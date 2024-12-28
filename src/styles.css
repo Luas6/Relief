@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'SegoeUI';
+    src: url('./assets/fonts/Segoeui.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'SegoePrint';
+    src: url('./assets/fonts/segoepr.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body {
+    font-family: 'SegoeUI', sans-serif !important;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'SegoePrint', sans-serif !important;
+  }
+
+
+.owl-carousel .owl-item img {
+    max-height: 150px !important;
+}
