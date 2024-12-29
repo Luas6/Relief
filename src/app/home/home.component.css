@@ -1,0 +1,8 @@
+header{
+    background-image: url("/assets/img/bg-banner.webp");
+}
+
+.motif-decoratif{
+    min-height: 80px;
+    object-fit: cover;
+}

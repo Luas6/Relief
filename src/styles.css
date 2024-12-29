@@ -18,9 +18,22 @@
 
   h1, h2, h3, h4 {
     font-family: 'SegoePrint', sans-serif !important;
+    font-weight: 700 !important;
   }
 
 
 .owl-carousel .owl-item img {
     max-height: 150px !important;
+}
+
+.custom-dark-blue{
+  color: #025589;
+}
+
+.custom-light-blue{
+  color: #4bbcbc;
+}
+
+.custom-gray{
+  color: #a09292;
 }

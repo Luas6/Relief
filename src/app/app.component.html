@@ -4,25 +4,28 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/miembros">Miembros</a>
+          <a class="nav-link" href="/miembros">Carrelage</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/blog">Blog</a>
+          <a class="nav-link" href="/blog">Sols Souples</a>
         </li>
       </ul>
+      <span class="navbar-text">
+        <a id="call-navbar" class="mx-2" href="tel:+0787662055">0 787 66 20 55</a>
+      </span>
     </div>
   </div>
 </nav>
 
-<div class="my-5 py-5">
+<div id="router-div">
   <router-outlet></router-outlet>
 </div>
 
 <footer id="footer-principal" class="text-center text-lg-start bg-dark fixed-bottom">
   <div class="text-center p-3 text-white">
-    <b>© 2025 Copyright:</b> Relief pose de carrelage et sols souples
+    © 2025 Copyright: Relief pose de carrelage et sols souples
   </div>
 </footer>
