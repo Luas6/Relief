@@ -34,7 +34,7 @@ export class MapaComponent {
     });
 
     const marker = L.marker([43.172794, -0.263396]);
-    marker.addTo(this.map).bindPopup('Ubicación específica').openPopup();
+    marker.addTo(this.map).bindPopup('Relief pose de carrelage et sols souples').openPopup();
   }
 
   ngAfterViewInit(): void {
