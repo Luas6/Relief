@@ -1,23 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-    font-family: 'SegoeUI';
-    src: url('./assets/fonts/Segoeui.ttf') format('opentype');
+    font-family: 'Philosopher-Regular';
+    src: url('./assets/fonts/Philosopher-Regular.ttf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }
   @font-face {
-    font-family: 'SegoePrint';
-    src: url('./assets/fonts/segoepr.ttf') format('opentype');
+    font-family: 'Philosopher-Bold';
+    src: url('./assets/fonts/Philosopher-Bold.ttf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }
 
   body {
-    font-family: 'SegoeUI', sans-serif !important;
+    font-family: 'Philosopher-Regular', sans-serif !important;
   }
 
   h1, h2, h3, h4 {
-    font-family: 'SegoePrint', sans-serif !important;
+    font-family: 'Philosopher-Bold', sans-serif !important;
     font-weight: 700 !important;
   }
 

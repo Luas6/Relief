@@ -10,8 +10,8 @@ export class MapaComponent {
 
   private initMap(): void {
     this.map = L.map('map', {
-      center: [43.172794, -0.263396], // Coordenadas especificadas
-      zoom: 13
+      center: [43.18226508304043, -0.24947973149451266], // Coordenadas especificadas
+      zoom: 14
     });
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -33,7 +33,7 @@ export class MapaComponent {
       shadowSize: [41, 41],
     });
 
-    const marker = L.marker([43.172794, -0.263396]);
+    const marker = L.marker([43.18226508304043, -0.24947973149451266]);
     marker.addTo(this.map).bindPopup('Relief pose de carrelage et sols souples').openPopup();
   }
 

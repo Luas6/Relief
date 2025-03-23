@@ -1,11 +1,44 @@
-<div>
-  <header class="p-5 w-100">
+
+  <header class="p-5 w-100 bg-1">
     <h1 id="title" class="text-center">Relief pose de carrelage et sols souples</h1>
   </header>
 
   <body>
-    <section class="container my-3">
-      <h3 class="text-center">Bon, agréable et pas cher</h3>
+
+    <section class="py-3 py-xl-5">
+      <h2 class="text-center mb-3">Nos services</h2>   
+      
+      <div id="grid-travaux">
+        <div class="image-container">
+          <p class="image-text">POSE DE FAIENCE</p>
+          <img src="assets/img/obras/prestado/azulejos.webp" alt="POSE DE FAIENCE">
+        </div>
+        <div class="image-container">
+          <p class="image-text">GALERIE</p>
+          <img src="assets/img/obras/prestado/camara.webp" alt="Galerie">
+        </div>
+        <div class="image-container">
+          <p class="image-text">POSE DE CARRELAGE AU SOL</p>
+          <img src="assets/img/obras/prestado/azulejossuelo.webp" alt="POSE DE CARRELAGE AU SOL">
+        </div>
+        <div class="image-container">
+          <p class="image-text">SALLES DE BAIN</p>
+          <img src="assets/img/obras/prestado/baño.webp" alt="SALLES DE BAIN">
+        </div>
+        <div class="image-container">
+          <p class="image-text">DOUCHE A L'ITALIENNE</p>
+          <img src="assets/img/obras/prestado/duchaitaliana.webp" alt="DOUCHE A L'ITALIENNE">
+        </div>
+        <div class="image-container">
+          <p class="image-text">POSE DE PARQUETS ET SOLS SOUPLES</p>
+          <img src="assets/img/obras/prestado/parquet.webp" alt="POSE DE PARQUETS ET SOLS SOUPLES">
+        </div>
+      </div>
+      
+    </section>
+
+    <section class="py-3 py-xl-5">
+      <h2 class="text-center">Bon, agréable et pas cher</h2>
       <p class="text-center">Nous sommes votre meilleure option</p>
       <owl-carousel-o [options]="customOptions">
         <ng-container *ngFor="let slide of slides">
@@ -20,10 +53,8 @@
       </owl-carousel-o>
     </section>
 
-    <img src="assets/img/motif-decoratif.webp" class="img-fluid motif-decoratif w-100" alt="Motif décoratif">
 
-
-    <section>
+    <section class="py-3 py-xl-5 bg-2">
       <div class="d-block d-md-flex">
         <div class="row justify-content-between px-2 my-5 px-4">
           <h2 class="mb-3">Contactez-nous</h2>
@@ -113,4 +144,3 @@
     </section>
 
   </body>
-</div>

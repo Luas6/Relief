@@ -1,8 +1,63 @@
-header{
-    background-image: url("/assets/img/bg-banner.webp");
+.bg-1{
+    background-color: #c5dddf;
+}
+
+.bg-2{
+    background-color: #f7f3fa;
 }
 
 .motif-decoratif{
     min-height: 80px;
     object-fit: cover;
 }
+
+.carousel-item{
+    height: 300px;
+    object-fit: cover;
+}
+
+#grid-travaux {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    grid-template-rows: repeat(2, 1fr);    /* 2 filas */
+    gap: 10px;                            /* Espacio entre los elementos */
+    width: 60%;                           /* El grid ocupa el 60% del ancho */
+    height: 60%;                          /* El grid ocupa el 60% de la altura */
+    margin: 0 auto;                       /* Centra el grid */
+  }
+  
+  #grid-travaux img {
+    width: 100%;                          /* Las imágenes ocupan el 100% del ancho de cada celda */
+    height: auto;                         /* Mantiene la proporción de las imágenes */
+    object-fit: cover;                    /* Ajusta las imágenes al contenedor sin distorsionarlas */
+  }
+
+  #grid-travaux {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 60%;
+    margin: auto;
+  }
+  
+  .image-container {
+    position: relative;
+    text-align: center;
+  }
+  
+  .image-text {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-wrap-style: balance;
+  }
+
+  
+  

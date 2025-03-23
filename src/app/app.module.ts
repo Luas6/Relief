@@ -8,13 +8,17 @@ import { HomeComponent } from './home/home.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MapaComponent } from './componentes/mapa/mapa.component';
 import { MetionsLegalesComponent } from './metions-legales/metions-legales.component';
+import { GalerieComponent } from './galerie/galerie.component';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MapaComponent,
-    MetionsLegalesComponent
+    MetionsLegalesComponent,
+    GalerieComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,

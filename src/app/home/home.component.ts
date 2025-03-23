@@ -9,30 +9,88 @@ export class HomeComponent {
   slides = [
     { 
       img: 'assets/img/hucha.svg', 
-      alt: 'Image 1', 
+      alt: 'Économisez de l\'argent', 
       title: 'Économisez de l\'argent', 
-      description: 'Demandez votre devis sans engagement' 
+      description: 'Devis gratuit, contactez-nous.' 
     },
     { 
       img: 'assets/img/tool.svg', 
-      alt: 'Image 2', 
+      alt: 'Professionnalisme', 
       title: 'Professionnalisme', 
-      description: 'Nous réalisons les travaux avec la plus haute qualité' 
+      description: 'Conseils personnalisés et adaptes aux différents besoins et budgets' 
     },
     { 
       img: 'assets/img/calendar.svg', 
-      alt: 'Image 3', 
+      alt: 'Rapidité', 
       title: 'Rapidité', 
       description: 'Nous effectuons les travaux rapidement et efficacement' 
+    },
+    { 
+      img: 'assets/img/place.svg', 
+      alt: 'Image 4', 
+      title: 'Travail soigné, respect des délais', 
+      description: 'Interventions jusqu\'à 50 km autour de Pau et Nay'
     }
     
+  ];
+
+  obras = [
+    { 
+      img: 'assets/img/obras/carrelage1.webp', 
+      alt: 'Image carrelage1', 
+    },
+    { 
+      img: 'assets/img/obras/carrelage2.webp', 
+      alt: 'Image carrelage2', 
+    },
+    { 
+      img: 'assets/img/obras/carrelage3.webp', 
+      alt: 'Image carrelage3', 
+    },
+    { 
+      img: 'assets/img/obras/doucheitali.webp', 
+      alt: 'Image doucheitali', 
+    },
+    { 
+      img: 'assets/img/obras/doucheitali2.webp', 
+      alt: 'Image doucheitali2', 
+    },
+    { 
+      img: 'assets/img/obras/sdb1.webp', 
+      alt: 'Image sdb1', 
+    },
+    { 
+      img: 'assets/img/obras/sdb2.webp', 
+      alt: 'Image sdb2', 
+    },
+    { 
+      img: 'assets/img/obras/sdb3.webp', 
+      alt: 'Image sdb3', 
+    },
+    { 
+      img: 'assets/img/obras/sdb4.webp', 
+      alt: 'Image sdb4', 
+    },
+    { 
+      img: 'assets/img/obras/sdb5.webp', 
+      alt: 'Image sdb5', 
+    },
+    { 
+      img: 'assets/img/obras/solparquet1.webp', 
+      alt: 'Image solparquet1', 
+    },
+    { 
+      img: 'assets/img/obras/solpvc2.webp', 
+      alt: 'Image solpvc2', 
+    }
+  
   ];
 
   customOptions = {
     loop: true,
     margin: 10,
     nav: false,
-    dots: false,
+    dots: true,
     autoplay: true,
     responsive: {
       0: {
@@ -43,7 +101,8 @@ export class HomeComponent {
       },
       1200: {
         autoplay: false,
-        items: 3
+        items: 4,
+        dots: false,
       }
     }
   };
