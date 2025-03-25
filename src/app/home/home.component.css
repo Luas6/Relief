@@ -1,14 +1,25 @@
 .bg-1{
-    background-color: #c5dddf;
+    background-color: #40dbe8;
 }
 
 .bg-2{
-    background-color: #f7f3fa;
+    background-color: #404082;
 }
 
-.motif-decoratif{
-    min-height: 80px;
-    object-fit: cover;
+.bg-3{
+    background-color: #d0d0d0;
+}
+
+.color1{
+    color: #40dbe8;
+}
+
+.color2{
+    color: #404082;
+}
+
+.color3{
+    color: #d0d0d0;
 }
 
 .carousel-item{
@@ -18,27 +29,20 @@
 
 #grid-travaux {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    grid-template-rows: repeat(2, 1fr);    /* 2 filas */
-    gap: 10px;                            /* Espacio entre los elementos */
-    width: 60%;                           /* El grid ocupa el 60% del ancho */
-    height: 60%;                          /* El grid ocupa el 60% de la altura */
-    margin: 0 auto;                       /* Centra el grid */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
   }
   
   #grid-travaux img {
-    width: 100%;                          /* Las imágenes ocupan el 100% del ancho de cada celda */
-    height: auto;                         /* Mantiene la proporción de las imágenes */
-    object-fit: cover;                    /* Ajusta las imágenes al contenedor sin distorsionarlas */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 
-  #grid-travaux {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    width: 60%;
-    margin: auto;
-  }
   
   .image-container {
     position: relative;
@@ -59,5 +63,24 @@
     text-wrap-style: balance;
   }
 
+
+  header {
+    background: url('/assets/img/banner.webp') no-repeat center center;
+    background-size: cover;
+    height: 300px; /* Ajusta la altura según necesites */
+    display: flex;
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: center; /* Centra el texto horizontalmente */
+    
+  }
+
+  header h1 {
+    text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7); /* Sombra negra para mejorar la lectura */
+  }
   
-  
+  @media only screen and (min-width: 600px){
+    #grid-travaux {
+        width: 70%;
+        height: 70%;
+      }
+  }

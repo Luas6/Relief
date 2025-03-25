@@ -8,28 +8,24 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   slides = [
     { 
-      img: 'assets/img/hucha.svg', 
+      img: 'assets/img/handshake.webp', 
       alt: 'Économisez de l\'argent', 
-      title: 'Économisez de l\'argent', 
-      description: 'Devis gratuit, contactez-nous.' 
+      title: 'Conseils personnalisés et adaptes aux différents besoins et budgets'
     },
     { 
-      img: 'assets/img/tool.svg', 
+      img: 'assets/img/documento.webp', 
       alt: 'Professionnalisme', 
-      title: 'Professionnalisme', 
-      description: 'Conseils personnalisés et adaptes aux différents besoins et budgets' 
+      title: 'Devis gratuit (Pau et alentours, Nay et alentours)'
     },
     { 
-      img: 'assets/img/calendar.svg', 
+      img: 'assets/img/paleta.webp', 
       alt: 'Rapidité', 
-      title: 'Rapidité', 
-      description: 'Nous effectuons les travaux rapidement et efficacement' 
+      title: 'Travail soigné, expertise et experience',    
     },
     { 
-      img: 'assets/img/place.svg', 
+      img: 'assets/img/casco-reloj.webp', 
       alt: 'Image 4', 
-      title: 'Travail soigné, respect des délais', 
-      description: 'Interventions jusqu\'à 50 km autour de Pau et Nay'
+      title: 'Nous travaillons dedans le delays, avec des professionnels reconnus pour ses bonnes compétences'
     }
     
   ];

@@ -9,3 +9,72 @@
 #navbarNav a{
     font-size: 1.5rem;
 }
+
+.bg-1{
+    background-color: #365cda83;
+}
+
+.bg-2{
+    background-color: #d0e9ff;
+}
+.navbar-nav{
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.nav-item{
+    align-content: center;
+}
+
+.nav-link{
+    text-wrap-style: balance;
+    text-align: center;
+    vertical-align: auto;
+}
+
+#contacto .contact-icon {
+    width: 50px; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+  }
+  
+  .contacto-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin-bottom: 15px; /* Espaciado entre elementos */
+  }
+  
+  .contacto-item h3 {
+    margin: 0;
+  }
+  
+  .contacto-item a {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .navbar-nav .nav-item {
+    position: relative;
+  }
+
+  .navbar-nav .nav-link:hover {
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.9);
+    transform: scale(1.05); /* Efecto de agrandamiento leve */
+  }
+  
+  .navbar-nav .nav-item::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+  }
+  
+  .navbar-nav .nav-item:hover::after {
+    width: 100%;
+  }

@@ -1,1 +1,57 @@
-<p>services works!</p>
+<header class="p-5 w-100 bg-1">
+    <h1 id="title" class="text-center">Nos Services</h1>
+</header>
+
+<body>
+
+    <section class="py-3 py-xl-5">
+        <div class="row justify-content-center">
+            <p class="text-center mb-3 col-lg-8">
+                Nous proposons une large gamme de services pour répondre à tous vos besoins en revêtements de sols et
+                murs. Que ce soit pour la pose de faïence, de carrelage, de parquets ou encore l’aménagement de salles
+                de bain et douches à l’italienne, nous vous accompagnons avec expertise et savoir-faire. Faites
+                confiance à notre expérience pour donner vie à vos projets de rénovation et de création.
+            </p>
+        </div>
+        <div id="grid-travaux">
+            <div class="image-container">
+              <a [routerLink]="'/pose-de-faience'">
+                <p class="image-text">POSE DE FAIENCE</p>
+                <img src="assets/img/obras/prestado/azulejos.webp" alt="POSE DE FAIENCE">
+              </a>
+            </div>
+            <div class="image-container">
+              <a [routerLink]="'/galerie'">
+                <p class="image-text">GALERIE</p>
+                <img src="assets/img/obras/prestado/camara.webp" alt="Galerie">
+              </a>
+            </div>
+            <div class="image-container">
+              <a [routerLink]="'/pose-de-carrelage-au-sol'">
+                <p class="image-text">POSE DE CARRELAGE AU SOL</p>
+                <img src="assets/img/obras/prestado/azulejossuelo.webp" alt="POSE DE CARRELAGE AU SOL">
+              </a>
+            </div>
+            <div class="image-container">
+              <a [routerLink]="'/salles-de-bain'">
+                <p class="image-text">SALLES DE BAIN</p>
+                <img src="assets/img/obras/prestado/baño.webp" alt="SALLES DE BAIN">
+              </a>
+            </div>
+            <div class="image-container">
+              <a [routerLink]="'/douche-italienne'">
+                <p class="image-text">DOUCHE A L'ITALIENNE</p>
+                <img src="assets/img/obras/prestado/duchaitaliana.webp" alt="DOUCHE A L'ITALIENNE">
+              </a>
+            </div>
+            <div class="image-container">
+              <a [routerLink]="'/pose-de-parquets-et-sols-souples'">
+                <p class="image-text">POSE DE PARQUETS ET SOLS SOUPLES</p>
+                <img src="assets/img/obras/prestado/parquet.webp" alt="POSE DE PARQUETS ET SOLS SOUPLES">
+              </a>
+            </div>
+          </div>
+          
+
+    </section>
+</body>
