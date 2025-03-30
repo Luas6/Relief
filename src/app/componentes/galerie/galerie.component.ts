@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+declare var bootstrap: any;  // Declaramos la variable bootstrap
+
+
 @Component({
   selector: 'app-galerie',
   templateUrl: './galerie.component.html',
@@ -57,5 +60,13 @@ export class GalerieComponent {
     }
   
   ];
+  selectedImage: string = '';  // Para almacenar la imagen seleccionada
 
+  // Función para abrir el modal de Bootstrap con la imagen seleccionada
+  openImageModal(imgUrl: string): void {
+    this.selectedImage = imgUrl;  // Establece la URL de la imagen seleccionada
+    const modalElement = document.getElementById('imageModal'); // Obtén el modal por su ID
+    const modal = new bootstrap.Modal(modalElement);  // Crea una instancia de Bootstrap Modal
+    modal.show();  // Muestra el modal
+  }
 }

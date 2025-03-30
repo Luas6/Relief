@@ -54,7 +54,7 @@
   /* Mobile: Imagen arriba y texto abajo */
   @media (max-width: 768px) {
     .row {
-      flex-direction: column-reverse;
+      flex-direction: column;
     }
   
     .text-container {

@@ -1,5 +1,5 @@
 <header class="p-5 w-100 bg-2">
-  <h1 id="title" class="text-center text-light">Relief pose de carrelage et sols souples</h1>
+  <h1 id="title" class="text-center text-light">Relief Pose de carrelage et sols</h1>
 </header>
 
 <section class="py-3 py-xl-5">
@@ -9,12 +9,26 @@
     <div class="row g-4">
       <div *ngFor="let obra of obras" class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="card">
-          <div class="image-container">
+          <div class="image-container-galeria" (click)="openImageModal(obra.img)">
             <img [src]="obra.img" [alt]="obra.alt" class="gallery-img">
           </div>
         </div>
       </div>
     </div>
   </div>
+
+ <!-- Modal de Bootstrap -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img [src]="selectedImage" class="img-fluid" alt="Imagen seleccionada">
+      </div>
+    </div>
+  </div>
+</div>
 
 </section>

@@ -1,86 +1,133 @@
-.bg-1{
-    background-color: #40dbe8;
+.bg-1 {
+  background-color: #40dbe8;
 }
 
-.bg-2{
-    background-color: #404082;
+.bg-2 {
+  background-color: #404082;
 }
 
-.bg-3{
-    background-color: #d0d0d0;
+.bg-3 {
+  background-color: #d0d0d0;
 }
 
-.color1{
-    color: #40dbe8;
+.color1 {
+  color: #40dbe8;
 }
 
-.color2{
-    color: #404082;
+.color2 {
+  color: #404082;
 }
 
-.color3{
-    color: #d0d0d0;
+.color3 {
+  color: #d0d0d0;
 }
 
-.carousel-item{
-    height: 300px;
-    object-fit: cover;
+.carousel-item {
+  height: 300px;
+  object-fit: cover;
 }
 
 #grid-travaux {
-    display: grid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+}
+
+#grid-travaux img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+#grid-travaux img:hover {
+  transform: scale(1.05); /* Efecto de agrandamiento leve */
+}
+
+
+.image-container {
+  position: relative;
+  text-align: center;
+}
+
+.image-text {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-wrap-style: balance;
+  z-index: 1000;
+}
+
+
+header {
+  background: url('/assets/img/banner-home.webp') no-repeat center bottom;
+  background-size: cover;
+  height: 300px;
+  /* Ajusta la altura segÃºn necesites */
+  display: flex;
+  align-items: center;
+  /* Centra el texto verticalmente */
+  justify-content: center;
+  /* Centra el texto horizontalmente */
+
+}
+
+header h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.relief{
+  font-family: 'SegoeUI', sans-serif !important;
+  margin-right: 40px;
+  font-size: 4rem;
+}
+
+.round-top {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.transition {
+  background: rgb(208, 208, 208);
+  background: linear-gradient(0deg, rgba(208, 208, 208, 1) 0%, rgba(64, 64, 130, 1) 100%);
+}
+
+.transition2 {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(208, 208, 208, 1) 100%);
+}
+
+@media only screen and (min-width: 720px) {
+  #grid-travaux {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
-    width: 90%;
-    height: 90%;
-    margin: 0 auto;
-  }
-  
-  #grid-travaux img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
   }
 
-  
-  .image-container {
-    position: relative;
-    text-align: center;
-  }
-  
-  .image-text {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    text-wrap-style: balance;
+  .round-top {
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
   }
 
+}
 
-  header {
-    background: url('/assets/img/banner.webp') no-repeat center center;
-    background-size: cover;
-    height: 300px; /* Ajusta la altura según necesites */
-    display: flex;
-    align-items: center; /* Centra el texto verticalmente */
-    justify-content: center; /* Centra el texto horizontalmente */
-    
+@media only screen and (min-width: 920px) {
+  #grid-travaux {
+    width: 75%;
+    height: 75%;
   }
 
-  header h1 {
-    text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7); /* Sombra negra para mejorar la lectura */
+  .relief{
+    font-family: 'SegoeUI', sans-serif !important;
+    margin-right: 50px;
   }
-  
-  @media only screen and (min-width: 600px){
-    #grid-travaux {
-        width: 70%;
-        height: 70%;
-      }
-  }
+}

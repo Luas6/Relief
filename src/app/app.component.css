@@ -32,6 +32,10 @@
     vertical-align: auto;
 }
 
+.nav-link:before {
+  content: "\f107";
+}
+
 #contacto .contact-icon {
     width: 50px; /* Ajusta el tamaño de las imágenes */
     height: auto;
@@ -56,6 +60,14 @@
 
   .navbar-nav .nav-item {
     position: relative;
+  }
+
+  .navbar-brand {
+  background-color: white;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0px 0px 5px 5px white;
+  margin: 5px;
   }
 
   .navbar-nav .nav-link:hover {
