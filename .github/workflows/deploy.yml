@@ -29,3 +29,5 @@ jobs:
         with:
           branch: gh-pages  # Rama donde se subirá la web
           folder: dist/relief-pose-de-carrelage-et-sols-souples
+          token: ${{ secrets.GITHUB_TOKEN }}  # Asegúrate de que el token esté disponible
+
