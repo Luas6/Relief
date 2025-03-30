@@ -1,0 +1,31 @@
+name: Deploy Angular to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master  # Se ejecuta cuando hay cambios en master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🔄 Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: 🔧 Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: 📦 Instalar dependencias
+        run: npm ci
+
+      - name: 🏗️ Compilar la app Angular
+        run: npm run build -- --base-href="/Relief/"
+
+      - name: 🚀 Deploy a GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # Rama donde se subirá la web
+          folder: dist/relief  # Ajusta el nombre de tu carpeta de build
