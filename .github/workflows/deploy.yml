@@ -27,6 +27,6 @@ jobs:
       - name: 🚀 Deploy a GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # Rama donde se subirá la web
+          branch: gh-pages  # Rama 
           folder: dist/relief-pose-de-carrelage-et-sols-souples
           token: ${{ secrets.GH_TOKEN }}  # Asegúrate de que el token esté disponible
