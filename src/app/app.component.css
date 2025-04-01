@@ -44,7 +44,8 @@
   .contacto-item {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    max-width: 320px;
     text-align: left;
     margin-bottom: 15px; /* Espaciado entre elementos */
   }
@@ -89,4 +90,12 @@
   
   .navbar-nav .nav-item:hover::after {
     width: 100%;
+  }
+
+  @media only screen and (min-width: 720px) {
+    .contacto-item {
+      justify-content: center;
+      max-width: auto;
+    }
+
   }
