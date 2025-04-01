@@ -29,4 +29,4 @@ jobs:
         with:
           branch: gh-pages  # Rama 
           folder: dist/relief-pose-de-carrelage-et-sols-souples
-          token: ${{ secrets.GH_TOKEN }}  # Asegúrate de que el token esté disponible
+          token: ${{ secrets.GH_TOKEN }}  # Asegúrate de que el token esté disponibl
