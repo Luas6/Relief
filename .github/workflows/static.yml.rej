@@ -1,0 +1,10 @@
+diff a/.github/workflows/static.yml b/.github/workflows/static.yml	(rejected hunks)
+@@ -30,7 +30,7 @@
+         run: npm ci
+ 
+       - name: 🏗️ Compilar la app Angular
+-        run: npm run build -- --output-path=dist --base-href="/Relief/"
++        run: npm run build -- --output-path=dist --base-href="/"
+ 
+       - name: Setup Pages
+         uses: actions/configure-pages@v5

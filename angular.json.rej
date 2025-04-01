@@ -1,0 +1,10 @@
+diff a/angular.json b/angular.json	(rejected hunks)
+@@ -13,7 +13,7 @@
+         "build": {
+           "builder": "@angular-devkit/build-angular:browser",
+           "options": {
+-            "baseHref": "/Relief/",
++            "baseHref": "/",
+             "outputPath": "dist/relief-pose-de-carrelage-et-sols-souples",
+             "index": "src/index.html",
+             "main": "src/main.ts",
