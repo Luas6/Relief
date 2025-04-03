@@ -10,22 +10,22 @@ export class HomeComponent {
     { 
       img: 'assets/img/handshake.webp', 
       alt: 'Économisez de l\'argent', 
-      title: 'Conseils personnalisés et adaptes aux différents besoins et budgets'
+      title: 'Conseils personnalisés et adaptés aux différents besoins et budgets'
     },
     { 
       img: 'assets/img/documento.webp', 
       alt: 'Professionnalisme', 
-      title: 'Devis gratuit (Pau et alentours, Nay et alentours)'
+      title: 'Devis gratuit, transparent et à domicile (Pau et alentours, Nay et alentours)'
     },
     { 
       img: 'assets/img/paleta.webp', 
       alt: 'Rapidité', 
-      title: 'Travail soigné, expertise et experience',    
+      title: 'Expertise et expérience. Travail soigné et sous garanti',    
     },
     { 
       img: 'assets/img/casco-reloj.webp', 
       alt: 'Image 4', 
-      title: 'Nous travaillons dedans le delays, avec des professionnels reconnus pour ses bonnes compétences'
+      title: ' Nous travaillons dans les meilleurs délais, avec des professionnels reconnus pour ses bonnes compétences'
     }
     
   ];
