@@ -11,10 +11,6 @@ declare var bootstrap: any;  // Declaramos la variable bootstrap
 export class GalerieComponent {
   obras = [
     { 
-      img: 'assets/img/obras/carrelage01.webp', 
-      alt: 'Image carrelage1', 
-    },
-    { 
       img: 'assets/img/obras/carrelage02.webp', 
       alt: 'Image carrelage2', 
     },
@@ -35,10 +31,6 @@ export class GalerieComponent {
       alt: 'Image sdb1', 
     },
     { 
-      img: 'assets/img/obras/sdb2.webp', 
-      alt: 'Image sdb2', 
-    },
-    { 
       img: 'assets/img/obras/sdb3.webp', 
       alt: 'Image sdb3', 
     },
@@ -53,10 +45,6 @@ export class GalerieComponent {
     { 
       img: 'assets/img/obras/solparquet1.webp', 
       alt: 'Image solparquet1', 
-    },
-    { 
-      img: 'assets/img/obras/solpvc2.webp', 
-      alt: 'Image solpvc2', 
     }
   
   ];

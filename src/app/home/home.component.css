@@ -89,6 +89,7 @@ header h1 {
 .relief{
   font-family: 'SegoeUI', sans-serif !important;
   font-size: 4rem;
+  letter-spacing: 16px;
 }
 
 .round-top {
@@ -129,7 +130,6 @@ header h1 {
   }
 
   .relief{
-    font-family: 'SegoeUI', sans-serif !important;
     margin-right: 50px;
   }
 }

@@ -25,7 +25,7 @@ export class HomeComponent {
     { 
       img: 'assets/img/casco-reloj.webp', 
       alt: 'Image 4', 
-      title: ' Nous travaillons dans les meilleurs délais, avec des professionnels reconnus pour ses bonnes compétences'
+      title: ' Nous travaillons dans les meilleurs délais, avec des professionnels reconnus pour leurs bonnes compétences'
     }
     
   ];

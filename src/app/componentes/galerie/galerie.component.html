@@ -1,14 +1,18 @@
-<header class="p-5 w-100 bg-2">
-  <h1 id="title" class="text-center text-light">Relief Pose de carrelage et sols</h1>
+<header class="p-3 p-md-5 w-100 bg-2">
+  <h1 id="title" class="text-center text-light "><span class="relief">RELIEF</span> Pose de carrelage et sols</h1>
 </header>
 
-<section class="py-3 py-xl-5">
-  <p class="lead fs-4 text-secondary mb-5 mx-4 mx-md-5">Si vous souhaitez donner une nouvelle vie à vos sols ou à vos revêtements muraux, n’hésitez pas à nous contacter. <br>
-Nous serons heureux de vous accompagner dans la réalisation de vos idées, notre but, un résultat à la hauteur de vos attentes.</p>
+<section class="py-5 round-top bg-1 mt-5">
+  <p class="lead fs-3 text-center mb-5 mx-4 mx-md-5 text-white">"Si vous souhaitez donner une nouvelle vie à vos sols ou à vos revêtements muraux, n’hésitez pas à nous contacter. <br>
+Nous serons heureux de vous accompagner dans la réalisation de vos idées, notre but, un résultat à la hauteur de vos attentes."</p>
 
+</section>
+<div class="transition p-3 w-100">
+</div>
+<section class="bg-3 py-5">
   <div class="container">
     <div class="row g-4">
-      <div *ngFor="let obra of obras" class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div *ngFor="let obra of obras" class="col-12 col-sm-6 col-md-4">
         <div class="card">
           <div class="image-container-galeria" (click)="openImageModal(obra.img)">
             <img [src]="obra.img" [alt]="obra.alt" class="gallery-img">
@@ -33,3 +37,6 @@ Nous serons heureux de vous accompagner dans la réalisation de vos idées, notr
 </div>
 
 </section>
+
+<div class="transition2 p-3 w-100">
+</div>
