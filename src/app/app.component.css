@@ -36,6 +36,10 @@
   content: "\f107";
 }
 
+.navbar-toggler{
+  border: none;
+}
+
 #contacto .contact-icon {
     width: 50px; /* Ajusta el tamaño de las imágenes */
     height: auto;
