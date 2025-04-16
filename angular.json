@@ -14,7 +14,6 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "baseHref": "/",
-            "deployUrl": "/",
             "outputPath": "dist/relief-pose-de-carrelage-et-sols-souples",
             "index": "src/index.html",
             "main": "src/main.ts",
