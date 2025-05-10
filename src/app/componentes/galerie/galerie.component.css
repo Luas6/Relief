@@ -1,26 +1,33 @@
 header {
-    background: url('/assets/img/banner.webp') no-repeat center center;
-    background-size: cover;
-    height: 300px; /* Ajusta la altura según necesites */
-    display: flex;
-    align-items: center; /* Centra el texto verticalmente */
-    justify-content: center; /* Centra el texto horizontalmente */
-    
-  }
+  background: url('/assets/img/banner.webp') no-repeat center center;
+  background-size: cover;
+  height: 300px;
+  /* Ajusta la altura según necesites */
+  display: flex;
+  align-items: center;
+  /* Centra el texto verticalmente */
+  justify-content: center;
+  /* Centra el texto horizontalmente */
 
-  header h1 {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  }
+}
 
-  .relief{
-    font-family: 'SegoeUI', sans-serif !important;
-    font-size: 4rem;
-    letter-spacing: 16px;
-  }
+header h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 
-  .lead{
-    font-family: 'SegoeUI', sans-serif !important;
-  }
+.relief {
+  font-family: 'SegoeUI', sans-serif !important;
+  font-size: 4rem;
+  letter-spacing: 16px;
+}
+
+.lead {
+  font-family: 'SegoeUI', sans-serif !important;
+}
+
+.text-purple {
+  color: #14144e;
+}
 
 .transition {
   background: #d0d0d0;
@@ -31,38 +38,44 @@ header {
   background: rgb(255, 255, 255);
   background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(208, 208, 208, 1) 100%);
 }
-  .card {
-    border: none;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-  }
+
+.card {
+  border: none;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.card img {
+  border-radius: 0;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.round-top {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.bg-1 {
+  background-color: #40dbe8;
+}
+
+.bg-2 {
+  background-color: #404082;
+}
+
+.bg-3 {
+  background-color: #d0d0d0;
+}
+
+@media only screen and (min-width: 720px) {
 
   .round-top {
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
   }
 
-  .bg-1 {
-    background-color: #40dbe8;
-  }
-  
-  .bg-2 {
-    background-color: #404082;
-  }
-  
-  .bg-3 {
-    background-color: #d0d0d0;
-  }
-
-  @media only screen and (min-width: 720px) {
-  
-    .round-top {
-      border-top-left-radius: 45px;
-      border-top-right-radius: 45px;
-    }
-  
-  }
+}

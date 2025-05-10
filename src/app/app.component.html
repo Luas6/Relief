@@ -6,7 +6,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNav" #navbarNav>
       <ul class="navbar-nav">
         <!--
         <li class="nav-item">
@@ -18,19 +18,19 @@
 
         -->
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/pose-de-carrelage-au-sol'">Pose de carrelage au sol</a>
+          <a class="nav-link" [routerLink]="'/pose-de-carrelage-au-sol'" (click)="closeNavbar(navbarNav)">Pose de carrelage au sol</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/pose-de-faience'">Pose de faïence</a>
+          <a class="nav-link" [routerLink]="'/pose-de-faience'" (click)="closeNavbar(navbarNav)">Pose de faïence</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/pose-de-parquets-et-sols-souples'">Pose de parquets et sols souples</a>
+          <a class="nav-link" [routerLink]="'/pose-de-parquets-et-sols-souples'" (click)="closeNavbar(navbarNav)">Pose de parquets et sols souples</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/salles-de-bain'">Salles de bain</a>
+          <a class="nav-link" [routerLink]="'/salles-de-bain'" (click)="closeNavbar(navbarNav)">Salles de bain</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/douche-italienne'">Douche italienne</a>
+          <a class="nav-link" [routerLink]="'/douche-italienne'" (click)="closeNavbar(navbarNav)">Douche italienne</a>
         </li>        
       </ul>
       <span class="navbar-text nav-item">
@@ -75,7 +75,7 @@
 <footer id="footer-principal" class="text-center text-lg-start bg-dark">
   <div class="text-center p-3 text-white d-lg-flex justify-content-lg-center gap-lg-4">
     <p>© 2025 Copyright: Relief Pose de carrelage et sols </p>
-    <a class="nav-link" [routerLink]="'/mentions-legales'">Mentions Légales</a>
+    <a class="nav-link" [routerLink]="'/mentions-legales'" (click)="closeNavbar(navbarNav)">Mentions Légales</a>
   </div>
   
 </footer>
