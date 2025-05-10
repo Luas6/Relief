@@ -33,6 +33,9 @@ jobs:
         run: |
           npm run build -- --output-path=dist --base-href="/"
           cp dist/index.html dist/404.html
+          cp static/robots.txt dist/
+          cp static/sitemap.xml dist/
+
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
