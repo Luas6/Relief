@@ -98,7 +98,7 @@
 
   @media only screen and (min-width: 720px) {
     .contacto-item {
-      justify-content: space-evenly;
+      justify-content: center;
       max-width: auto;
     }
 
