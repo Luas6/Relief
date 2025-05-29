@@ -15,6 +15,7 @@ import { PoseDeParquetsEtSolsSouplesComponent } from './services/pose-de-parquet
 import { HandibatComponent } from './services/handibat/handibat.component';
 import { GalerieComponent } from './componentes/galerie/galerie.component';
 import { PoseDeFaienceComponent } from './services/pose-de-faience/pose-de-faience.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PoseDeFaienceComponent } from './services/pose-de-faience/pose-de-faien
     SallesDeBainComponent,
     DoucheItalienneComponent,
     PoseDeParquetsEtSolsSouplesComponent,
-    HandibatComponent
+    HandibatComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
