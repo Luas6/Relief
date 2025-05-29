@@ -1,4 +1,4 @@
-name: Deploy Angular to GitHub Pages
+name: Deploy Angular Universal Prerendered to GitHub Pages
 
 on:
   push:
@@ -29,21 +29,25 @@ jobs:
       - name: 📦 Instalar dependencias
         run: npm ci
 
-      - name: 🏗️ Compilar la app Angular
+      - name: 🏗️ Prerenderizar la app Angular con Angular Universal
         run: |
-          npm run build -- --output-path=dist --base-href="/"
-          cp dist/index.html dist/404.html
-          cp static/robots.txt dist/
-          cp static/sitemap.xml dist/
+          npm run build
+          npm run prerender
+          # npm run prerender debería generar dist/browser o dist/prerender con el HTML estático
 
+      - name: 📋 Copiar archivos necesarios
+        run: |
+          cp dist/browser/index.html dist/browser/404.html
+          cp static/robots.txt dist/browser/
+          cp static/sitemap.xml dist/browser/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: 📤 Subir el contenido compilado
+      - name: 📤 Subir el contenido prerenderizado
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist'  # Solo sube la carpeta compilada
+          path: 'dist/browser'  # Aquí la carpeta generada con HTML estático
 
       - name: 🚀 Deploy a GitHub Pages
         id: deployment

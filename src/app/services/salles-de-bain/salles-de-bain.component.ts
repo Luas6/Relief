@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-
+import { Component, Inject, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 declare var bootstrap: any;  // Declaramos la variable bootstrap
 
 
@@ -8,7 +9,19 @@ declare var bootstrap: any;  // Declaramos la variable bootstrap
   templateUrl: './salles-de-bain.component.html',
   styleUrls: ['./salles-de-bain.component.css']
 })
-export class SallesDeBainComponent {
+export class SallesDeBainComponent implements OnInit {
+  constructor(
+    private titleService: Title,
+    private metaService: Meta,
+    @Inject(DOCUMENT) private document: Document
+  ) {}
+  ngOnInit() {
+  this.titleService.setTitle('Salles de Bain - Relief');
+  this.metaService.updateTag({ name: 'description', content: 'Aménagement et rénovation de salles de bain modernes par Relief.' });
+  this.metaService.updateTag({ rel: 'canonical', href: 'https://www.reliefcarreleur.fr/salles-de-bain' });
+}
+
+
   obras = [
     { 
       img: 'assets/img/obras/sallebain1.webp', 

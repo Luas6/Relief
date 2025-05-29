@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "baseHref": "/",
-            "outputPath": "dist/relief-pose-de-carrelage-et-sols-souples",
+            "outputPath": "dist/relief-pose-de-carrelage-et-sols-souples/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -104,6 +104,70 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy"
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/relief-pose-de-carrelage-et-sols-souples/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "relief-pose-de-carrelage-et-sols-souples:build:development",
+              "serverTarget": "relief-pose-de-carrelage-et-sols-souples:server:development"
+            },
+            "production": {
+              "browserTarget": "relief-pose-de-carrelage-et-sols-souples:build:production",
+              "serverTarget": "relief-pose-de-carrelage-et-sols-souples:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/",
+              "/mentions-legales",
+              "/galerie",
+              "/services",
+              "/pose-de-carrelage-au-sol",
+              "/pose-de-faience",
+              "/pose-de-parquets-et-sols-souples",
+              "/salles-de-bain",
+              "/douche-italienne",
+              "/handibat",
+              "/404"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "relief-pose-de-carrelage-et-sols-souples:build:production",
+              "serverTarget": "relief-pose-de-carrelage-et-sols-souples:server:production"
+            },
+            "development": {
+              "browserTarget": "relief-pose-de-carrelage-et-sols-souples:build:development",
+              "serverTarget": "relief-pose-de-carrelage-et-sols-souples:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

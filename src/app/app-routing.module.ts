@@ -11,6 +11,7 @@ import { SallesDeBainComponent } from './services/salles-de-bain/salles-de-bain.
 import { PoseDeCarrelageAuSolComponent } from './services/pose-de-carrelage-au-sol/pose-de-carrelage-au-sol.component';
 import { PoseDeFaienceComponent } from './services/pose-de-faience/pose-de-faience.component';
 import { PoseDeParquetsEtSolsSouplesComponent } from './services/pose-de-parquets-et-sols-souples/pose-de-parquets-et-sols-souples.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,11 +23,18 @@ const routes: Routes = [
   { path: 'pose-de-parquets-et-sols-souples', component: PoseDeParquetsEtSolsSouplesComponent },
   { path: 'salles-de-bain', component: SallesDeBainComponent },
   { path: 'douche-italienne', component: DoucheItalienneComponent },
-  { path: 'handibat', component: HandibatComponent }
+  { path: 'handibat', component: HandibatComponent },
+  { path: '404', component: NotFoundComponent },
+
+  // Esta línea captura todas las rutas no definidas y redirige a /404
+  { path: '**', redirectTo: '/404' }
+
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    initialNavigation: 'enabledBlocking'
+})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
