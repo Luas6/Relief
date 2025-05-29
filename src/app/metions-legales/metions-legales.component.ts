@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
 
@@ -11,11 +11,17 @@ export class MetionsLegalesComponent implements OnInit {
   constructor(
     private titleService: Title,
     private metaService: Meta,
+    private renderer: Renderer2,
     @Inject(DOCUMENT) private document: Document
   ) {}
 
   ngOnInit(): void {
     this.titleService.setTitle('Mentions Légales - Relief');
     this.metaService.updateTag({ name: 'description', content: 'Consultez les mentions légales de Relief Carreleur à Nay et Pau.' });
-    this.metaService.updateTag({ rel: 'canonical', href: 'https://www.reliefcarreleur.fr/mentions-legales' });  }
+    const link: HTMLLinkElement | null = this.document.querySelector("link[rel='canonical']");
+    if (link) {
+      this.renderer.setAttribute(link, 'href', 'https://www.reliefcarreleur.fr/mentions-legales');
+    }
+
+  }
 }

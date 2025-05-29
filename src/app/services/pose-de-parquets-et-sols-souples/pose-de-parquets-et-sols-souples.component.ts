@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
 @Component({
@@ -10,12 +10,16 @@ export class PoseDeParquetsEtSolsSouplesComponent implements OnInit {
   constructor(
     private titleService: Title,
     private metaService: Meta,
+    private renderer: Renderer2,
     @Inject(DOCUMENT) private document: Document
   ) {}
 ngOnInit() {
   this.titleService.setTitle('Pose de Parquets et Sols Souples - Relief');
   this.metaService.updateTag({ name: 'description', content: 'Pose de parquets, sols souples et PVC sur mesure par Relief.' });
-  this.metaService.updateTag({ rel: 'canonical', href: 'https://www.reliefcarreleur.fr/pose-de-parquets-et-sols-souples' });
+  const link: HTMLLinkElement | null = this.document.querySelector("link[rel='canonical']");
+    if (link) {
+      this.renderer.setAttribute(link, 'href', 'https://www.reliefcarreleur.fr/pose-de-parquets-et-sols-souples');
+    }
 }
 
 }

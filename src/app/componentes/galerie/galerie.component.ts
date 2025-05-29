@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 declare var bootstrap: any;  // Declaramos la variable bootstrap
@@ -14,12 +14,16 @@ export class GalerieComponent implements OnInit {
   constructor(
     private titleService: Title,
     private metaService: Meta,
+    private renderer: Renderer2,
     @Inject(DOCUMENT) private document: Document
   ) {}
   ngOnInit() {
   this.titleService.setTitle('Galerie - Relief');
   this.metaService.updateTag({ name: 'description', content: 'Découvrez nos réalisations en carrelage, faïence, parquets et plus dans notre galerie.' });
-  this.metaService.updateTag({ rel: 'canonical', href: 'https://www.reliefcarreleur.fr/galerie' });
+  const link: HTMLLinkElement | null = this.document.querySelector("link[rel='canonical']");
+    if (link) {
+      this.renderer.setAttribute(link, 'href', 'https://www.reliefcarreleur.fr/galerie');
+    }
 }
 
 
