@@ -37,10 +37,9 @@ jobs:
 
       - name: 📋 Copiar archivos necesarios
         run: |
-          cp dist/relief-pose-de-carrelage-et-souples/browser/index.html dist/relief-pose-de-carrelage-et-sols-souples/browser/404.html
-          cp static/robots.txt dist/relief-pose-de-carrelage-et-souples/browser/
-          cp static/sitemap.xml dist/relief-pose-de-carrelage-et-souples/browser/
-
+          cp dist/relief-pose-de-carrelage-et-souples/browser/index.html dist/
+          cp static/robots.txt dist/
+          cp static/sitemap.xml dist/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
