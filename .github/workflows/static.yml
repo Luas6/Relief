@@ -37,9 +37,9 @@ jobs:
 
       - name: 📋 Copiar archivos necesarios
         run: |
-          cp dist/relief-pose-de-carrelage-et-souples/browser/index.html dist/
-          cp static/robots.txt dist/
-          cp static/sitemap.xml dist/
+          cp dist/relief-pose-de-carrelage-et-sols-souples/browser/index.html dist/relief-pose-de-carrelage-et-sols-souples/browser/404.html
+          cp static/robots.txt dist/relief-pose-de-carrelage-et-sols-souples/browser/
+          cp static/sitemap.xml dist/relief-pose-de-carrelage-et-sols-souples/browser/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -47,7 +47,7 @@ jobs:
       - name: 📤 Subir el contenido prerenderizado
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist/browser'  # Aquí la carpeta generada con HTML estático
+          path: 'dist/relief-pose-de-carrelage-et-sols-souples/browser'
 
       - name: 🚀 Deploy a GitHub Pages
         id: deployment
