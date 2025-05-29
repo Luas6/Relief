@@ -14,7 +14,7 @@ export class DoucheItalienneComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document
   ) {}
 ngOnInit() {
-  this.titleService.setTitle('Douche Italienne - Relief');
+  this.titleService.setTitle('Douche Italienne');
   this.metaService.updateTag({ name: 'description', content: 'Installation de douches à l\'italienne élégantes et fonctionnelles par Relief.' });
   const link: HTMLLinkElement | null = this.document.querySelector("link[rel='canonical']");
     if (link) {

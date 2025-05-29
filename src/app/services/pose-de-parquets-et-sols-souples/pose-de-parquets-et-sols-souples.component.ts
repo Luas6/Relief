@@ -14,7 +14,7 @@ export class PoseDeParquetsEtSolsSouplesComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document
   ) {}
 ngOnInit() {
-  this.titleService.setTitle('Pose de Parquets et Sols Souples - Relief');
+  this.titleService.setTitle('Pose de Parquets et Sols Souples');
   this.metaService.updateTag({ name: 'description', content: 'Pose de parquets, sols souples et PVC sur mesure par Relief.' });
   const link: HTMLLinkElement | null = this.document.querySelector("link[rel='canonical']");
     if (link) {

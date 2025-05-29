@@ -17,7 +17,7 @@ export class SallesDeBainComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document
   ) {}
   ngOnInit() {
-  this.titleService.setTitle('Salles de Bain - Relief');
+  this.titleService.setTitle('Salles de Bain');
   this.metaService.updateTag({ name: 'description', content: 'Aménagement et rénovation de salles de bain modernes par Relief.' });
   const link: HTMLLinkElement | null = this.document.querySelector("link[rel='canonical']");
     if (link) {

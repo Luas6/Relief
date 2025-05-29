@@ -18,7 +18,7 @@ export class GalerieComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document
   ) {}
   ngOnInit() {
-  this.titleService.setTitle('Galerie - Relief');
+  this.titleService.setTitle('Galerie');
   this.metaService.updateTag({ name: 'description', content: 'Découvrez nos réalisations en carrelage, faïence, parquets et plus dans notre galerie.' });
   const link: HTMLLinkElement | null = this.document.querySelector("link[rel='canonical']");
     if (link) {

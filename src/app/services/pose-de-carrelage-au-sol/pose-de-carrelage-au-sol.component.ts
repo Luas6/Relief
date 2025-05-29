@@ -14,7 +14,7 @@ export class PoseDeCarrelageAuSolComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document
   ) {}
 ngOnInit() {
-  this.titleService.setTitle('Pose de Carrelage au Sol - Relief');
+  this.titleService.setTitle('Pose de Carrelage au Sol');
   this.metaService.updateTag({ name: 'description', content: 'Pose professionnelle de carrelage au sol par Relief à Nay et Pau.' });
   const link: HTMLLinkElement | null = this.document.querySelector("link[rel='canonical']");
     if (link) {
