@@ -94,11 +94,13 @@ header h1 {
   background: linear-gradient(0deg, rgba(208, 208, 208, 1) 0%, rgba(64, 64, 130, 1) 100%);
 }
 
-@media only screen and (min-width: 720px) {
+@media only screen and (max-width: 720px) {
   header {
     background-image: url('/assets/img/banner-home-mobile.webp');
   }
-  
+}
+
+@media only screen and (min-width: 720px) {
   #grid-travaux {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
