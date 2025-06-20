@@ -95,6 +95,10 @@ header h1 {
 }
 
 @media only screen and (min-width: 720px) {
+  header {
+    background-image: url('/assets/img/banner-home-mobile.webp');
+  }
+  
   #grid-travaux {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
