@@ -1,14 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
     font-family: 'Philosopher-Regular';
-    src: url('./assets/fonts/Philosopher-Regular.ttf') format('opentype');
+    src: url('./assets/fonts/Philosopher-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
   @font-face {
     font-family: 'Philosopher-Bold';
-    src: url('./assets/fonts/Philosopher-Bold.ttf') format('opentype');
+    src: url('./assets/fonts/Philosopher-Bold.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -16,7 +16,7 @@
 
   @font-face {
     font-family: 'SegoeUi';
-    src: url('./assets/fonts/Segoe-UI-Bold-Italic.ttf') format('opentype');
+    src: url('./assets/fonts/Segoe-UI-Bold-Italic.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -24,7 +24,7 @@
 
   @font-face {
     font-family: 'SegoeScript';
-    src: url('./assets/fonts/segoesc.ttf') format('opentype');
+    src: url('./assets/fonts/segoesc.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
