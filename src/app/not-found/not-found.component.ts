@@ -16,7 +16,7 @@ export class NotFoundComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.titleService.setTitle('Mentions Légales');
+    this.titleService.setTitle('Mentions Légales - Relief');
     this.metaService.updateTag({ name: 'description', content: 'Consultez les mentions légales de Relief Carreleur à Nay et Pau.' });
     const link: HTMLLinkElement | null = this.document.querySelector("link[rel='canonical']");
     if (link) {
