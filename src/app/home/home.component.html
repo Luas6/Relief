@@ -103,7 +103,7 @@ en place pour un travail de qualité.
         <ng-container *ngFor="let slide of slides">
           <ng-template carouselSlide>
             <div class="text-center">
-              <img [src]="slide.img" [alt]="slide.alt" class="img-fluid w-auto" style="max-height: 300px; margin: auto;">
+              <img [src]="slide.img" [alt]="slide.alt" class="img-fluid w-auto" style="max-height: 300px; margin: auto;" loading="lazy" decoding="async">
               <p class="mt-3 px-5 fs-5">{{ slide.title }}</p>
             </div>
           </ng-template>
