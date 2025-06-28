@@ -51,11 +51,23 @@
     justify-content: flex-start;
     max-width: 320px;
     text-align: left;
-    margin-bottom: 15px; /* Espaciado entre elementos */
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+
+  .contacto-item:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
   
   .contacto-item h3 {
     margin: 0;
+  }
+  
+  .contacto-item:hover h3 {
+    color: black;
   }
   
   .contacto-item a {
