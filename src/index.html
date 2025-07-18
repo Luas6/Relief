@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <link rel="preload" href="assets/fonts/Philosopher-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -9,8 +10,10 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0">
   <link rel="icon" type="image/x-icon" href="assets/img/icon.webp">
-  <meta name="description" content="RELIEF, artisan carreleur à Nay et Pau. Pose de carrelage, faïence, parquets, douches à l'italienne et salles de bain.">
-  <meta name="keywords" content="Relief, Carreleur Nay, Pose de carrelage, Faïence, Parquets, Sols souples, Salles de bain, Douche italienne, Artisan, Pau">
+  <meta name="description"
+    content="RELIEF, artisan carreleur à Nay et Pau. Pose de carrelage, faïence, parquets, douches à l'italienne et salles de bain.">
+  <meta name="keywords"
+    content="Relief, Carreleur Nay, Pose de carrelage, Faïence, Parquets, Sols souples, Salles de bain, Douche italienne, Artisan, Pau">
 
   <meta name="geo.region" content="FR-64">
   <meta name="geo.placename" content="Nay, France">
@@ -18,7 +21,8 @@
   <meta name="ICBM" content="43.1791, -0.2615">
 
   <meta property="og:title" content="RELIEF - Artisan Carreleur à Nay">
-  <meta property="og:description" content="Pose de carrelage, faïence, parquets et douches italiennes à Nay. Finitions haut de gamme.">
+  <meta property="og:description"
+    content="Pose de carrelage, faïence, parquets et douches italiennes à Nay. Finitions haut de gamme.">
   <meta property="og:image" content="https://www.reliefcarreleur.fr/assets/img/icon.completo.webp">
   <meta property="og:url" content="https://www.reliefcarreleur.fr">
   <meta property="og:type" content="business.business">
@@ -36,7 +40,30 @@
   <meta name="robots" content="index, follow">
 
 </head>
+
 <body>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17238733334"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-17238733334');
+
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof (url) !== 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17238733334/muVvCIaq0_MaEJbkiJxA',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+
   <app-root></app-root>
 </body>
+
 </html>
