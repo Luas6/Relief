@@ -108,6 +108,38 @@
     width: 100%;
   }
 
+  .floating-btn {
+  position: fixed;
+  right: 20px;   /* Separación del borde derecho */
+  bottom: 20px;  /* Separación del borde inferior */
+  z-index: 1000; /* Siempre por encima de otros elementos */
+  width: 60px;   /* Tamaño del botón */
+  height: 60px;
+  background-color: #404082; /* Color de fondo */
+  border-radius: 50%; /* Botón redondo */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.floating-btn.visible {
+  opacity: 1;
+  pointer-events: auto; /* Hacer clickeable */
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+.floating-btn img.btn-icon {
+  width: 50%;
+  height: auto;
+}
+
+
   @media only screen and (min-width: 720px) {
     .contacto-item {
       justify-content: center;

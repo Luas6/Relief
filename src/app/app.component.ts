@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 
 declare var bootstrap: any;  // Declaramos la variable bootstrap
@@ -11,7 +11,23 @@ declare function gtag_report_conversion(url: string): any; // Google Ads global
 })
 export class AppComponent {
   title = 'relief-pose-de-carrelage-et-sols-souples';
+  showButton = false;
   constructor(private router: Router) {}
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const windowHeight = window.innerHeight;
+    const docHeight = document.documentElement.scrollHeight;
+
+    const scrollPercent = scrollTop / (docHeight - windowHeight);
+
+    if (scrollPercent > 0.1 && scrollPercent < 0.9) {
+      this.showButton = true;
+    } else {
+      this.showButton = false;
+    }
+  }
 
   scrollToContact() {
       document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });

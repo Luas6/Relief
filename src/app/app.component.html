@@ -37,6 +37,24 @@
 
 <div id="router-div">
   <router-outlet></router-outlet>
+      <!-- Botón flotante -->
+<a 
+  *ngIf="showButton"
+  href="tel:+0787662055" 
+  (click)="reportConversion('tel:+0787662055', $event)"
+  class="floating-btn d-flex d-md-none"
+  aria-label="Llamar">
+  <img src="assets/img/phone-mobile.webp" alt="Llamar" class="btn-icon" loading="lazy" decoding="async">
+</a>
+
+<a 
+  *ngIf="showButton"
+  href="mailto:reliefcarreleur@gmail.com" 
+  (click)="reportConversion('mailto:reliefcarreleur@gmail.com', $event)"
+  class="floating-btn d-none d-md-flex"
+  aria-label="Enviar Email">
+  <img src="assets/img/email.webp" alt="Email" class="btn-icon" loading="lazy" decoding="async">
+</a>
 </div>
 
 
