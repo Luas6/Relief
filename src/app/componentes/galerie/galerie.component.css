@@ -59,18 +59,9 @@ header h1 {
   border-top-right-radius: 25px;
 }
 
-.bg-1 {
-  background-color: #40dbe8;
+#frase-galeria{
+  background: url('/assets/img/fondo-texto-galeria.webp') no-repeat center bottom;
 }
-
-.bg-2 {
-  background-color: #404082;
-}
-
-.bg-3 {
-  background-color: #d0d0d0;
-}
-
 @media only screen and (min-width: 720px) {
 
   .round-top {

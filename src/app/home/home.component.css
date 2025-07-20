@@ -88,6 +88,9 @@ header h1 {
 #text1-relief{
 background: url('/assets/img/fondo-texto-1.webp') no-repeat center bottom;
 }
+#text2-relief{
+background: url('/assets/img/fondo-texto-2.webp') no-repeat center bottom;
+}
 .round-top {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
