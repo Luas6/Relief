@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'galerie', component: GalerieComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'pose-de-carrelage-au-sol', component: PoseDeCarrelageAuSolComponent },
-  { path: 'pose-de-faience', component: PoseDeFaienceComponent },
+  { path: 'pose-de-carrelage-mural', component: PoseDeFaienceComponent },
   { path: 'pose-de-parquets-et-sols-souples', component: PoseDeParquetsEtSolsSouplesComponent },
   { path: 'salles-de-bain', component: SallesDeBainComponent },
   { path: 'douche-italienne', component: DoucheItalienneComponent },

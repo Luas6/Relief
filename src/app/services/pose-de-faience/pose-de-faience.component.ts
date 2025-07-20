@@ -14,7 +14,7 @@ export class PoseDeFaienceComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document
   ) {}
 ngOnInit() {
-  this.titleService.setTitle('Pose de Faïence - Relief');
+  this.titleService.setTitle('Pose de carrelage mural - Relief');
   this.metaService.updateTag({ name: 'description', content: 'Installation experte de faïence pour cuisines et salles de bain par Relief.' });
   const link: HTMLLinkElement | null = this.document.querySelector("link[rel='canonical']");
     if (link) {
