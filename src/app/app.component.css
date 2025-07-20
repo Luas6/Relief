@@ -1,149 +1,161 @@
-#call-navbar{
-    text-decoration: none;
+#call-navbar {
+  text-decoration: none;
 }
 
 #router-div {
-    margin-top: 86px;
+  margin-top: 86px;
 }
 
-#navbarNav a{
-    font-size: 1.5rem;
+#navbarNav a {
+  font-size: 1.5rem;
 }
 
-.bg-1{
-    background-color: #365cda83;
+.bg-1 {
+  background-color: #365cda83;
 }
 
-.bg-2{
-    background-color: #d0e9ff;
-}
-.navbar-nav{
-    width: 100%;
-    justify-content: space-evenly;
+.bg-2 {
+  background-color: #d0e9ff;
 }
 
-.nav-item{
-    align-content: center;
+.navbar-nav {
+  width: 100%;
+  justify-content: space-evenly;
 }
 
-.nav-link{
-    text-wrap-style: balance;
-    text-align: center;
-    vertical-align: auto;
+.nav-item {
+  align-content: center;
+}
+
+.nav-link {
+  text-wrap-style: balance;
+  text-align: center;
+  vertical-align: auto;
 }
 
 .nav-link:before {
   content: "\f107";
 }
 
-.navbar-toggler{
+.navbar-toggler {
   border: none;
 }
 
 #contacto .contact-icon {
-    width: 50px; /* Ajusta el tamaño de las imágenes */
-    height: auto;
-  }
-  
-  .contacto-item {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    max-width: 320px;
-    text-align: left;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 12px;
-    padding: 1rem;
-  }
+  width: 50px;
+  /* Ajusta el tamaño de las imágenes */
+  height: auto;
+}
 
-  .contacto-item:hover {
-    transform: translateY(-5px) scale(1.03);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  .contacto-item h3 {
-    margin: 0;
-  }
-  
-  .contacto-item:hover h3 {
-    color: black;
-  }
-  
-  .contacto-item a {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
+.contacto-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 320px;
+  text-align: left;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  padding: 1rem;
+}
 
-  .navbar-nav .nav-item {
-    position: relative;
-  }
+.contacto-item:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 
-  .navbar-brand {
+.contacto-item h3 {
+  margin: 0;
+}
+
+.contacto-item:hover h3 {
+  color: black;
+}
+
+.contacto-item a {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-item {
+  position: relative;
+}
+
+.navbar-brand {
   background-color: white;
   border-radius: 50%;
   background-color: white;
   box-shadow: 0px 0px 8px 8px white;
   margin: 5px;
-  }
+}
 
-  .navbar-nav .nav-link:hover {
-    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.9);
-    transform: scale(1.05); /* Efecto de agrandamiento leve */
-  }
-  
-  .navbar-nav .nav-item::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background: white;
-    transition: all 0.3s ease-in-out;
-    transform: translateX(-50%);
-  }
-  
-  .navbar-nav .nav-item:hover::after {
-    width: 100%;
-  }
+.navbar-nav .nav-link:hover {
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.9);
+  transform: scale(1.05);
+  /* Efecto de agrandamiento leve */
+}
 
-  .floating-btn {
+.navbar-nav .nav-item::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-item:hover::after {
+  width: 100%;
+}
+
+.floating-btn {
   position: fixed;
-  right: 20px;   /* Separación del borde derecho */
-  bottom: 20px;  /* Separación del borde inferior */
-  z-index: 1000; /* Siempre por encima de otros elementos */
-  width: 60px;   /* Tamaño del botón */
+  right: 20px;
+  /* Separación del borde derecho */
+  bottom: 20px;
+  /* Separación del borde inferior */
+  z-index: 1000;
+  /* Siempre por encima de otros elementos */
+  width: 60px;
+  /* Tamaño del botón */
   height: 60px;
-  background-color: #404082; /* Color de fondo */
-  border-radius: 50%; /* Botón redondo */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  background-color: #404082;
+  /* Color de fondo */
+  border-radius: 50%;
+  /* Botón redondo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .floating-btn.visible {
   opacity: 1;
-  pointer-events: auto; /* Hacer clickeable */
+  pointer-events: auto;
+  /* Hacer clickeable */
 }
 
 .floating-btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .floating-btn img.btn-icon {
   width: 50%;
   height: auto;
+  filter: invert(1);
 }
 
 
-  @media only screen and (min-width: 720px) {
-    .contacto-item {
-      justify-content: center;
-      max-width: auto;
-    }
-
+@media only screen and (min-width: 720px) {
+  .contacto-item {
+    justify-content: center;
+    max-width: auto;
   }
+
+}
