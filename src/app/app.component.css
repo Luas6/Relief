@@ -151,7 +151,22 @@
   filter: invert(1);
 }
 
+#form-email label{
+  font-size: large;
+}
 
+#form-email button{
+  background-color: #404082;
+  border: none;
+}
+
+#form-email button:hover {
+  background-color: #4bbcbc;
+}
+
+#form-email button:active {
+  background-color: #4bbcbc;
+}
 @media only screen and (min-width: 720px) {
   .contacto-item {
     justify-content: center;
