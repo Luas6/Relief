@@ -153,8 +153,12 @@
 
 #form-email label{
   font-size: large;
+  color: white;
 }
-
+#form-email label .required {
+  color: red;
+  font-size: x-large;
+}
 #form-email button{
   background-color: #404082;
   border: none;
