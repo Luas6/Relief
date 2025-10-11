@@ -30,45 +30,6 @@ export class HomeComponent {
     
   ];
 
-  obras = [
-    { 
-      img: 'assets/img/obras/carrelage02.webp', 
-      alt: 'Image carrelage2', 
-    },
-    { 
-      img: 'assets/img/obras/carrelage3.webp', 
-      alt: 'Image carrelage3', 
-    },
-    { 
-      img: 'assets/img/obras/doucheitali.webp', 
-      alt: 'Image doucheitali', 
-    },
-    { 
-      img: 'assets/img/obras/doucheitali2.webp', 
-      alt: 'Image doucheitali2', 
-    },
-    { 
-      img: 'assets/img/obras/sdb1.webp', 
-      alt: 'Image sdb1', 
-    },
-    { 
-      img: 'assets/img/obras/sdb3.webp', 
-      alt: 'Image sdb3', 
-    },
-    { 
-      img: 'assets/img/obras/montdemarsan.webp', 
-      alt: 'Image Mont de Marsan', 
-    },
-    { 
-      img: 'assets/img/obras/sdb5.webp', 
-      alt: 'Image sdb5', 
-    },
-    { 
-      img: 'assets/img/obras/solparquet1.webp', 
-      alt: 'Image solparquet1', 
-    }
-
-  ];
 
   customOptions = {
     loop: true,
@@ -90,23 +51,5 @@ export class HomeComponent {
       }
     }
   };
-  customOptionsGaleria = {
-    loop: true,
-    margin: 10,
-    nav: false,
-    dots: true,
-    dotsEach: 1,
-    autoplay: true,
-    responsive: {
-      0: {
-        items: 2
-      },
-      768: {
-        items: 3
-      },
-      1200: {
-        items: 4
-      }
-    }
-  };
+
 }
