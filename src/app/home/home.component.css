@@ -52,12 +52,12 @@
 
 .image-text {
   position: absolute;
-  top: 10px;
+  top: 8px;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.6);
   color: white;
-  padding: 5px 10px;
+  padding: 4px 10px;
   border-radius: 5px;
   font-size: 14px;
   font-weight: bold;
@@ -104,6 +104,13 @@ background: url('/assets/img/fondo-texto-2.webp') no-repeat center bottom;
   filter: brightness(0) invert(1);
 }
 
+#seccion-galeria .btn{
+  background-color: #404082;
+}
+#seccion-galeria .btn:hover{
+  background-color: #40dbe8;
+  color: #404082;
+}
 @media only screen and (max-width: 720px) {
   header {
     background-image: url('/assets/img/banner-home-mobile.webp');

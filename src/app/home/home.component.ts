@@ -32,11 +32,7 @@ export class HomeComponent {
 
   obras = [
     { 
-      img: 'assets/img/obras/carrelage1.webp', 
-      alt: 'Image carrelage1', 
-    },
-    { 
-      img: 'assets/img/obras/carrelage2.webp', 
+      img: 'assets/img/obras/carrelage02.webp', 
       alt: 'Image carrelage2', 
     },
     { 
@@ -56,16 +52,12 @@ export class HomeComponent {
       alt: 'Image sdb1', 
     },
     { 
-      img: 'assets/img/obras/sdb2.webp', 
-      alt: 'Image sdb2', 
-    },
-    { 
       img: 'assets/img/obras/sdb3.webp', 
       alt: 'Image sdb3', 
     },
     { 
-      img: 'assets/img/obras/sdb4.webp', 
-      alt: 'Image sdb4', 
+      img: 'assets/img/obras/montdemarsan.webp', 
+      alt: 'Image Mont de Marsan', 
     },
     { 
       img: 'assets/img/obras/sdb5.webp', 
@@ -74,12 +66,8 @@ export class HomeComponent {
     { 
       img: 'assets/img/obras/solparquet1.webp', 
       alt: 'Image solparquet1', 
-    },
-    { 
-      img: 'assets/img/obras/solpvc2.webp', 
-      alt: 'Image solpvc2', 
     }
-  
+
   ];
 
   customOptions = {
@@ -99,6 +87,25 @@ export class HomeComponent {
         autoplay: false,
         items: 4,
         dots: false,
+      }
+    }
+  };
+  customOptionsGaleria = {
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    dotsEach: 1,
+    autoplay: true,
+    responsive: {
+      0: {
+        items: 2
+      },
+      768: {
+        items: 3
+      },
+      1200: {
+        items: 4
       }
     }
   };

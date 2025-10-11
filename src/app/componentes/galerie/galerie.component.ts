@@ -53,8 +53,8 @@ export class GalerieComponent implements OnInit {
       alt: 'Image sdb3', 
     },
     { 
-      img: 'assets/img/obras/sdb4.webp', 
-      alt: 'Image sdb4', 
+      img: 'assets/img/obras/montdemarsan.webp', 
+      alt: 'Image Mont de Marsan', 
     },
     { 
       img: 'assets/img/obras/sdb5.webp', 
