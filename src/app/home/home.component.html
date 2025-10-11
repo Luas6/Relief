@@ -125,6 +125,30 @@
     </div>
   </section>
 
+  <section id="seccion-galeria" class="py-5 bg-light text-center">
+    <div class="container">
+      <h2 class="mb-4">Découvrez notre galerie</h2>
+      <p class="lead mb-4">
+        Découvrez une sélection de nos œuvres et projets les plus marquants.
+      </p>
+      <a [routerLink]="'/galerie'" class="btn btn-primary btn-lg mb-4">
+        Voir la galerie
+      </a>
+
+      <owl-carousel-o [options]="customOptionsGaleria">
+        <ng-container *ngFor="let slide of obras">
+          <ng-template carouselSlide>
+            <div class="text-center">
+              <div class="ratio ratio-16x9 overflow-hidden mx-auto" style="max-width: 300px;">
+                <img [src]="slide.img" [alt]="slide.alt" class="w-100 h-100 object-fit-cover" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </ng-template>
+        </ng-container>
+        </owl-carousel-o>
+    </div>
+  </section>
+
   <section class="py-3 py-xl-5">
     <h2 class="text-center">Nos atouts</h2>
     <owl-carousel-o [options]="customOptions">
