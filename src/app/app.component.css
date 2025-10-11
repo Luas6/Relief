@@ -18,6 +18,10 @@
   background-color: #d0e9ff;
 }
 
+.ml-3{
+  margin-left: 1.5rem !important;
+}
+
 .navbar-nav {
   width: 100%;
   justify-content: space-evenly;

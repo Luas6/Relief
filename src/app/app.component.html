@@ -8,6 +8,9 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-between" id="navbarNav" #navbarNav>
+      <span class="navbar-text nav-item">
+        <a class="ml-3 nav-link" [routerLink]="'/galerie'" (click)="closeNavbar(navbarNav)" >Galerie</a>
+      </span>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" [routerLink]="'/pose-de-carrelage-au-sol'" (click)="closeNavbar(navbarNav)">Pose de
@@ -25,9 +28,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" [routerLink]="'/douche-italienne'" (click)="closeNavbar(navbarNav)">Douche italienne</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/galerie'" (click)="closeNavbar(navbarNav)">Galerie</a>
         </li>
       </ul>
       <span class="navbar-text nav-item">
