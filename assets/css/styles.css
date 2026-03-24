@@ -1,0 +1,279 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face { 
+  font-family: 'Philosopher-Regular';
+  src: url('../fonts/Philosopher-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Philosopher-Bold';
+  src: url('../fonts/Philosopher-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SegoeUi';
+  src: url('../fonts/Segoe-UI-Bold-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SegoeScript';
+  src: url('../fonts/segoesc.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Philosopher-Regular', sans-serif !important;
+}
+
+h1 {
+  font-family: 'SegoeScript', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+h2,
+h3,
+h4,
+label {
+  font-family: 'Philosopher-Bold', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+h2 {
+  font-size: 2rem !important;
+}
+
+.nav-link{
+  font-size: 1.5rem !important;
+}
+.custom-dark-blue {
+  color: #404082;
+}
+
+.custom-light-blue {
+  color: #4bbcbc;
+}
+
+.custom-gray {
+  color: #a09292;
+}
+
+
+
+.hero {
+  background: url('../img/banner-home.webp') no-repeat center center;
+  background-size: cover;
+  height: 300px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+/* Overlay opcional para mejorar contraste */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* Contenido por encima del overlay */
+.hero-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  color: white;
+}
+
+/* RELIEF */
+.hero-relief {
+  font-family: 'SegoeUI', sans-serif;
+  font-size: 4rem;
+  letter-spacing: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Texto script */
+.hero-title {
+  font-family: 'SegoeScript', cursive;
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+/* Sombra para legibilidad */
+.hero-relief,
+.hero-title {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+.btn-outline-relief {
+  color: #404082;
+  border: 2px solid #404082;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+/* hover */
+.btn-outline-relief:hover {
+  color: #fff;
+  background-color: #404082;
+  border-color: #404082;
+}
+
+/* focus (accesibilidad) */
+.btn-outline-relief:focus,
+.btn-outline-relief:active {
+  box-shadow: 0 0 0 0.2rem #404082;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 8px 0;
+  margin: 0 10px;
+  font-size: 14px;
+  color: #2c2c2c;
+  transition: color 0.3s ease;
+}
+
+/* línea base */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #404082; /* cambia a tu color */
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+/* hover */
+.navbar-nav .nav-link:hover {
+  color: #404082;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+
+.services {
+  padding: 40px 20px;
+}
+
+.services-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* GRID RESPONSIVE */
+.services-grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* 1 columna (mobile) */
+@media (max-width: 575px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 2 columnas (tablet) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 3 columnas (desktop) */
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* CARD */
+.service-card {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1; /* cuadrados */
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+}
+
+/* IMAGEN */
+.service-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+   transition: transform 0.4s ease, border-radius 0.4s ease;
+  border-radius: 50%;
+}
+
+/* HOVER ZOOM */
+.service-card:hover img {
+  transform: scale(1.05);
+  border-radius: 5%;
+}
+
+/* OVERLAY SUAVE */
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+
+/* TEXTO */
+.service-card span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  z-index: 1;
+
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.service-card .contain {
+object-fit: contain;
+}
+
+#text1-relief {
+  background: url(/assets/img/fondo-texto-1.webp) no-repeat center bottom;
+}
+
+#text2-relief {
+  background: url(/assets/img/fondo-texto-2.webp) no-repeat center bottom;
+}
+@media only screen and (min-width: 1200px) {
+
+  h2 {
+    font-size: 2.5rem !important;
+  }
+}
