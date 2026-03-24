@@ -1,11 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-@font-face { 
+@font-face {
   font-family: 'Philosopher-Regular';
   src: url('../fonts/Philosopher-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Philosopher-Bold';
   src: url('../fonts/Philosopher-Bold.woff2') format('woff2');
@@ -51,9 +52,10 @@ h2 {
   font-size: 2rem !important;
 }
 
-.nav-link{
+.nav-link {
   font-size: 1.5rem !important;
 }
+
 .custom-dark-blue {
   color: #404082;
 }
@@ -118,6 +120,7 @@ h2 {
 .hero-title {
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
 }
+
 .btn-outline-relief {
   color: #404082;
   border: 2px solid #404082;
@@ -156,7 +159,8 @@ h2 {
   left: 50%;
   width: 0;
   height: 2px;
-  background-color: #404082; /* cambia a tu color */
+  background-color: #404082;
+  /* cambia a tu color */
   transform: translateX(-50%);
   transition: width 0.3s ease;
 }
@@ -211,7 +215,8 @@ h2 {
 .service-card {
   position: relative;
   display: block;
-  aspect-ratio: 1 / 1; /* cuadrados */
+  aspect-ratio: 1 / 1;
+  /* cuadrados */
   overflow: hidden;
   text-decoration: none;
   color: white;
@@ -222,7 +227,7 @@ h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-   transition: transform 0.4s ease, border-radius 0.4s ease;
+  transition: transform 0.4s ease, border-radius 0.4s ease;
   border-radius: 50%;
 }
 
@@ -261,7 +266,7 @@ h2 {
 }
 
 .service-card .contain {
-object-fit: contain;
+  object-fit: contain;
 }
 
 #text1-relief {
@@ -271,6 +276,76 @@ object-fit: contain;
 #text2-relief {
   background: url(/assets/img/fondo-texto-2.webp) no-repeat center bottom;
 }
+
+.accordion-button:not(.collapsed) {
+  background-color: #404082;
+  color: #fff;
+}
+
+.accordion-button:not(.collapsed):after {
+  filter: brightness(0) invert(1);
+}
+
+
+#contacto .contact-icon {
+  width: 50px;
+  /* Ajusta el tamaño de las imágenes */
+  height: auto;
+}
+
+.contacto-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 320px;
+  text-align: left;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.contacto-item:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contacto-item h3 {
+  margin: 0;
+}
+
+.contacto-item:hover h3 {
+  color: black;
+}
+
+.contacto-item a {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#form-email label {
+  font-size: large;
+  color: white;
+}
+
+#form-email label .required {
+  color: red;
+  font-size: x-large;
+}
+
+#form-email button {
+  background-color: #404082;
+  border: none;
+}
+
+#form-email button:hover {
+  background-color: #4bbcbc;
+}
+
+#form-email button:active {
+  background-color: #4bbcbc;
+}
+
 @media only screen and (min-width: 1200px) {
 
   h2 {
