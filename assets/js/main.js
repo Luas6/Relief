@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const lightbox = GLightbox({
+        selector: '.glightbox'
+    });
     const swiperContainer = document.querySelector(".mySwiper");
 
     if (!swiperContainer) return;

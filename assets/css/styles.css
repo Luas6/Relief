@@ -33,6 +33,12 @@
 
 body {
   font-family: 'Philosopher-Regular', sans-serif !important;
+  font-size: 1.1rem;
+}
+
+body b,
+a{
+  font-size: 1.2rem !important;
 }
 
 h1 {
@@ -68,7 +74,24 @@ h2 {
   color: #a09292;
 }
 
+.title-separator.fancy {
+  position: relative;
+  width: 120px;
+  height: 4px;
+  background-color: #404082;
+  border-radius: 2px;
+}
 
+.title-separator.fancy::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 4px;
+  background-color: #4bbcbc;
+}
 
 .hero {
   background: url('../img/banner-home.webp') no-repeat center center;
@@ -284,6 +307,77 @@ h2 {
 
 .accordion-button:not(.collapsed):after {
   filter: brightness(0) invert(1);
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 180px;
+  gap: 16px;
+}
+
+.bento-item {
+  overflow: hidden;
+  border-radius: 16px;
+  position: relative;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.bento-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.bento-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Variaciones tipo bento */
+.bento-item.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.bento-item.tall {
+  grid-row: span 2;
+}
+
+.bento-item.wide {
+  grid-column: span 2;
+}
+
+.object-bottom {
+  object-position: bottom;
+}
+
+.floating-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  background-color: #404082;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.3s ease;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+.floating-btn img.btn-icon {
+  width: 50%;
+  height: auto;
+  filter: invert(1);
 }
 
 
