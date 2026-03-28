@@ -305,13 +305,13 @@ h2 {
   object-fit: contain;
 }
 
-/*#text1-relief {
-  background: url(/assets/img/fondo-texto-1.webp) no-repeat center top;
+#text1-relief {
+  background: url(/assets/img/fondo-texto-1.webp) no-repeat center top #f0eceb;
 }
 
 #text2-relief {
-  background: url(/assets/img/fondo-texto-2.webp) no-repeat center top;
-}*/
+  background: url(/assets/img/fondo-texto-2.webp) no-repeat center top #f0eceb;
+}
 
 .accordion-button:not(.collapsed) {
   background-color: #404082;
