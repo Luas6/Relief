@@ -52,6 +52,7 @@ h4,
 label {
   font-family: 'Philosopher-Bold', sans-serif !important;
   font-weight: 700 !important;
+  color: #2c2c2c;
 }
 
 h2 {
@@ -98,7 +99,7 @@ h2 {
 }
 
 .hero {
-  background: url('../img/banner-home.webp') no-repeat center center;
+  background: url('../img/banner-home-mobile.webp') no-repeat center center;
   background-size: cover;
   height: 300px;
 
@@ -109,6 +110,11 @@ h2 {
   position: relative;
 }
 
+@media (min-width: 768px) {
+  .hero {
+    background-image: url('../img/banner-home.webp');
+  }
+}
 /* Overlay opcional para mejorar contraste */
 .hero::before {
   content: "";
@@ -412,6 +418,7 @@ h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 12px;
   padding: 1rem;
+  color: #2c2c2c !important;
 }
 
 .contacto-item:hover {
