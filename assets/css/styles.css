@@ -16,14 +16,6 @@
 }
 
 @font-face {
-  font-family: 'SegoeUi';
-  src: url('../fonts/Segoe-UI-Bold-Italic.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'SegoeScript';
   src: url('../fonts/segoesc.woff2') format('woff2');
   font-weight: normal;
@@ -313,13 +305,13 @@ h2 {
   object-fit: contain;
 }
 
-#text1-relief {
-  background: url(/assets/img/fondo-texto-1.webp) no-repeat center bottom;
+/*#text1-relief {
+  background: url(/assets/img/fondo-texto-1.webp) no-repeat center top;
 }
 
 #text2-relief {
-  background: url(/assets/img/fondo-texto-2.webp) no-repeat center bottom;
-}
+  background: url(/assets/img/fondo-texto-2.webp) no-repeat center top;
+}*/
 
 .accordion-button:not(.collapsed) {
   background-color: #404082;
