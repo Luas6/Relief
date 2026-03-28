@@ -58,6 +58,10 @@ h2 {
   font-size: 2rem !important;
 }
 
+.nav-item {
+  align-content: center;
+}
+
 .nav-link {
   font-size: 1.5rem !important;
 }
@@ -117,9 +121,20 @@ h2 {
 .hero-content {
   position: relative;
   display: flex;
+  flex-direction: column; /* MOBILE */
   align-items: center;
-  gap: 30px;
+  gap: 10px;
   color: white;
+  text-align: center;
+}
+
+/* Tablet y desktop */
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row; /* LADO A LADO */
+    gap: 30px;
+    text-align: left;
+  }
 }
 
 /* RELIEF */
