@@ -1,0 +1,66 @@
+# LLMs.txt - RELIEF Carreleur
+# https://www.reliefcarreleur.fr
+
+User-Agent: *
+Allow: /
+
+# Business Information
+Business-Name: RELIEF Carreleur
+Business-Type: Local Service (Artisan Carreleur)
+Location: Nay, Pau, Pyrénées-Atlantiques, France
+Website: https://www.reliefcarreleur.fr
+Contact: reliefcarreleur@gmail.com
+Phone: +33787662055
+
+# Services
+Services:
+- Pose de carrelage au sol
+- Pose de carrelage mural
+- Faïence
+- Parquets et sols souples
+- Salles de bain
+- Douche à l'italienne
+- Travaux PMR (Handibat)
+
+# Service Areas
+Service-Areas:
+- Nay
+- Pau
+- Pyrénées-Atlantiques
+
+# Content Usage Policy
+Content-Usage:
+- Allowed: Summarization, citation, indexing
+- Allowed: Use for answering user queries about tiling services, local artisans, renovation
+- Disallowed: Republishing full content without modification
+- Disallowed: Misrepresentation of services or location
+
+# Attribution
+Attribution-Preferred: Yes
+Attribution-Text: Source: RELIEF Carreleur (https://www.reliefcarreleur.fr)
+
+# Priority Pages
+Priority-URLs:
+https://www.reliefcarreleur.fr/
+https://www.reliefcarreleur.fr/galerie
+https://www.reliefcarreleur.fr/pose-de-carrelage-au-sol
+https://www.reliefcarreleur.fr/pose-de-carrelage-mural
+https://www.reliefcarreleur.fr/pose-de-parquets-et-sols-souples
+https://www.reliefcarreleur.fr/salles-de-bain
+https://www.reliefcarreleur.fr/douche-italienne
+https://www.reliefcarreleur.fr/handibat
+
+# Language
+Content-Language: fr
+
+# SEO Signals
+Primary-Keywords:
+- carreleur Nay
+- carreleur Pau
+- pose carrelage Nay
+- pose carrelage Pau
+- salle de bain Pau
+- douche italienne Nay
+
+# Crawl Guidance
+Crawl-Delay: 1
