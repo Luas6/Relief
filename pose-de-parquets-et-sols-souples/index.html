@@ -30,6 +30,8 @@
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>
+  <link rel="stylesheet" href="/assets/css/footer.css">
 </head>
 
 <body>
@@ -43,30 +45,30 @@
           <img src="../assets/img/icon.webp" alt="Logo RELIEF" height="50">
         </a>
 
-        <a href="../" class="btn btn-outline-relief d-inline-flex align-items-center gap-2 mx-2">
-          <span>&larr;</span>
+        <a href="/" class="btn btn-outline-relief d-inline-flex align-items-center gap-2 mx-2" aria-label="Retour à l’accueil">
+          <span aria-hidden="true">&larr;</span>
         </a>
 
         <div>
-          <a class="btn btn-lg btn-outline-relief d-md-none" href="#contacto">Contact</a>
+          <a class="btn btn-lg btn-outline-relief d-lg-none" href="/pose-de-parquets-et-sols-souples/#contacto">Contact</a>
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Afficher ou masquer le menu">
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto text-center">
-            <li class="nav-item"><a class="nav-link" href="../galerie">Galerie</a></li>
-            <li class="nav-item"><a class="nav-link" href="../pose-de-carrelage-au-sol">Sol</a></li>
-            <li class="nav-item"><a class="nav-link" href="../pose-de-carrelage-mural">Mural</a></li>
-            <li class="nav-item"><a class="nav-link" href="../pose-de-parquets-et-sols-souples/">Parquets</a></li>
-            <li class="nav-item"><a class="nav-link" href="../salles-de-bain/">Salle de bain</a></li>
-            <li class="nav-item"><a class="nav-link" href="../douche-italienne/">Douche</a></li>
-            <li class="nav-item"><a class="nav-link" href="../handibat/">Handibat</a></li>
+            <li class="nav-item"><a class="nav-link" href="/galerie/">Galerie</a></li>
+            <li class="nav-item"><a class="nav-link" href="/pose-de-carrelage-au-sol/">Sol</a></li>
+            <li class="nav-item"><a class="nav-link" href="/pose-de-carrelage-mural/">Mural</a></li>
+            <li class="nav-item"><a class="nav-link" href="/pose-de-parquets-et-sols-souples/" aria-current="page">Parquets</a></li>
+            <li class="nav-item"><a class="nav-link" href="/salles-de-bain/">Salle de bain</a></li>
+            <li class="nav-item"><a class="nav-link" href="/douche-italienne/">Douche</a></li>
+            <li class="nav-item"><a class="nav-link" href="/handibat/">Handibat</a></li>
           </ul>
 
-          <a class="btn btn-outline-relief d-none d-md-block mx-auto my-3" href="#contacto">
+          <a class="btn btn-outline-relief d-none d-lg-block mx-auto my-3" href="/pose-de-parquets-et-sols-souples/#contacto">
             Contact
           </a>
         </div>
@@ -76,6 +78,7 @@
   </header>
 
   <!-- CONTENT -->
+  <main>
   <section class="banner-container container py-5">
     <div class="row align-items-center justify-content-evenly">
 
@@ -135,7 +138,7 @@
     <div class="container">
       <div class="row justify-content-center align-items-center">
 
-        <a href="tel:+0787662055"
+        <a href="tel:+33787662055"
           class="col-md-5 d-flex align-items-center contacto-item text-decoration-none link-secondary">
           <picture>
             <source srcset="assets/img/phone-mobile.webp" media="(max-width: 768px)">
@@ -167,21 +170,22 @@
         class="p-4 border rounded shadow-sm bg-secondary" id="form-email">
 
         <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
         <input type="hidden" name="_next" value="https://www.reliefcarreleur.fr/">
 
         <div class="mb-3">
-          <label class="form-label">Nom <span class="required">*</span></label>
-          <input type="text" name="nom" class="form-control" required>
+          <label for="nom" class="form-label">Nom <span class="required">*</span></label>
+          <input type="text" id="nom" name="nom" class="form-control" required>
         </div>
 
         <div class="mb-3">
-          <label class="form-label">Email ou Téléphone <span class="required">*</span></label>
-          <input type="text" name="contact" class="form-control" required>
+          <label for="contact" class="form-label">Email ou Téléphone <span class="required">*</span></label>
+          <input type="text" id="contact" name="contact" class="form-control" required>
         </div>
 
         <div class="mb-3">
-          <label class="form-label">Message <span class="required">*</span></label>
-          <textarea name="message" class="form-control" rows="4" required></textarea>
+          <label for="message" class="form-label">Message <span class="required">*</span></label>
+          <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary w-100">Envoyer</button>
@@ -190,18 +194,24 @@
   </section>
 
   <!-- STRUCTURED DATA -->
+  </main>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": "https://www.reliefcarreleur.fr/pose-de-parquets-et-sols-souples/#service",
+    "url": "https://www.reliefcarreleur.fr/pose-de-parquets-et-sols-souples/",
     "name": "Pose de parquets et sols souples",
     "provider": {
       "@type": "LocalBusiness",
+      "@id": "https://www.reliefcarreleur.fr/#business",
       "name": "RELIEF Carreleur",
-      "url": "https://www.reliefcarreleur.fr",
+      "url": "https://www.reliefcarreleur.fr/",
       "telephone": "+33787662055",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "22 Avenue Charles de Gaulle",
+        "postalCode": "64800",
         "addressLocality": "Nay",
         "addressRegion": "Pyrénées-Atlantiques",
         "addressCountry": "FR"
@@ -212,18 +222,41 @@
   }
   </script>
 
-  <footer id="footer-principal" class="bg-dark">
-    <div
-      class="container py-3 text-center text-lg-start d-lg-flex justify-content-lg-center gap-lg-4 align-items-center">
-
-      <p class="mb-2 mb-lg-0 text-white small">
-        © 2026 Copyright: RELIEF Carreleur
-      </p>
-
-      <a href="../mentions-legales" class="text-white small text-decoration-underline">
-        Mentions Légales
-      </a>
-
+  <footer id="footer-principal" class="relief-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <section class="footer-intro" aria-label="RELIEF Carreleur">
+          <a class="footer-brand" href="/"><img src="/assets/img/icon.webp" alt="" width="64" height="48" loading="lazy" decoding="async"><span class="footer-brand-name">RELIEF</span></a>
+          <p class="footer-description">Artisan carreleur basé à Nay, pour vos projets de carrelage, faïence et rénovation de salle de bain à Pau et dans les environs.</p>
+          <a href="/galerie/">Voir nos réalisations</a>
+        </section>
+        <nav aria-label="Prestations de RELIEF">
+          <p class="footer-heading">Nos services</p>
+          <ul class="footer-links">
+            <li><a href="/pose-de-carrelage-au-sol/">Carrelage au sol</a></li>
+            <li><a href="/pose-de-carrelage-mural/">Carrelage mural et faïence</a></li>
+            <li><a href="/pose-de-parquets-et-sols-souples/">Parquets et sols souples</a></li>
+            <li><a href="/salles-de-bain/">Salles de bain</a></li>
+            <li><a href="/douche-italienne/">Douches à l’italienne</a></li>
+            <li><a href="/handibat/">Accessibilité et travaux PMR</a></li>
+            <li><a href="/services/">Tous nos services</a></li>
+          </ul>
+        </nav>
+        <section aria-labelledby="footer-contact-title">
+          <p class="footer-heading" id="footer-contact-title">Parlons de votre projet</p>
+          <p class="footer-location">Basé à Nay · Interventions à Pau et alentours</p>
+          <ul class="footer-links">
+            <li><a href="tel:+33787662055">07 87 66 20 55</a></li>
+            <li><a href="mailto:reliefcarreleur@gmail.com">reliefcarreleur@gmail.com</a></li>
+          </ul>
+          <a class="footer-cta" href="/#contacto">Demander un devis gratuit</a>
+        </section>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 RELIEF Carreleur</p>
+        <a href="/mentions-legales/">Mentions légales</a>
+        <p class="footer-credit">Développé par <img src="/assets/img/icon-red-web-charra.png" alt="" width="28" height="28" loading="lazy" decoding="async"><span>Web Charra</span></p>
+      </div>
     </div>
   </footer>
 </body>

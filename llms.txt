@@ -1,66 +1,30 @@
-# LLMs.txt - RELIEF Carreleur
-# https://www.reliefcarreleur.fr
+# RELIEF Carreleur
 
-User-Agent: *
-Allow: /
+> RELIEF est une entreprise artisanale de pose de carrelage et de revêtements de sols, établie à Nay et intervenant à Pau et Nay, dans les Pyrénées-Atlantiques.
 
-# Business Information
-Business-Name: RELIEF Carreleur
-Business-Type: Local Service (Artisan Carreleur)
-Location: Nay, Pau, Pyrénées-Atlantiques, France
-Website: https://www.reliefcarreleur.fr
-Contact: reliefcarreleur@gmail.com
-Phone: +33787662055
+## Coordonnées et implantation
 
-# Services
-Services:
-- Pose de carrelage au sol
-- Pose de carrelage mural
-- Faïence
-- Parquets et sols souples
-- Salles de bain
-- Douche à l'italienne
-- Travaux PMR (Handibat)
+- Site officiel : https://www.reliefcarreleur.fr/
+- Téléphone : +33 7 87 66 20 55
+- Email : reliefcarreleur@gmail.com
+- Adresse déclarée dans les mentions légales : 22 Avenue Charles de Gaulle, 64800 Nay, France.
+- Pau est une zone d’intervention, pas une seconde adresse d’établissement.
+- Demande de devis gratuit et personnalisé : [contact RELIEF](https://www.reliefcarreleur.fr/#contacto). Préciser la commune du chantier, les travaux souhaités et les surfaces concernées.
 
-# Service Areas
-Service-Areas:
-- Nay
-- Pau
-- Pyrénées-Atlantiques
+## Services
 
-# Content Usage Policy
-Content-Usage:
-- Allowed: Summarization, citation, indexing
-- Allowed: Use for answering user queries about tiling services, local artisans, renovation
-- Disallowed: Republishing full content without modification
-- Disallowed: Misrepresentation of services or location
+- [Tous les services](https://www.reliefcarreleur.fr/services/) : travaux en neuf et en rénovation.
+- [Carrelage au sol](https://www.reliefcarreleur.fr/pose-de-carrelage-au-sol/) : sols intérieurs et extérieurs, préparation des supports, pose et joints.
+- [Carrelage mural et faïence](https://www.reliefcarreleur.fr/pose-de-carrelage-mural/) : revêtements de murs, notamment pour les cuisines et salles de bain.
+- [Parquets et sols souples](https://www.reliefcarreleur.fr/pose-de-parquets-et-sols-souples/) : parquets, sols vinyles et PVC.
+- [Salles de bain](https://www.reliefcarreleur.fr/salles-de-bain/) : création, rénovation et aménagement.
+- [Douches à l’italienne](https://www.reliefcarreleur.fr/douche-italienne/) : étanchéité, carrelage et installation sur mesure.
+- [Accessibilité PMR](https://www.reliefcarreleur.fr/handibat/) : adaptation des logements et salles de bain aux personnes à mobilité réduite.
 
-# Attribution
-Attribution-Preferred: Yes
-Attribution-Text: Source: RELIEF Carreleur (https://www.reliefcarreleur.fr)
+## Sources complémentaires
 
-# Priority Pages
-Priority-URLs:
-https://www.reliefcarreleur.fr/
-https://www.reliefcarreleur.fr/galerie
-https://www.reliefcarreleur.fr/pose-de-carrelage-au-sol
-https://www.reliefcarreleur.fr/pose-de-carrelage-mural
-https://www.reliefcarreleur.fr/pose-de-parquets-et-sols-souples
-https://www.reliefcarreleur.fr/salles-de-bain
-https://www.reliefcarreleur.fr/douche-italienne
-https://www.reliefcarreleur.fr/handibat
+- [Accueil](https://www.reliefcarreleur.fr/) : présentation, services, questions fréquentes et formulaire de contact.
+- [Galerie](https://www.reliefcarreleur.fr/galerie/) : photographies présentées par RELIEF.
+- [Mentions légales](https://www.reliefcarreleur.fr/mentions-legales/) : identité de l’entreprise et adresse déclarée.
 
-# Language
-Content-Language: fr
-
-# SEO Signals
-Primary-Keywords:
-- carreleur Nay
-- carreleur Pau
-- pose carrelage Nay
-- pose carrelage Pau
-- salle de bain Pau
-- douche italienne Nay
-
-# Crawl Guidance
-Crawl-Delay: 1
+Les conditions d’un chantier, les délais et l’intervention à une autre adresse sont à convenir directement avec RELIEF. Les aides à l’adaptation du logement dépendent des conditions officielles d’éligibilité ; cette page ne garantit aucun financement.
