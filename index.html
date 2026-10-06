@@ -48,28 +48,10 @@
 
   <meta name="robots" content="index, follow">
 
-  <!-- CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"
-    media="print" onload="this.media='all'">
-  <link rel="preload" href="assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/styles.css">
-  </noscript>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" media="print"
-    onload="this.media='all'">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/css/glightbox.min.css" media="print"
-    onload="this.media='all'">
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"
-    defer></script>
+  <link rel="stylesheet" href="casa-alternativa/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/css/glightbox.min.css">
   <script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/js/glightbox.min.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
-
+  <script src="casa-alternativa/script.js" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -104,542 +86,401 @@
   ]
 }
 </script>
-  <link rel="stylesheet" href="/assets/css/footer.css">
 </head>
+<body class="home-root">
 
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-brand">
+        <img src="assets/img/icon.webp" alt="RELIEF" class="nav-logo">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-menu" id="navMenu">
+        <a href="/galerie/" class="nav-link">Galerie</a>
+        <a href="/pose-de-carrelage-au-sol/" class="nav-link">Sol</a>
+        <a href="/pose-de-carrelage-mural/" class="nav-link">Mural</a>
+        <a href="/pose-de-parquets-et-sols-souples/" class="nav-link">Parquets</a>
+        <a href="/salles-de-bain/" class="nav-link">Salle de bain</a>
+        <a href="/douche-italienne/" class="nav-link">Douche</a>
+        <a href="/handibat/" class="nav-link">Handibat</a>
+        <a href="#contacto" class="nav-cta">Devis gratuit</a>
+      </div>
+    </div>
+  </nav>
 
-<body>
-    
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <div class="container-lg">
+  <main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="assets/img/banner-home.webp" alt="" class="hero-img" width="2000" height="300" fetchpriority="high">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-badge">Artisan Carreleur · Pau & Nay</span>
+      <h1 class="hero-title"><em>RELIEF</em> Pose de Carrelage et Sols</h1>
+      <p class="hero-subtitle">Pose de carrelage, faïence, parquets et rénovation de salles de bain. Un travail précis, esthétique et durable.</p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn btn-primary">Demander un devis gratuit</a>
+        <a href="/galerie/" class="btn btn-outline">Voir nos réalisations</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Défiler</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-        <a class="navbar-brand" href="/">
-          <img src="assets/img/icon.webp" alt="Logo" height="59">
-        </a>
-
-        <div>
-          <a class="btn btn-lg btn-outline-relief d-lg-none" href="#contacto">
-            Contact
-          </a>
-
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Afficher ou masquer le menu">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+  <!-- Trust bar -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <span class="trust-number">14+</span>
+          <span class="trust-label">années d'expérience</span>
         </div>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto text-center">
-            <li class="nav-item"><a class="nav-link" href="/galerie/">Galerie</a></li>
-            <li class="nav-item"><a class="nav-link" href="/pose-de-carrelage-au-sol/">Sol</a></li>
-            <li class="nav-item"><a class="nav-link" href="/pose-de-carrelage-mural/">Mural</a></li>
-            <li class="nav-item"><a class="nav-link" href="/pose-de-parquets-et-sols-souples/">Parquets</a></li>
-            <li class="nav-item"><a class="nav-link" href="/salles-de-bain/">Salle de bain</a></li>
-            <li class="nav-item"><a class="nav-link" href="/douche-italienne/">Douche</a></li>
-            <li class="nav-item"><a class="nav-link" href="/handibat/">Handibat</a></li>
-          </ul>
-          <a class="btn btn-outline-relief d-none d-lg-block mx-auto my-3" href="#contacto">
-            Contact
-          </a>
-
+        <div class="trust-item">
+          <span class="trust-number">3</span>
+          <span class="trust-label">pays de formation</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-number">100%</span>
+          <span class="trust-label">devis gratuit</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-number">A-Z</span>
+          <span class="trust-label">salles de bain clés en main</span>
         </div>
       </div>
-    </nav>
-  </header>
-  <main role="main">
-    <section class="hero">
-      <div class="hero-media" aria-hidden="true">
-        <picture>
-          <source media="(min-width: 992px)" srcset="assets/img/banner-home.webp">
-          <img src="assets/img/banner-home-mobile.webp"
-            alt="RELIEF pose de carrelage et sols à Nay et Pau"
-            loading="eager" decoding="async" width="1200" height="600" fetchpriority="high">
-        </picture>
-      </div>
-      <div class="hero-content">
-        <span class="hero-relief">RELIEF</span>
-        <h1 class="hero-title">Carreleur à Pau et Nay</h1>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="services container col-9">
-      <h2 class="services-title">Pose de carrelage et sols</h2>
-      <h2 class="services-title mb-0">Nos services</h2>
-      <div class="title-separator fancy mx-auto mb-4"></div>
+  <!-- Services -->
+  <section class="services section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nos services</span>
+        <h2 class="section-title">Pose de carrelage et sols</h2>
+        <p class="section-desc">Des solutions sur mesure pour tous vos projets, en neuf comme en rénovation.</p>
+      </div>
       <div class="services-grid">
-
-        <a href="/pose-de-carrelage-mural/" class="service-card rounded-3">
-          <img src="assets/img/obras/prestado/azulejos.webp" alt="Pose de carrelage mural à Nay et Pau" width="260"
-            height="260" decoding="async">
-          <span>POSE DE CARRELAGE MURAL</span>
+        <a href="/pose-de-carrelage-mural/" class="service-card">
+          <div class="service-icon">
+            <img src="assets/img/obras/prestado/azulejos.webp" alt="">
+          </div>
+          <h3>Carrelage mural</h3>
+          <p>Faïence et carrelage mural pour cuisines, salles de bain et espaces de vie.</p>
+          <span class="service-link">En savoir plus →</span>
         </a>
-
-        <a href="/pose-de-carrelage-au-sol/" class="service-card rounded">
-          <img src="assets/img/obras/prestado/azulejossuelo.webp"
-            alt="Pose de carrelage au sol pour habitations et locaux" width="260" height="260" decoding="async">
-          <span>POSE DE CARRELAGE AU SOL</span>
+        <a href="/pose-de-carrelage-au-sol/" class="service-card">
+          <div class="service-icon">
+            <img src="assets/img/obras/prestado/azulejossuelo.webp" alt="">
+          </div>
+          <h3>Carrelage au sol</h3>
+          <p>Pose de carrelage au sol pour habitations, locaux et terrasses.</p>
+          <span class="service-link">En savoir plus →</span>
         </a>
-
-        <a href="/salles-de-bain/" class="service-card rounded">
-          <img src="assets/img/obras/prestado/baño.webp" alt="Rénovation et installation de salles de bain complètes"
-            width="260" height="260" decoding="async">
-          <span>SALLES DE BAIN</span>
+        <a href="/salles-de-bain/" class="service-card">
+          <div class="service-icon">
+            <img src="assets/img/obras/prestado/baño.webp" alt="">
+          </div>
+          <h3>Salles de bain</h3>
+          <p>Rénovation et installation de salles de bain complètes, clés en main.</p>
+          <span class="service-link">En savoir plus →</span>
         </a>
-
-        <a href="/douche-italienne/" class="service-card rounded">
-          <img src="assets/img/obras/prestado/duchaitaliana.webp" alt="Création de douche à l'italienne sur mesure"
-            width="260" height="260" decoding="async">
-          <span>DOUCHE À L'ITALIENNE</span>
+        <a href="/douche-italienne/" class="service-card">
+          <div class="service-icon">
+            <img src="assets/img/obras/prestado/duchaitaliana.webp" alt="">
+          </div>
+          <h3>Douche à l'italienne</h3>
+          <p>Création de douches à l'italienne sur mesure, accessibles et élégantes.</p>
+          <span class="service-link">En savoir plus →</span>
         </a>
-
-        <a href="/pose-de-parquets-et-sols-souples/" class="service-card rounded">
-          <img src="assets/img/obras/prestado/parquet.webp" alt="Pose de parquets et sols souples" width="260"
-            height="260" decoding="async">
-          <span>PARQUETS ET SOLS SOUPLES</span>
+        <a href="/pose-de-parquets-et-sols-souples/" class="service-card">
+          <div class="service-icon">
+            <img src="assets/img/obras/prestado/parquet.webp" alt="">
+          </div>
+          <h3>Parquets & sols souples</h3>
+          <p>Pose de parquets, lames clipsables, PVC et sols vinyles.</p>
+          <span class="service-link">En savoir plus →</span>
         </a>
-
-        <a href="/handibat/" class="service-card rounded">
-          <img class="contain" src="assets/img/obras/prestado/handibat-silverbat.webp"
-            alt="Travaux adaptés PMR et accessibilité" width="260" height="260" decoding="async">
-          <span>TRAVAUX PMR</span>
+        <a href="/handibat/" class="service-card">
+          <div class="service-icon">
+            <img src="assets/img/obras/prestado/handibat-silverbat.webp" alt="">
+          </div>
+          <h3>Travaux PMR</h3>
+          <p>Aménagements adaptés pour personnes à mobilité réduite.</p>
+          <span class="service-link">En savoir plus →</span>
         </a>
-
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="text1-relief" class="text-center py-5">
-      <div class="container">
-        <h2 class="fw-bold">Votre Expert en Carrelage à Pau</h2>
-        <div class="title-separator fancy mx-auto mb-4"></div>
-        <p class="mt-3">
-          RELIEF est une entreprise artisanale établie à Nay, qui intervient à Pau et Nay
-          pour vos projets de carrelage, de faïence et de revêtements de sols.
-        </p>
-        <p>
-          Que vous souhaitiez rénover votre salle de bain, carreler vos terrasses
-          ou vos espaces extérieurs, embellir votre cuisine ou créer un salon
-          unique, vous cherchez un carreleur à Pau pour un travail <b>précis,
-            esthétique et durable.</b>
-        </p>
-        <p>
-          Nous avons les solutions qu'il vous faut.
-        </p>
-        <p>
-          Découvrez <a href="/services/">nos services de carreleur</a> pour vos sols,
-          vos murs et votre salle de bain, en neuf comme en rénovation.
-          <a href="#contacto">Demander un devis gratuit et personnalisé</a>.
-        </p>
-      </div>
-      <div class="container">
-        <h2 class="fw-bold">À propos</h2>
-        <div class="title-separator fancy mx-auto mb-4"></div>
-        <p class="mt-3">
-          Je suis artisan carreleur diplômé, avec de nombreuses années
-          d'expérience dans le domaine de la construction.
-        </p>
-        <p>
-          RELIEF intervient à Pau et Nay pour
-          des travaux de revêtements de sols et murs.
-        </p>
-        <p>
-          Nous sommes une équipe de passionnés par notre métier et réputés
-          pour effectuer avec précision et efficacité des projets résidentiels, pour
-          les particuliers et aussi pour les collectivités, en neuf et en rénovation.
-        </p>
-        <p>
-          Si vous cherchez un carreleur, nous sommes des travailleurs assidus et
-          consciencieux avec des aptitudes à produire une finition lisse et de haute
-          qualité pour satisfaire nos clients.
-        </p>
-        <p>
-          <b>L'expérience unie au sens de l'organisation</b> fera la différence pour
-          réussir chacun de vos projets.
-        </p>
-      </div>
-    </section>
-
-    <section id="seccion-galeria" class="py-5 bg-light text-center">
-      <div class="container">
-
-        <h2 class="text-center">Découvrez notre galerie</h2>
-        <div class="title-separator fancy mx-auto my-3"></div>
-        <p class="mb-4"> Découvrez une sélection de photos de nos chantiers. </p>
-
-        <div class="bento-grid mt-4">
-
-          <a class="bento-item large glightbox" href="assets/img/obras/primavera4.webp"
-            data-type="image" data-gallery="relief">
-            <img src="assets/img/obras/primavera4.webp"
-              alt="Terrasse extérieure avec pose de carrelage effet bois" loading="lazy" decoding="async">
-          </a>
-
-          <a class="bento-item glightbox" href="assets/img/obras/montdemarsan.webp"
-            data-type="image" data-gallery="relief">
-            <img src="assets/img/obras/montdemarsan.webp"
-              alt="Aménagement intérieur avec pose de carrelage au sol dans une maison" loading="lazy" decoding="async">
-          </a>
-
-          <a class="bento-item tall glightbox" href="assets/img/obras/primavera2.webp"
-            data-type="image" data-gallery="relief">
-            <img src="assets/img/obras/primavera2.webp" alt="Pose de parquet ou carrelage dans un salon moderne"
-              loading="lazy" decoding="async">
-          </a>
-
-          <a class="bento-item tall glightbox" href="assets/img/obras/sdb5.webp"
-            data-type="image" data-gallery="relief">
-            <img src="assets/img/obras/sdb5.webp" alt="Salle de bain rénovée avec douche moderne et carrelage mural"
-              loading="lazy" decoding="async">
-          </a>
-
-          <a class="bento-item glightbox" href="assets/img/obras/faience1.webp"
-            data-type="image" data-gallery="relief">
-            <img src="assets/img/obras/faience1.webp" alt="Installation de faïence murale dans une salle de bain"
-              loading="lazy" decoding="async">
-          </a>
-
-          <a class="bento-item wide glightbox" href="assets/img/obras/primavera1.webp"
-            data-type="image" data-gallery="relief">
-            <img src="assets/img/obras/primavera1.webp" class="object-bottom"
-              alt="Pose de carrelage extérieur sur terrasse avec finition professionnelle" loading="lazy"
-              decoding="async">
-          </a>
+  <!-- About -->
+  <section class="about section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <span class="section-tag">À propos</span>
+          <h2 class="section-title">Un artisan passionné, un savoir-faire reconnu</h2>
+          <p>Je suis artisan carreleur diplômé, avec de nombreuses années d'expérience dans le domaine de la construction. Formé dans trois pays, je me suis établi dans la région de Pau depuis déjà quatorze années.</p>
+          <p>RELIEF intervient à Pau et Nay pour des travaux de revêtements de sols et murs, pour les particuliers comme pour les collectivités, en neuf et en rénovation.</p>
+          <blockquote class="about-quote">
+            « C'est le travail de carreleur et solier, ancien métier, des premières civilisations, qui ne cesse d'évoluer, et qui retrouve de nos jours, l'équilibre parfait entre tradition et innovation. »
+          </blockquote>
+          <a href="#contacto" class="btn btn-primary">Discuter de votre projet</a>
         </div>
-
-        <div class="text-center mt-5">
-          <a href="/galerie/" class="btn btn-outline-relief px-4 py-2">
-            Voir toute la galerie
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="nous-atout" class="py-3 py-xl-5 container">
-      <h2 class="text-center">Nos atouts</h2>
-      <div class="title-separator fancy mx-auto mb-4"></div>
-
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide text-center">
-            <img src="assets/img/handshake.webp" alt="Économisez de l'argent" class="img-fluid w-auto"
-              style="max-height: 300px; margin:auto;" loading="lazy" decoding="async">
-            <p class="mt-3 px-5 fs-5">
-              Conseils personnalisés et adaptés aux différents besoins et budgets
-            </p>
-          </div>
-
-          <div class="swiper-slide text-center">
-            <img src="assets/img/documento.webp" alt="Professionnalisme" class="img-fluid w-auto"
-              style="max-height: 300px; margin:auto;" loading="lazy" decoding="async">
-            <p class="mt-3 px-5 fs-5">
-              Devis gratuit, transparent et à domicile (Pau et alentours, Nay et alentours)
-            </p>
-          </div>
-
-          <div class="swiper-slide text-center">
-            <img src="assets/img/paleta.webp" alt="Rapidité" class="img-fluid w-auto"
-              style="max-height: 300px; margin:auto;" loading="lazy" decoding="async">
-            <p class="mt-3 px-5 fs-5">
-              Expertise et expérience. Travail soigné et sous garantie
-            </p>
-          </div>
-
-          <div class="swiper-slide text-center">
-            <img src="assets/img/casco-reloj.webp" alt="Image 4" class="img-fluid w-auto"
-              style="max-height: 300px; margin:auto;" loading="lazy" decoding="async">
-            <p class="mt-3 px-5 fs-5">
-              Nous travaillons dans les meilleurs délais, avec des professionnels reconnus pour leurs bonnes compétences
-            </p>
-          </div>
-
+        <div class="about-image">
+          <img src="assets/img/obras/primavera4.webp" alt="Terrasse en carrelage" loading="lazy">
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="text2-relief" class="text-center py-5">
-      <div class="container">
-        <h3 class="fw-bold">Un parcours riche et passionné</h3>
-        <div class="title-separator fancy mx-auto mb-4"></div>
-        <p class="mt-3">
-          Qui a débuté dans les
-          années 2000, porté par une passion transmise par mes proches et une curiosité
-          naturelle. Je me suis formé dans trois pays, avant de m’établir dans la région de Pau depuis déjà
-          quatorze années, ville où j’ai obtenu mon diplôme (à Lons) et perfectionné mon
-          savoir-faire dans les Pyrénées-Atlantiques.
-        </p>
+  <!-- Gallery -->
+  <section class="gallery section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Réalisations</span>
+        <h2 class="section-title">Découvrez notre galerie</h2>
+        <p class="section-desc">Découvrez une sélection de photos de nos chantiers.</p>
       </div>
-      <div class="container">
-        <h3 class="fw-bold">Tradition et Innovation</h3>
-        <div class="title-separator fancy mx-auto mb-4"></div>
-        <p class="mt-3">
-          Ayant appris comment carreler au cœur
-          de diverses entreprises basées à Pau, j'ai toujours été fasciné par les divers matériaux
-          qui couvrent nos sols et murs, ce qui m'a amené à approfondir mes connaissances
-          sur les techniques qui font partie de ce métier passionnant.
-        </p>
-        <p>
-          <b>« C'est le travail de carreleur et solier, ancien métier, des premières
-            civilisations, qui ne cesse d'évoluer, et qui retrouve de nos jours, l'équilibre
-            parfait entre tradition et innovation. »</b>
-        </p>
-        <p>
-          "Nous croyons que chaque projet est unique pour faire le point d'honneur à satisfaire
-          le client."
-        </p>
+      <div class="gallery-grid">
+        <a href="assets/img/obras/primavera4.webp" class="gallery-item glightbox" data-gallery="relief">
+          <img src="assets/img/obras/primavera4.webp" alt="Terrasse extérieure avec pose de carrelage effet bois" loading="lazy">
+          <div class="gallery-overlay"><span>Terrasse</span></div>
+        </a>
+        <a href="assets/img/obras/montdemarsan.webp" class="gallery-item glightbox" data-gallery="relief">
+          <img src="assets/img/obras/montdemarsan.webp" alt="Aménagement intérieur avec pose de carrelage au sol" loading="lazy">
+          <div class="gallery-overlay"><span>Intérieur</span></div>
+        </a>
+        <a href="assets/img/obras/primavera2.webp" class="gallery-item glightbox" data-gallery="relief">
+          <img src="assets/img/obras/primavera2.webp" alt="Pose de parquet ou carrelage dans un salon moderne" loading="lazy">
+          <div class="gallery-overlay"><span>Salon</span></div>
+        </a>
+        <a href="assets/img/obras/sdb5.webp" class="gallery-item glightbox" data-gallery="relief">
+          <img src="assets/img/obras/sdb5.webp" alt="Salle de bain rénovée avec douche moderne" loading="lazy">
+          <div class="gallery-overlay"><span>Salle de bain</span></div>
+        </a>
+        <a href="assets/img/obras/faience1.webp" class="gallery-item glightbox" data-gallery="relief">
+          <img src="assets/img/obras/faience1.webp" alt="Installation de faïence murale dans une salle de bain" loading="lazy">
+          <div class="gallery-overlay"><span>Faïence</span></div>
+        </a>
+        <a href="assets/img/obras/primavera1.webp" class="gallery-item glightbox" data-gallery="relief">
+          <img src="assets/img/obras/primavera1.webp" alt="Pose de carrelage extérieur sur terrasse" loading="lazy">
+          <div class="gallery-overlay"><span>Extérieur</span></div>
+        </a>
       </div>
-      <div class="container">
-        <h3 class="fw-bold">Pourquoi Choisir un Carreleur à Pau?</h3>
-        <div class="title-separator fancy mx-auto mb-4"></div>
-        <p class="mt-3">
-          Vous êtes décidé à carreler votre balcon ou changer ces anciennes lames de bois...
-          Mais au moment de s'y mettre, beaucoup de questions se posent.
-        </p>
-        <p>
-          En effet, le métier de carreleur ou de solier nécessite une technique et une pratique qui
-          s’apprennent seulement sur des chantiers à travers les années.
-          Découpes, applications de mortiers, fractionnement et calepinages mais aussi les
-          connaissances des normes qui s’imposent pour la durabilité et bon achèvement des
-          chantiers, peuvent se montrer vite comme un vrai casse-tête.
-        </p>
-        <p>
-          <b>"Opter pour un Carreleur à Pau c'est choisir un expert local connaissant la
-            zone et surtout expert de son métier.
-            Nos valeurs reposent sur la qualité des travaux fournis mais aussi sur le côté
-            humain, nous sommes en interaction avec le client et restons à l'écoute de ses
-            besoins"</b>
-        </p>
+      <div class="text-center mt-5" style="margin-top: 48px;">
+        <a href="/galerie/" class="btn btn-outline-dark">Voir toute la galerie</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="faqs-relief" class="py-5">
-      <div class="container">
-        <h2 class="mb-4">FAQ - Questions fréquentes</h2>
-        <div class="accordion" id="faqAccordion">
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                aria-expanded="true" aria-controls="collapseOne">
-                Quels types de carrelage posez-vous ?
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-              data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Nous proposons la pose d'une large variété de carrelages : céramique, porcelaine, grès cérame, faïence
-                ainsi que certaines options en pierre naturelle pour vos projets intérieurs et extérieurs.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Quels types de parquets et sols souples proposez-vous chez RELIEF?
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-              data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Nous proposons la pose d'une large variété de parquets et sols souples : parquet stratifié, collé,
-                linoleum, lames clipsables, dalles PVC et divers sols en vinyle.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Comment obtenir un devis pour des travaux de carrelage à Pau ou Nay ?
-              </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-              data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Oui, RELIEF propose un devis gratuit et personnalisé pour votre projet à Pau ou Nay.
-                Contactez-nous par téléphone, par email ou via le formulaire en précisant la commune,
-                le type de travaux et les surfaces concernées. Nous étudierons votre demande ensemble.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFour">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                Est-ce que vous faites des salles de bain et toilettes clés en main?
-              </button>
-            </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-              data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Oui, forts de notre expérience et possédant l'accréditation nécessaire, nous prenons en charge la
-                réfection des salles d'eau de A à Z (installation et aménagement compris), en collaborant avec des
-                professionnels réputés en plomberie et électricité. Nous intervenons aussi pour des travaux destinés aux
-                personnes handicapées.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFive">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                Combien de temps dure un projet typique de pose de carrelage?
-              </button>
-            </h2>
-            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-              data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                La durée dépend de la taille et de la complexité du projet ainsi que de divers facteurs comme
-                l'accessibilité au chantier, mais en général, un projet standard peut prendre entre quelques jours et
-                une
-                semaine.
-              </div>
-            </div>
-          </div>
-
+  <!-- Why choose us -->
+  <section class="why-us section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nos atouts</span>
+        <h2 class="section-title">Pourquoi choisir RELIEF ?</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">💡</div>
+          <h3>Conseils personnalisés</h3>
+          <p>Des solutions adaptées à vos besoins et votre budget.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">📋</div>
+          <h3>Devis transparent</h3>
+          <p>Devis gratuit et détaillé, à domicile ou à distance.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🎨</div>
+          <h3>Expertise reconnue</h3>
+          <p>Travail soigné, finitions de qualité et garantie.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">⏱️</div>
+          <h3>Respect des délais</h3>
+          <p>Intervention rapide et professionnelle dans les meilleurs délais.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="py-5 bg-light" id="contacto">
-      <div class="container">
-        <div class="row justify-content-center align-items-center">
-
-          <a href="tel:+33787662055"
-            class="col-md-5 d-flex align-items-center contacto-item text-decoration-none link-secondary">
-            <picture>
-              <source srcset="assets/img/phone-mobile.webp" media="(max-width: 768px)">
-              <img src="assets/img/phone.webp" alt="Téléphone" class="contact-icon" loading="lazy" decoding="async" width="50" height="50">
-            </picture>
-            <div class="ms-3">
-              <h3 class="mb-1">Téléphone</h3>
-              <span>07 87 66 20 55</span>
-            </div>
-          </a>
-
-          <a href="mailto:reliefcarreleur@gmail.com"
-            class="col-md-5 d-flex align-items-center contacto-item text-decoration-none link-secondary">
-            <picture>
-              <source srcset="assets/img/email-mobile.webp" media="(max-width: 768px)">
-              <img src="assets/img/email.webp" alt="Email" class="contact-icon" loading="lazy" decoding="async" width="50" height="50">
-            </picture>
-            <div class="ms-3">
-              <h3 class="mb-1">E-Mail</h3>
-              <span>reliefcarreleur@gmail.com</span>
-            </div>
-          </a>
-
-          <a href="https://www.facebook.com/profile.php?id=61574427483464" target="_blank"
-            class="col-md-5 d-flex align-items-center contacto-item text-decoration-none link-secondary">
-            <picture>
-              <source srcset="assets/img/facebook-mobile.webp" media="(max-width: 768px)">
-              <img src="assets/img/facebook.webp" alt="Facebook" class="contact-icon" loading="lazy" decoding="async" width="50" height="50">
-            </picture>
-            <div class="ms-3">
-              <h3 class="mb-1">Facebook</h3>
-              <span>Voir le profil</span>
-            </div>
-          </a>
-
-          <a href="https://maps.app.goo.gl/5Z3hjmxM4YaWL9km7" target="_blank"
-            class="col-md-5 d-flex align-items-center contacto-item text-decoration-none link-secondary">
-            <picture>
-              <source srcset="assets/img/maps-mobile.webp" media="(max-width: 768px)">
-              <img src="assets/img/maps.webp" alt="Google Maps" class="contact-icon" loading="lazy" decoding="async" width="50" height="50">
-            </picture>
-            <div class="ms-3">
-              <h3 class="mb-1">Adresse</h3>
-              <span>Voir sur Google Maps</span>
-            </div>
-          </a>
-
+  <!-- Process -->
+  <section class="process section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Notre méthode</span>
+        <h2 class="section-title">Comment ça se passe ?</h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">01</div>
+          <h3>Contact</h3>
+          <p>Appelez-nous ou envoyez un message pour décrire votre projet.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">02</div>
+          <h3>Devis gratuit</h3>
+          <p>Nous visitons votre projet et vous remettons un devis détaillé.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">03</div>
+          <h3>Réalisation</h3>
+          <p>Nous réalisons vos travaux avec précision et dans les délais.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">04</div>
+          <h3>Garantie</h3>
+          <p>Un travail garanti et un suivi après la fin du chantier.</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="container mt-4">
-        <form action="https://formsubmit.co/338f44ea291a454f5347896201a022c0" method="POST"
-          class="p-4 border rounded shadow-sm bg-secondary" id="form-email">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
-          <input type="hidden" name="_cc" value="hedamaji@gmail.com,reliefcarreleur@gmail.com,saulmaji@gmail.com">
-
-          <input type="hidden" name="_next" value="https://www.reliefcarreleur.fr/">
-          <input type="hidden" name="url" id="form-url">
-
-          <div class="mb-3">
-            <label for="nom" class="form-label">Nom : <span class="required">*</span></label>
-            <input type="text" id="nom" name="nom" class="form-control" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="contact" class="form-label">Email ou Téléphone : <span class="required">*</span></label>
-            <input type="text" id="contact" name="contact" class="form-control" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="message" class="form-label">Posez-nous votre question : <span class="required">*</span></label>
-            <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary w-100">Envoyer</button>
-        </form>
+  <!-- FAQ -->
+  <section class="faq section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Questions fréquentes</h2>
       </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Quels types de carrelage posez-vous ?</summary>
+          <div class="faq-answer">
+            <p>Nous proposons la pose d'une large variété de carrelages : céramique, porcelaine, grès cérame, faïence ainsi que certaines options en pierre naturelle pour vos projets intérieurs et extérieurs.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Quels types de parquets et sols souples proposez-vous ?</summary>
+          <div class="faq-answer">
+            <p>Nous proposons la pose de parquets stratifiés, collés, de linoleum, de lames clipsables, de dalles PVC et divers sols en vinyle.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Comment obtenir un devis ?</summary>
+          <div class="faq-answer">
+            <p>Contactez-nous par téléphone, par email ou via le formulaire en précisant la commune, le type de travaux et les surfaces concernées. Nous étudions votre demande ensemble.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Faites-vous des salles de bain clés en main ?</summary>
+          <div class="faq-answer">
+            <p>Oui, nous prenons en charge la réfection des salles d'eau de A à Z (installation et aménagement compris), en collaborant avec des professionnels réputés en plomberie et électricité.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Combien de temps dure un projet ?</summary>
+          <div class="faq-answer">
+            <p>La durée dépend de la taille et de la complexité du projet. En général, un projet standard peut prendre entre quelques jours et une semaine.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
 
-    </section>
+  <!-- Contact -->
+  <section class="contact section" id="contacto">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="section-tag">Contact</span>
+          <h2 class="section-title">Parlons de votre projet</h2>
+          <p>Basé à Nay, intervenant à Pau et alentours. Devis gratuit et personnalisé.</p>
+          <div class="contact-details">
+            <a href="tel:+33787662055" class="contact-item">
+              <span class="contact-icon">📞</span>
+              <div>
+                <strong>Téléphone</strong>
+                <span>07 87 66 20 55</span>
+              </div>
+            </a>
+            <a href="mailto:reliefcarreleur@gmail.com" class="contact-item">
+              <span class="contact-icon">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <span>reliefcarreleur@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://maps.app.goo.gl/5Z3hjmxM4YaWL9km7" target="_blank" class="contact-item">
+              <span class="contact-icon">📍</span>
+              <div>
+                <strong>Adresse</strong>
+                <span>22 Av. Charles de Gaulle, Nay</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper">
+          <form action="https://formsubmit.co/338f44ea291a454f5347896201a022c0" method="POST" class="contact-form">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+            <input type="hidden" name="_cc" value="hedamaji@gmail.com,reliefcarreleur@gmail.com,saulmaji@gmail.com">
+            <input type="hidden" name="_next" value="https://www.reliefcarreleur.fr/">
+            <div class="form-group">
+              <label for="nom">Nom <span class="required">*</span></label>
+              <input type="text" id="nom" name="nom" required>
+            </div>
+            <div class="form-group">
+              <label for="contact">Email ou Téléphone <span class="required">*</span></label>
+              <input type="text" id="contact" name="contact" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Votre projet <span class="required">*</span></label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Envoyer ma demande</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
   </main>
-
-  <!-- Botón flotante -->
-  <a href="tel:+33787662055" class="floating-btn d-flex d-md-none" aria-label="Appeler RELIEF">
-    <img src="assets/img/phone-mobile.webp" alt="Téléphone" class="btn-icon" loading="lazy" decoding="async" width="30" height="30">
-  </a>
-
-  <a href="mailto:reliefcarreleur@gmail.com" class="floating-btn d-none d-md-flex" aria-label="Envoyer un email à RELIEF">
-    <img src="assets/img/email.webp" alt="Email" class="btn-icon" loading="lazy" decoding="async" width="30" height="30">
-  </a>
-
-  <footer id="footer-principal" class="relief-footer">
-    <div class="footer-container">
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
       <div class="footer-grid">
-        <section class="footer-intro" aria-label="RELIEF Carreleur">
-          <a class="footer-brand" href="/"><img src="/assets/img/icon.webp" alt="" width="64" height="48" loading="lazy" decoding="async"><span class="footer-brand-name">RELIEF</span></a>
-          <p class="footer-description">Artisan carreleur basé à Nay, pour vos projets de carrelage, faïence et rénovation de salle de bain à Pau et dans les environs.</p>
-          <a href="/galerie/">Voir nos réalisations</a>
-        </section>
-        <nav aria-label="Prestations de RELIEF">
-          <p class="footer-heading">Nos services</p>
-          <ul class="footer-links">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo">
+            <img src="assets/img/icon.webp" alt="RELIEF">
+            <span>RELIEF</span>
+          </a>
+          <p>Artisan carreleur basé à Nay, pour vos projets de carrelage, faïence et rénovation de salle de bain à Pau et dans les environs.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Nos services</h4>
+          <ul>
             <li><a href="/pose-de-carrelage-au-sol/">Carrelage au sol</a></li>
-            <li><a href="/pose-de-carrelage-mural/">Carrelage mural et faïence</a></li>
+            <li><a href="/pose-de-carrelage-mural/">Carrelage mural</a></li>
             <li><a href="/pose-de-parquets-et-sols-souples/">Parquets et sols souples</a></li>
             <li><a href="/salles-de-bain/">Salles de bain</a></li>
-            <li><a href="/douche-italienne/">Douches à l’italienne</a></li>
-            <li><a href="/handibat/">Accessibilité et travaux PMR</a></li>
-            <li><a href="/services/">Tous nos services</a></li>
+            <li><a href="/douche-italienne/">Douches à l'italienne</a></li>
+            <li><a href="/handibat/">Accessibilité PMR</a></li>
           </ul>
-        </nav>
-        <section aria-labelledby="footer-contact-title">
-          <p class="footer-heading" id="footer-contact-title">Parlons de votre projet</p>
-          <p class="footer-location">Basé à Nay · Interventions à Pau et alentours</p>
-          <ul class="footer-links">
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <ul>
             <li><a href="tel:+33787662055">07 87 66 20 55</a></li>
             <li><a href="mailto:reliefcarreleur@gmail.com">reliefcarreleur@gmail.com</a></li>
           </ul>
-          <a class="footer-cta" href="/#contacto">Demander un devis gratuit</a>
-        </section>
+          <a href="#contacto" class="btn btn-primary">Demander un devis</a>
+        </div>
       </div>
       <div class="footer-bottom">
         <p>© 2026 RELIEF Carreleur</p>
         <a href="/mentions-legales/">Mentions légales</a>
-        <p class="footer-credit">Développé par <img src="/assets/img/icon-red-web-charra.png" alt="" width="28" height="28" loading="lazy" decoding="async"><span>Web Charra</span></p>
+        <p class="footer-credit">Développé par <img src="assets/img/icon-red-web-charra.png" alt="Web Charra"> Web Charra</p>
       </div>
     </div>
   </footer>
-</body>
 
+</body>
 </html>

@@ -2,6 +2,7 @@
 const navbar = document.getElementById('navbar');
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
@@ -24,52 +25,75 @@ document.querySelectorAll('.nav-link, .nav-cta').forEach(link => {
   link.addEventListener('click', () => {
     navMenu.classList.remove('active');
     navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
   });
 });
 
-// Intersection Observer for scroll animations
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, observerOptions);
-
-// Observe elements for animation
-document.querySelectorAll('.service-card, .why-card, .process-step, .gallery-item, .faq-item').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(30px)';
-  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  observer.observe(el);
-});
-
-// Add visible class styles
-const style = document.createElement('style');
-style.textContent = `
-  .service-card.visible, .why-card.visible, .process-step.visible, .gallery-item.visible, .faq-item.visible {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && navMenu.classList.contains('active')) {
+    navMenu.classList.remove('active');
+    navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.focus();
   }
-`;
-document.head.appendChild(style);
+});
+
+if (typeof GLightbox === 'function') GLightbox({selector: '.glightbox'});
+
+// Progressive enhancement: no initial hidden state, no hero/LCP animation.
+if (document.body.classList.contains('home-root') && 'IntersectionObserver' in window) {
+  const targets = document.querySelectorAll('.service-card, .about-image, .why-card, .process-step, .gallery-item, .faq-item');
+  const seen = new WeakSet();
+  let revealObserver;
+
+  const updateMotion = () => {
+    if (revealObserver) revealObserver.disconnect();
+    targets.forEach(target => target.classList.remove('home-reveal'));
+    if (reducedMotion.matches) return;
+
+    revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const target = entry.target;
+        revealObserver.unobserve(target);
+        seen.add(target);
+        // Keep keyboard focus and direct fragment destinations stationary.
+        const fragment = document.getElementById(window.location.hash.slice(1));
+        if (reducedMotion.matches || target.contains(document.activeElement) ||
+            (fragment && (target.contains(fragment) || fragment.contains(target)))) return;
+        target.classList.add('home-reveal');
+      });
+    }, { threshold: 0.25, rootMargin: '0px 0px -80px 0px' });
+
+    targets.forEach(target => {
+      if (!seen.has(target)) revealObserver.observe(target);
+    });
+  };
+
+  targets.forEach(target => {
+    target.addEventListener('animationend', event => {
+      if (event.animationName === 'reliefHomeEnter') target.classList.remove('home-reveal');
+    });
+    target.addEventListener('focusin', () => {
+      seen.add(target);
+      target.classList.remove('home-reveal');
+      if (revealObserver) revealObserver.unobserve(target);
+    });
+  });
+  reducedMotion.addEventListener('change', updateMotion);
+  updateMotion();
+}
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     const href = this.getAttribute('href');
     if (href !== '#') {
-      e.preventDefault();
       const target = document.querySelector(href);
       if (target) {
+        e.preventDefault();
         target.scrollIntoView({
-          behavior: 'smooth',
+          behavior: reducedMotion.matches ? 'instant' : 'smooth',
           block: 'start'
         });
       }
