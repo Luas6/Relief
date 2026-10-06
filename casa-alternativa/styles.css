@@ -10,6 +10,7 @@
   --color-secondary: #2c2c5e;
   --color-accent: #4bbcbc;
   --color-accent-hover: #3da8a8;
+  --color-gold: #d4a843;
   --color-warm: #a09292;
   --color-cream: #f4f1eb;
   --color-text: #2d2d2d;
@@ -373,13 +374,19 @@ a {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  background: var(--color-primary);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  border: 2px solid transparent;
+  transition: var(--transition);
 }
 
 .trust-number {
   font-family: var(--font-main);
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--color-accent);
+  color: var(--color-primary);
+  opacity: 0.6;
 }
 
 .trust-label {
@@ -398,7 +405,7 @@ a {
 
 .section-tag {
   display: inline-block;
-  color: var(--color-accent);
+  color: var(--color-primary);
   font-weight: 600;
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -434,7 +441,7 @@ a {
 }
 
 .service-card {
-  background: #fff;
+  background: var(--color-bg-alt);
   border-radius: var(--radius-lg);
   padding: 36px 28px;
   text-align: center;
@@ -453,6 +460,20 @@ a {
   height: 4px;
   background: linear-gradient(90deg, var(--color-accent), var(--color-gold));
   transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--transition);
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-primary));
+  transform: scaleX(0);
+  transform-origin: left;
   transition: var(--transition);
 }
 
@@ -461,7 +482,8 @@ a {
   box-shadow: var(--shadow-lg);
 }
 
-.service-card:hover::before {
+.service-card:hover::before,
+.service-card:hover::after {
   transform: scaleX(1);
 }
 
@@ -486,7 +508,7 @@ a {
 .service-card h3 {
   font-family: var(--font-main);
   font-size: 1.3rem;
-  color: var(--color-primary);
+  color: var(--color-text-light);
   margin-bottom: 12px;
 }
 
@@ -619,7 +641,7 @@ a {
   text-align: center;
   padding: 36px 24px;
   border-radius: var(--radius-lg);
-  background: #fff;
+  background: var(--color-bg-alt);
   border: 1px solid var(--color-border);
   transition: var(--transition);
 }
@@ -638,7 +660,7 @@ a {
 .why-card h3 {
   font-family: var(--font-main);
   font-size: 1.2rem;
-  color: var(--color-primary);
+  color: var(--color-text-light);
   margin-bottom: 10px;
 }
 
@@ -669,13 +691,18 @@ a {
 .process-step {
   text-align: center;
   position: relative;
+  background: var(--color-primary);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  border: 2px solid transparent;
+  transition: var(--transition);
 }
 
 .step-number {
   font-family: var(--font-main);
   font-size: 3.5rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-primary);
   opacity: 0.6;
   line-height: 1;
   margin-bottom: 16px;
@@ -705,7 +732,7 @@ a {
 }
 
 .faq-item {
-  background: #fff;
+  background: var(--color-bg-alt);
   border-radius: var(--radius);
   margin-bottom: 12px;
   border: 1px solid var(--color-border);
@@ -721,7 +748,7 @@ a {
   padding: 20px 24px;
   cursor: pointer;
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-text-light);
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -792,7 +819,7 @@ a {
 
 .contact-item strong {
   display: block;
-  color: var(--color-primary);
+  color: var(--color-text-light);
   font-size: 0.9rem;
 }
 
@@ -802,7 +829,7 @@ a {
 }
 
 .contact-form-wrapper {
-  background: #fff;
+  background: var(--color-bg-alt);
   border-radius: var(--radius-lg);
   padding: 40px;
   box-shadow: var(--shadow-md);
@@ -1171,9 +1198,71 @@ a {
   to { opacity: 1; translate: 0 0; }
 }
 
+/* Animación de color para cards y elementos al revelarse */
+@keyframes reliefColorEnter {
+  from {
+    background-color: var(--color-bg-alt);
+    border-color: var(--color-border);
+  }
+  to {
+    background-color: #fff;
+    border-color: var(--color-accent);
+  }
+}
+
+@keyframes reliefColorEnterDark {
+  from {
+    background-color: var(--color-primary);
+    border-color: transparent;
+  }
+  to {
+    background-color: var(--color-secondary);
+    border-color: var(--color-accent);
+  }
+}
+
+@keyframes reliefTextColorEnter {
+  from { color: var(--color-text-light); }
+  to { color: var(--color-primary); }
+}
+
+@keyframes reliefAccentColorEnter {
+  from { color: var(--color-primary); }
+  to { color: var(--color-accent); }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .home-root .home-reveal {
     animation: reliefHomeEnter 520ms cubic-bezier(0.2, 0.65, 0.3, 1);
+  }
+
+  .home-root .home-reveal-color {
+    animation: reliefColorEnter 600ms cubic-bezier(0.2, 0.65, 0.3, 1) forwards;
+  }
+
+  .home-root .home-reveal-color.service-card,
+  .home-root .home-reveal-color.why-card,
+  .home-root .home-reveal-color.faq-item,
+  .home-root .home-reveal-color.contact-item,
+  .home-root .home-reveal-color.contact-form-wrapper {
+    animation: reliefColorEnter 600ms cubic-bezier(0.2, 0.65, 0.3, 1) forwards;
+  }
+
+  .home-root .home-reveal-color.process-step,
+  .home-root .home-reveal-color.trust-item {
+    animation: reliefColorEnterDark 600ms cubic-bezier(0.2, 0.65, 0.3, 1) forwards;
+  }
+
+  .home-root .home-reveal-color .section-tag,
+  .home-root .home-reveal-color .step-number {
+    animation: reliefAccentColorEnter 500ms cubic-bezier(0.2, 0.65, 0.3, 1) forwards;
+  }
+
+  .home-root .home-reveal-color.service-card h3,
+  .home-root .home-reveal-color.why-card h3,
+  .home-root .home-reveal-color.faq-item summary,
+  .home-root .home-reveal-color.contact-item strong {
+    animation: reliefTextColorEnter 500ms cubic-bezier(0.2, 0.65, 0.3, 1) forwards;
   }
 }
 
@@ -1240,7 +1329,8 @@ a {
     translate: none;
   }
 
-  .home-root .service-card::before {
+  .home-root .service-card::before,
+  .home-root .service-card::after {
     transform: none;
   }
 }

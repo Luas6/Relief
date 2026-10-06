@@ -45,8 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Animate once, only after 25% enters the viewport inset by 80px.
   // No initial hidden state: content remains usable without JS or an observer.
+  // ONLY service cards get the reveal animation.
   if (document.body.classList.contains("home-root") && "IntersectionObserver" in window) {
-    const targets = document.querySelectorAll(".service-card, .about-image, .why-card, .process-step, .gallery-item, .faq-item");
+    const targets = document.querySelectorAll(".service-card, .about-image, .why-card, .gallery-item, .faq-item, .contact-item .trust-item");
     const seen = new WeakSet();
     let observer;
     const updateMotion = () => {
@@ -64,8 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
           if (reducedMotion.matches || target.contains(document.activeElement) ||
               (fragment && (target.contains(fragment) || fragment.contains(target)))) return;
           target.classList.add("home-reveal");
+          target.classList.add("home-reveal-color");
         });
-      }, { threshold: 0.25, rootMargin: "0px 0px -80px 0px" });
+      }, { threshold: 0.25, rootMargin: "0px 0px -150px 0px" });
 
       targets.forEach(target => {
         if (!seen.has(target)) observer.observe(target);
@@ -74,6 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     targets.forEach(target => {
       target.addEventListener("animationend", event => {
         if (event.animationName === "reliefHomeEnter") target.classList.remove("home-reveal");
+      });
       });
       target.addEventListener("focusin", () => {
         seen.add(target);

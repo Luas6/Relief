@@ -70,6 +70,11 @@
     "addressRegion": "Pyrénées-Atlantiques",
     "addressCountry": "FR"
   },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 43.1791,
+    "longitude": -0.2615
+  },
   "areaServed": [
     {
       "@type": "City",
@@ -81,9 +86,213 @@
     }
   ],
   "description": "Artisan carreleur établi à Nay, intervenant à Pau et Nay pour la pose de carrelage, la faïence, les salles de bain et les revêtements de sols.",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  ],
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Credit Card, Check, Bank Transfer",
   "sameAs": [
     "https://www.facebook.com/profile.php?id=61574427483464"
-  ]
+  ],
+  "knowsAbout": [
+    "Pose de carrelage mural",
+    "Pose de carrelage au sol",
+    "Faïence",
+    "Rénovation de salles de bain",
+    "Douche à l'italienne",
+    "Pose de parquets",
+    "Sols souples (PVC, vinyle, linoléum)",
+    "Aménagement PMR / Handibat",
+    "Accessibilité personnes à mobilité réduite"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services de carrelage et sols RELIEF",
+    "category": [
+      {
+        "@type": "Service",
+        "name": "Pose de carrelage mural et faïence",
+        "description": "Pose de carrelage mural, faïence et crédences pour cuisines, salles de bain et espaces de vie. Travail soigné, joints parfaits, finitions durables.",
+        "provider": {
+          "@id": "https://www.reliefcarreleur.fr/#business"
+        },
+        "areaServed": ["Nay", "Pau"],
+        "offers": {
+          "@type": "Offer",
+          "name": "Devis gratuit - Pose carrelage mural",
+          "description": "Devis gratuit et sans engagement pour pose de carrelage mural et faïence.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 500,
+            "priceCurrency": "EUR",
+            "valueAddedTaxIncluded": true
+          },
+          "availability": "https://schema.org/InStock",
+          "eligibleRegion": {
+            "@type": "City",
+            "name": "Nay"
+          }
+        },
+        "serviceType": "Carrelage mural, faïence, crédence"
+      },
+      {
+        "@type": "Service",
+        "name": "Pose de carrelage au sol",
+        "description": "Pose de carrelage au sol pour habitations, locaux professionnels et terrasses. Grès cérame, pierre naturelle, carrelage grand format. Préparation de support, ragréage, joints époxy.",
+        "provider": {
+          "@id": "https://www.reliefcarreleur.fr/#business"
+        },
+        "areaServed": ["Nay", "Pau"],
+        "offers": {
+          "@type": "Offer",
+          "name": "Devis gratuit - Pose carrelage au sol",
+          "description": "Devis gratuit et sans engagement pour pose de carrelage au sol.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 500,
+            "priceCurrency": "EUR",
+            "valueAddedTaxIncluded": true
+          },
+          "availability": "https://schema.org/InStock"
+        },
+        "serviceType": "Carrelage sol, grès cérame, terrasse, grand format"
+      },
+      {
+        "@type": "Service",
+        "name": "Rénovation de salles de bain complètes",
+        "description": "Rénovation et installation de salles de bain clés en main : carrelage, faïence, plomberie, électricité, meubles, vasques, miroirs. Coordination des corps de métier.",
+        "provider": {
+          "@id": "https://www.reliefcarreleur.fr/#business"
+        },
+        "areaServed": ["Nay", "Pau"],
+        "offers": {
+          "@type": "Offer",
+          "name": "Devis gratuit - Salle de bain clé en main",
+          "description": "Devis gratuit et sans engagement pour rénovation complète de salle de bain.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 500,
+            "priceCurrency": "EUR",
+            "valueAddedTaxIncluded": true
+          },
+          "availability": "https://schema.org/InStock"
+        },
+        "serviceType": "Salle de bain, rénovation complète, clé en main"
+      },
+      {
+        "@type": "Service",
+        "name": "Création de douche à l'italienne sur mesure",
+        "description": "Conception et réalisation de douches à l'italienne sur mesure : receveurs extra-plats, étanchéité, carrelage, parois vitrées, accessoires. Accessibles PMR possibles.",
+        "provider": {
+          "@id": "https://www.reliefcarreleur.fr/#business"
+        },
+        "areaServed": ["Nay", "Pau"],
+        "offers": {
+          "@type": "Offer",
+          "name": "Devis gratuit - Douche à l'italienne",
+          "description": "Devis gratuit et sans engagement pour création de douche à l'italienne.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 500,
+            "priceCurrency": "EUR",
+            "valueAddedTaxIncluded": true
+          },
+          "availability": "https://schema.org/InStock"
+        },
+        "serviceType": "Douche à l'italienne, receveur extra-plat, accessibilité PMR"
+      },
+      {
+        "@type": "Service",
+        "name": "Pose de parquets et sols souples",
+        "description": "Pose de parquets stratifiés, contrecollés, massifs, lames clipsables, sols PVC, vinyles, linoléum. Préparation de support, sous-couche, plinthes.",
+        "provider": {
+          "@id": "https://www.reliefcarreleur.fr/#business"
+        },
+        "areaServed": ["Nay", "Pau"],
+        "offers": {
+          "@type": "Offer",
+          "name": "Devis gratuit - Parquets et sols souples",
+          "description": "Devis gratuit et sans engagement pour pose de parquets et sols souples.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 500,
+            "priceCurrency": "EUR",
+            "valueAddedTaxIncluded": true
+          },
+          "availability": "https://schema.org/InStock"
+        },
+        "serviceType": "Parquet, stratifié, PVC, vinyle, linoléum, sols clipsables"
+      },
+      {
+        "@type": "Service",
+        "name": "Travaux PMR / Handibat - Accessibilité",
+        "description": "Aménagements adaptés pour personnes à mobilité réduite : douches accessibles, barres d'appui, sièges de douche, revêtements antidérapants, élargissement de portes. Certification Handibat Silverbat.",
+        "provider": {
+          "@id": "https://www.reliefcarreleur.fr/#business"
+        },
+        "areaServed": ["Nay", "Pau"],
+        "offers": {
+          "@type": "Offer",
+          "name": "Devis gratuit - Travaux PMR Handibat",
+          "description": "Devis gratuit et sans engagement pour travaux d'accessibilité PMR certifiés Handibat.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 500,
+            "priceCurrency": "EUR",
+            "valueAddedTaxIncluded": true
+          },
+          "availability": "https://schema.org/InStock"
+        },
+        "serviceType": "Accessibilité PMR, Handibat, douche accessible, adaptation logement"
+      }
+    ]
+  },
+  "makesOffer": {
+    "@type": "Offer",
+    "name": "Devis gratuit et personnalisé",
+    "description": "Devis gratuit, détaillé et sans engagement, établi à domicile ou à distance pour tous vos projets de carrelage, faïence, salle de bain et sols.",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "eligibleRegion": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.1791,
+        "longitude": -0.2615
+      },
+      "geoRadius": "30000"
+    }
+  },
+  "credentials": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Certification Handibat Silverbat",
+      "description": "Certification pour l'aménagement de logements accessibles aux personnes à mobilité réduite",
+      "recognizedBy": "Handibat"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Garantie décennale",
+      "description": "Assurance responsabilité civile décennale obligatoire pour les travaux de construction",
+      "recognizedBy": "Code des assurances français"
+    }
+  ],
+  "yearsInBusiness": "2",
+  "numberOfEmployees": "1",
+  "foundingDate": "2025",
+  "slogan": "L'équilibre parfait entre tradition et innovation",
+  "brand": {
+    "@type": "Brand",
+    "name": "RELIEF",
+    "logo": "https://www.reliefcarreleur.fr/assets/img/icon.webp"
+  }
 }
 </script>
 </head>

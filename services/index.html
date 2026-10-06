@@ -227,29 +227,167 @@
     <img src="assets/img/email.webp" alt="Email" class="btn-icon" loading="lazy" decoding="async">
   </a>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://www.reliefcarreleur.fr/#business",
-    "name": "RELIEF Carreleur",
-    "url": "https://www.reliefcarreleur.fr/",
-    "telephone": "+33787662055",
-    "email": "reliefcarreleur@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "22 Avenue Charles de Gaulle",
-      "postalCode": "64800",
-      "addressLocality": "Nay",
-      "addressRegion": "Pyrénées-Atlantiques",
-      "addressCountry": "FR"
-    },
-    "areaServed": ["Nay", "Pau"],
-    "description": "Artisan carreleur établi à Nay, intervenant à Pau et Nay pour la pose de carrelage, la faïence, les salles de bain et les revêtements de sols.",
-    "sameAs": [
-      "https://www.facebook.com/profile.php?id=61574427483464"
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.reliefcarreleur.fr/#business",
+  "name": "RELIEF Carreleur",
+  "image": "https://www.reliefcarreleur.fr/assets/img/icon.completo.webp",
+  "url": "https://www.reliefcarreleur.fr/",
+  "telephone": "+33787662055",
+  "email": "reliefcarreleur@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "22 Avenue Charles de Gaulle",
+    "postalCode": "64800",
+    "addressLocality": "Nay",
+    "addressRegion": "Pyrénées-Atlantiques",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 43.1791,
+    "longitude": -0.2615
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Nay" },
+    { "@type": "City", "name": "Pau" }
+  ],
+  "description": "Artisan carreleur établi à Nay, intervenant à Pau et Nay pour la pose de carrelage, la faïence, les salles de bain et les revêtements de sols.",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  ],
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Credit Card, Check, Bank Transfer",
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61574427483464"
+  ],
+  "knowsAbout": [
+    "Pose de carrelage mural",
+    "Pose de carrelage au sol",
+    "Faïence",
+    "Rénovation de salles de bain",
+    "Douche à l'italienne",
+    "Pose de parquets",
+    "Sols souples (PVC, vinyle, linoléum)",
+    "Aménagement PMR / Handibat",
+    "Accessibilité personnes à mobilité réduite"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services de carrelage et sols RELIEF",
+    "category": [
+      {
+        "@type": "Service",
+        "name": "Pose de carrelage mural et faïence",
+        "description": "Pose de carrelage mural, faïence et crédences pour cuisines, salles de bain et espaces de vie.",
+        "provider": { "@id": "https://www.reliefcarreleur.fr/#business" },
+        "areaServed": ["Nay", "Pau"],
+        "offers": {
+          "@type": "Offer",
+          "name": "Devis gratuit - Pose carrelage mural",
+          "description": "Devis gratuit et sans engagement pour pose de carrelage mural et faïence.",
+          "priceSpecification": { "@type": "PriceSpecification", "minPrice": 500, "priceCurrency": "EUR", "valueAddedTaxIncluded": true },
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Pose de carrelage au sol",
+        "description": "Pose de carrelage au sol pour habitations, locaux professionnels et terrasses. Grès cérame, pierre naturelle, grand format.",
+        "provider": { "@id": "https://www.reliefcarreleur.fr/#business" },
+        "areaServed": ["Nay", "Pau"],
+        "offers": {
+          "@type": "Offer",
+          "name": "Devis gratuit - Pose carrelage au sol",
+          "description": "Devis gratuit et sans engagement pour pose de carrelage au sol.",
+          "priceSpecification": { "@type": "PriceSpecification", "minPrice": 500, "priceCurrency": "EUR", "valueAddedTaxIncluded": true },
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Rénovation de salles de bain complètes",
+        "description": "Rénovation et installation de salles de bain clés en main : carrelage, faïence, plomberie, électricité, coordination des corps de métier.",
+        "provider": { "@id": "https://www.reliefcarreleur.fr/#business" },
+        "areaServed": ["Nay", "Pau"],
+        "offers": {
+          "@type": "Offer",
+          "name": "Devis gratuit - Salle de bain clé en main",
+          "description": "Devis gratuit et sans engagement pour rénovation complète de salle de bain.",
+          "priceSpecification": { "@type": "PriceSpecification", "minPrice": 500, "priceCurrency": "EUR", "valueAddedTaxIncluded": true },
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Création de douche à l'italienne sur mesure",
+        "description": "Conception et réalisation de douches à l'italienne sur mesure : receveurs extra-plats, étanchéité, carrelage, parois vitrées. Accessibles PMR possibles.",
+        "provider": { "@id": "https://www.reliefcarreleur.fr/#business" },
+        "areaServed": ["Nay", "Pau"],
+        "offers": {
+          "@type": "Offer",
+          "name": "Devis gratuit - Douche à l'italienne",
+          "description": "Devis gratuit et sans engagement pour création de douche à l'italienne.",
+          "priceSpecification": { "@type": "PriceSpecification", "minPrice": 500, "priceCurrency": "EUR", "valueAddedTaxIncluded": true },
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Pose de parquets et sols souples",
+        "description": "Pose de parquets stratifiés, contrecollés, massifs, lames clipsables, sols PVC, vinyles, linoléum.",
+        "provider": { "@id": "https://www.reliefcarreleur.fr/#business" },
+        "areaServed": ["Nay", "Pau"],
+        "offers": {
+          "@type": "Offer",
+          "name": "Devis gratuit - Parquets et sols souples",
+          "description": "Devis gratuit et sans engagement pour pose de parquets et sols souples.",
+          "priceSpecification": { "@type": "PriceSpecification", "minPrice": 500, "priceCurrency": "EUR", "valueAddedTaxIncluded": true },
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Travaux PMR / Handibat - Accessibilité",
+        "description": "Aménagements adaptés PMR : douches accessibles, barres d'appui, sièges, revêtements antidérapants. Certification Handibat Silverbat.",
+        "provider": { "@id": "https://www.reliefcarreleur.fr/#business" },
+        "areaServed": ["Nay", "Pau"],
+        "offers": {
+          "@type": "Offer",
+          "name": "Devis gratuit - Travaux PMR Handibat",
+          "description": "Devis gratuit et sans engagement pour travaux d'accessibilité PMR certifiés Handibat.",
+          "priceSpecification": { "@type": "PriceSpecification", "minPrice": 500, "priceCurrency": "EUR", "valueAddedTaxIncluded": true },
+          "availability": "https://schema.org/InStock"
+        }
+      }
     ]
-  }
-  </script>
+  },
+  "makesOffer": {
+    "@type": "Offer",
+    "name": "Devis gratuit et personnalisé",
+    "description": "Devis gratuit, détaillé et sans engagement, établi à domicile ou à distance pour tous vos projets.",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock"
+  },
+  "credentials": [
+    { "@type": "EducationalOccupationalCredential", "name": "Certification Handibat Silverbat", "description": "Certification pour l'aménagement de logements accessibles PMR", "recognizedBy": "Handibat" },
+    { "@type": "EducationalOccupationalCredential", "name": "Garantie décennale", "description": "Assurance responsabilité civile décennale obligatoire", "recognizedBy": "Code des assurances français" }
+  ],
+  "yearsInBusiness": "2",
+  "numberOfEmployees": "1",
+  "foundingDate": "2025",
+  "slogan": "L'équilibre parfait entre tradition et innovation",
+  "brand": { "@type": "Brand", "name": "RELIEF", "logo": "https://www.reliefcarreleur.fr/assets/img/icon.webp" }
+}
+</script>
   <footer id="footer-principal" class="relief-footer">
     <div class="footer-container">
       <div class="footer-grid">
