@@ -1,108 +1,166 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const formUrl = document.getElementById("form-url");
-  if (formUrl) formUrl.value = window.location.href;
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  if (typeof window.GLightbox === "function") {
-    try {
-      const lightbox = window.GLightbox({
-        selector: ".glightbox",
-        descriptions: false,
-        openEffect: reducedMotion.matches ? "none" : "zoom",
-        closeEffect: reducedMotion.matches ? "none" : "zoom",
-        slideEffect: reducedMotion.matches ? "none" : "slide"
-      });
-      if (lightbox && typeof lightbox.on === "function") {
-        lightbox.on("open", () => {
-          const dialog = document.querySelector(".glightbox-container");
-          if (dialog) dialog.setAttribute("aria-label", "Photographies des réalisations RELIEF");
-        });
-      }
-    } catch (error) {
-      console.warn("La galerie reste accessible par ses liens.", error);
-    }
+document.addEventListener('DOMContentLoaded', () => {
+
+  const navbar = document.getElementById('navbar');
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+
+  // =========================
+  // NAVBAR
+  // =========================
+
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
   }
 
-  // Interior menus use Bootstrap; only the home has this drawer.
-  const navToggle = document.getElementById("navToggle");
-  const navMenu = document.getElementById("navMenu");
+
+  // =========================
+  // MOBILE MENU
+  // =========================
+
   if (navToggle && navMenu) {
-    const setMenuOpen = open => {
-      navMenu.classList.toggle("active", open);
-      navToggle.classList.toggle("active", open);
-      navToggle.setAttribute("aria-expanded", String(open));
-    };
-    navToggle.addEventListener("click", () => setMenuOpen(!navMenu.classList.contains("active")));
-    navMenu.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => setMenuOpen(false));
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('active');
+
+      navToggle.classList.toggle('active', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen);
     });
-    document.addEventListener("keydown", event => {
-      if (event.key === "Escape" && navMenu.classList.contains("active")) {
-        setMenuOpen(false);
+
+
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        closeMenu();
         navToggle.focus();
       }
     });
+
+
+    function closeMenu() {
+      navMenu.classList.remove('active');
+      navToggle.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
   }
 
-  // Animate once, only after 25% enters the viewport inset by 80px.
-  // No initial hidden state: content remains usable without JS or an observer.
-  // ONLY service cards get the reveal animation.
-  if (document.body.classList.contains("home-root") && "IntersectionObserver" in window) {
-    const targets = document.querySelectorAll(".service-card, .about-image, .why-card, .gallery-item, .faq-item, .contact-item .trust-item");
-    const seen = new WeakSet();
-    let observer;
-    const updateMotion = () => {
-      if (observer) observer.disconnect();
-      targets.forEach(target => target.classList.remove("home-reveal"));
-      if (reducedMotion.matches) return;
 
-      observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting || entry.intersectionRatio < 0.25) return;
-          const target = entry.target;
-          observer.unobserve(target);
-          seen.add(target);
-          const fragment = document.getElementById(window.location.hash.slice(1));
-          if (reducedMotion.matches || target.contains(document.activeElement) ||
-              (fragment && (target.contains(fragment) || fragment.contains(target)))) return;
-          target.classList.add("home-reveal");
-          target.classList.add("home-reveal-color");
-        });
-      }, { threshold: 0.25, rootMargin: "0px 0px -150px 0px" });
+  // =========================
+  // GALLERY
+  // =========================
 
-      targets.forEach(target => {
-        if (!seen.has(target)) observer.observe(target);
-      });
-    };
-    targets.forEach(target => {
-      target.addEventListener("animationend", event => {
-        if (event.animationName === "reliefHomeEnter") target.classList.remove("home-reveal");
-      });
-      });
-      target.addEventListener("focusin", () => {
-        seen.add(target);
-        target.classList.remove("home-reveal");
-        if (observer) observer.unobserve(target);
-      });
+  if (typeof GLightbox === 'function') {
+    GLightbox({
+      selector: '.glightbox'
     });
-    reducedMotion.addEventListener("change", updateMotion);
-    updateMotion();
   }
 
-  document.querySelectorAll('.home-root a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", event => {
-      const target = document.getElementById(anchor.getAttribute("href").slice(1));
-      if (!target) return;
+
+  // =========================
+  // SCROLL ANIMATIONS
+  // =========================
+
+  const animatedElements = document.querySelectorAll(
+    '.about-image, .gallery-item, .faq-item, .contact-item, .trust-item'
+  );
+
+  if (
+    animatedElements.length &&
+    !reducedMotion.matches &&
+    'IntersectionObserver' in window
+  ) {
+
+    animatedElements.forEach(element => {
+      element.classList.add('reveal');
+    });
+
+
+    const observer = new IntersectionObserver(entries => {
+
+      entries.forEach(entry => {
+
+        // Empieza la animación cuando ya ha entrado bastante en pantalla
+        if (entry.intersectionRatio >= 0.8) {
+          entry.target.classList.add('is-visible');
+        }
+
+        // Solo reseteamos cuando ha salido completamente
+        if (!entry.isIntersecting) {
+          entry.target.classList.remove('is-visible');
+        }
+
+      });
+
+    }, {
+      threshold: [0, 0.8]
+    });
+
+    animatedElements.forEach(element => {
+      observer.observe(element);
+    });
+  }
+
+
+  // =========================
+  // SMOOTH SCROLL
+  // =========================
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener('click', event => {
+
+      const href = anchor.getAttribute('href');
+
+      if (!href || href === '#') {
+        return;
+      }
+
+      const target = document.querySelector(href);
+
+      if (!target) {
+        return;
+      }
+
       event.preventDefault();
-      target.scrollIntoView({ behavior: reducedMotion.matches ? "instant" : "smooth", block: "start" });
-    });
-  });
 
-  const questions = document.querySelectorAll(".faq-item");
-  questions.forEach(item => {
-    item.addEventListener("toggle", () => {
-      if (item.open) questions.forEach(other => {
-        if (other !== item && other.open) other.open = false;
+      target.scrollIntoView({
+        behavior: reducedMotion.matches ? 'auto' : 'smooth',
+        block: 'start'
       });
     });
+
   });
+
+
+  // =========================
+  // FAQ
+  // =========================
+
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+
+    item.addEventListener('toggle', () => {
+
+      if (!item.open) {
+        return;
+      }
+
+      faqItems.forEach(other => {
+        if (other !== item) {
+          other.open = false;
+        }
+      });
+
+    });
+
+  });
+
 });
