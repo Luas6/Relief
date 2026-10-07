@@ -171,23 +171,23 @@
 
     <div class="container mt-4">
       <form action="https://formsubmit.co/338f44ea291a454f5347896201a022c0" method="POST"
-        class="p-4 border rounded shadow-sm bg-secondary" id="form-email">
+        class="p-4 border rounded shadow-sm contact-form-wrapper" id="form-email">
 
         <input type="hidden" name="_captcha" value="false">
         <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
         <input type="hidden" name="_next" value="https://www.reliefcarreleur.fr/">
 
-        <div class="mb-3">
+        <div class="mb-3 form-group">
           <label for="nom" class="form-label">Nom <span class="required">*</span></label>
           <input type="text" id="nom" name="nom" class="form-control" required>
         </div>
 
-        <div class="mb-3">
+        <div class="mb-3 form-group">
           <label for="contact" class="form-label">Email ou Téléphone <span class="required">*</span></label>
           <input type="text" id="contact" name="contact" class="form-control" required>
         </div>
 
-        <div class="mb-3">
+        <div class="mb-3 form-group">
           <label for="message" class="form-label">Message <span class="required">*</span></label>
           <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
         </div>
@@ -226,40 +226,40 @@
   }
   </script>
 
-  <footer id="footer-principal" class="relief-footer">
-    <div class="footer-container">
+  <footer class="footer">
+    <div class="container">
       <div class="footer-grid">
-        <section class="footer-intro" aria-label="RELIEF Carreleur">
-          <a class="footer-brand" href="/"><img src="/assets/img/icon.webp" alt="" width="64" height="48" loading="lazy" decoding="async"><span class="footer-brand-name">RELIEF</span></a>
-          <p class="footer-description">Artisan carreleur basé à Nay, pour vos projets de carrelage, faïence et rénovation de salle de bain à Pau et dans les environs.</p>
-          <a href="/galerie/">Voir nos réalisations</a>
-        </section>
-        <nav aria-label="Prestations de RELIEF">
-          <p class="footer-heading">Nos services</p>
-          <ul class="footer-links">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo">
+            <img src="assets/img/icon.webp" alt="RELIEF">
+            <span>RELIEF</span>
+          </a>
+          <p>Artisan carreleur basé à Nay, pour vos projets de carrelage, faïence et rénovation de salle de bain à Pau et dans les environs.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Nos services</h4>
+          <ul>
             <li><a href="/pose-de-carrelage-au-sol/">Carrelage au sol</a></li>
-            <li><a href="/pose-de-carrelage-mural/">Carrelage mural et faïence</a></li>
+            <li><a href="/pose-de-carrelage-mural/">Carrelage mural</a></li>
             <li><a href="/pose-de-parquets-et-sols-souples/">Parquets et sols souples</a></li>
             <li><a href="/salles-de-bain/">Salles de bain</a></li>
-            <li><a href="/douche-italienne/">Douches à l’italienne</a></li>
-            <li><a href="/handibat/">Accessibilité et travaux PMR</a></li>
-            <li><a href="/services/">Tous nos services</a></li>
+            <li><a href="/douche-italienne/">Douches à l'italienne</a></li>
+            <li><a href="/handibat/">Accessibilité PMR</a></li>
           </ul>
-        </nav>
-        <section aria-labelledby="footer-contact-title">
-          <p class="footer-heading" id="footer-contact-title">Parlons de votre projet</p>
-          <p class="footer-location">Basé à Nay · Interventions à Pau et alentours</p>
-          <ul class="footer-links">
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <ul>
             <li><a href="tel:+33787662055">07 87 66 20 55</a></li>
             <li><a href="mailto:reliefcarreleur@gmail.com">reliefcarreleur@gmail.com</a></li>
           </ul>
-          <a class="footer-cta" href="/#contacto">Demander un devis gratuit</a>
-        </section>
+          <a href="#contacto" class="btn btn-primary">Demander un devis</a>
+        </div>
       </div>
       <div class="footer-bottom">
         <p>© 2026 RELIEF Carreleur</p>
         <a href="/mentions-legales/">Mentions légales</a>
-        <p class="footer-credit">Développé par <img src="/assets/img/icon-red-web-charra.png" alt="" width="28" height="28" loading="lazy" decoding="async"><span>Web Charra</span></p>
+        <p class="footer-credit">Développé par <img src="assets/img/icon-red-web-charra.png" alt="Web Charra"> Web Charra</p>
       </div>
     </div>
   </footer>

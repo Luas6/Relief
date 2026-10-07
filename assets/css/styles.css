@@ -1,7 +1,26 @@
-/* ============================================
-   RELIEF — Casa Alternativa
-   Diseño moderno y profesional
-   ============================================ */
+.btn-outline-dark:hover,
+.btn-outline:hover,
+.btn-primary:hover,
+.nav-cta:hover {
+  transform: translateY(-2px)
+}
+
+.hero-title,
+.section-title,
+.service-card h3,
+.trust-number {
+  font-family: var(--font-main)
+}
+
+.btn,
+.hero,
+.process-step,
+.section-header,
+.service-card,
+.trust-grid,
+.why-card {
+  text-align: center
+}
 
 :root {
   --color-primary: #404082;
@@ -18,55 +37,64 @@
   --color-border: #e0e0e0;
   --font-main: 'Philosopher', 'Segoe UI', Georgia, serif;
   --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  --shadow-sm: 0 2px 8px rgba(64,64,130,0.08);
-  --shadow-md: 0 4px 20px rgba(64,64,130,0.12);
-  --shadow-lg: 0 8px 40px rgba(64,64,130,0.16);
+  --shadow-sm: 0 2px 8px rgba(64, 64, 130, 0.08);
+  --shadow-md: 0 4px 20px rgba(64, 64, 130, 0.12);
+  --shadow-lg: 0 8px 40px rgba(64, 64, 130, 0.16);
   --radius: 12px;
   --radius-lg: 20px;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth
 }
 
 body {
   font-family: var(--font-body);
   color: var(--color-text);
   line-height: 1.7;
-  overflow-x: hidden;
+  overflow-x: hidden
 }
 
 img {
   max-width: 100%;
   height: auto;
-  display: block;
+  display: block
 }
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: none
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 24px
+}
+
+.banner-container {
+  margin-top: 120px
+}
+
+.banner-image {
+  border-radius: 5%
+}
+
+.description {
+  margin-bottom: .5rem
 }
 
 .section {
-  padding: 100px 0;
+  padding: 100px 0
 }
 
-/* ============================================
-   Botones
-   ============================================ */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -77,98 +105,111 @@ a {
   font-size: 1rem;
   cursor: pointer;
   transition: var(--transition);
-  border: 2px solid transparent;
-  text-align: center;
+  border: 2px solid transparent
+}
+
+.nav-container,
+.nav-menu {
+  display: flex;
+  align-items: center
 }
 
 .btn-primary {
   background: var(--color-accent);
   color: #fff;
-  border-color: var(--color-accent);
+  border-color: var(--color-accent)
 }
 
 .btn-primary:hover {
   background: var(--color-accent-hover);
   border-color: var(--color-accent-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-md)
 }
 
 .btn-outline {
-  background: transparent;
+  background: 0 0;
   color: #fff;
-  border-color: rgba(255,255,255,0.6);
+  border-color: rgba(255, 255, 255, .6)
 }
 
 .btn-outline:hover {
-  background: rgba(255,255,255,0.1);
-  border-color: #fff;
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, .1);
+  border-color: #fff
+}
+
+.btn-outline-dark:hover,
+.home-root .navbar .nav-toggle span,
+.nav-toggle span,
+.navbar.scrolled .nav-toggle span {
+  background: var(--color-text)
 }
 
 .btn-outline-dark {
-  background: transparent;
+  background: 0 0;
   color: var(--color-text);
-  border-color: var(--color-text);
+  border-color: var(--color-text)
 }
 
 .btn-outline-dark:hover {
-  background: var(--color-text);
-  color: #fff;
-  transform: translateY(-2px);
+  color: #fff
 }
 
-/* ============================================
-   Navbar
-   ============================================ */
+.navbar,
+.navbar.scrolled {
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: none;
+  padding: 16px 0
+}
+
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 16px 0;
-  transition: var(--transition);
-  background: transparent;
+  transition: box-shadow .2s
 }
 
-.navbar.scrolled {
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(20px);
-  box-shadow: var(--shadow-sm);
-  padding: 12px 0;
+.nav-cta,
+.nav-link::after {
+  background: var(--color-accent);
+  transition: var(--transition)
 }
 
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: space-between
 }
 
 .nav-logo {
   height: 48px;
-  width: auto;
+  width: auto
 }
 
 .nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 32px;
+  gap: 32px
+}
+
+.home-root .navbar .nav-link,
+.nav-link {
+  color: var(--color-text);
+  display: inline-flex;
+  min-height: 44px
 }
 
 .nav-link {
   font-weight: 500;
-  font-size: 0.95rem;
-  color: #fff;
+  font-size: .95rem;
   transition: var(--transition);
   position: relative;
+  align-items: center
 }
 
 .navbar.scrolled .nav-link {
-  color: var(--color-text);
+  color: var(--color-text)
 }
 
 .nav-link::after {
@@ -177,135 +218,164 @@ a {
   bottom: -4px;
   left: 0;
   width: 0;
-  height: 2px;
-  background: var(--color-accent);
-  transition: var(--transition);
+  height: 2px
+}
+
+.hero,
+.nav-toggle {
+  position: relative
 }
 
 .nav-link:hover::after {
-  width: 100%;
+  width: 100%
 }
 
 .nav-cta {
-  background: var(--color-accent);
-  color: #fff !important;
+  color: #202044 !important;
   padding: 10px 24px;
   border-radius: 50px;
-  font-weight: 600;
-  transition: var(--transition);
+  font-weight: 600
 }
 
 .nav-cta:hover {
-  background: var(--color-accent-hover);
-  transform: translateY(-2px);
+  background: var(--color-accent-hover)
 }
 
 .nav-toggle {
   display: none;
   flex-direction: column;
   gap: 5px;
-  background: none;
+  background: 0 0;
   border: none;
   cursor: pointer;
   padding: 8px;
+  z-index: 1;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center
+}
+
+.hero,
+.service-icon {
+  overflow: hidden;
+  align-items: center
 }
 
 .nav-toggle span {
   display: block;
   width: 26px;
   height: 2px;
-  background: #fff;
-  transition: var(--transition);
+  transition: var(--transition)
 }
 
-.navbar.scrolled .nav-toggle span {
-  background: var(--color-text);
-}
-
-/* ============================================
-   Hero
-   ============================================ */
 .hero {
-  position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  color: #fff;
-  overflow: hidden;
+  color: #fff
+}
+
+.hero-bg,
+.hero-overlay,
+.hero-scroll {
+  position: absolute
 }
 
 .hero-bg {
-  position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: -1
 }
 
-.hero-img {
+.hero-img,
+.service-icon img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover
 }
 
 .hero-overlay {
-  position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(26,26,46,0.85) 0%, rgba(22,33,62,0.75) 50%, rgba(233,69,96,0.4) 100%);
+  background: linear-gradient(135deg, rgba(26, 26, 46, .85) 0, rgba(22, 33, 62, .75) 50%, rgba(233, 69, 96, .4) 100%)
 }
 
 .hero-content {
   max-width: 800px;
   padding: 120px 24px 80px;
-  animation: fadeInUp 1s ease;
+  animation: 1s fadeInUp
 }
 
 .hero-badge {
   display: inline-block;
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, .15);
   backdrop-filter: blur(10px);
   padding: 8px 20px;
   border-radius: 50px;
-  font-size: 0.9rem;
+  font-size: .9rem;
   font-weight: 500;
   margin-bottom: 24px;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, .2)
 }
 
 .hero-title {
-  font-family: var(--font-main);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 700;
   line-height: 1.15;
-  margin-bottom: 24px;
+  margin-bottom: 24px
 }
-.home-root .hero-title em{font-family:'Segoe UI',system-ui,sans-serif;font-style:italic;font-weight:700;color:#fff;display:inline-block;margin-right:.18em}
-.home-root :is(a,button,input,textarea,summary):focus-visible{outline:3px solid #404082;outline-offset:3px}
-.home-root .hero :is(a,button):focus-visible{outline-color:#fff}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.home-root *, .home-root *::before,.home-root *::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+.home-root .hero-title em {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  color: #fff;
+  display: inline-block;
+  margin-right: .18em
+}
+
+.home-root :is(a, button, input, textarea, summary):focus-visible {
+  outline: #404082 solid 3px;
+  outline-offset: 3px
+}
+
+.home-root .hero :is(a, button):focus-visible {
+  outline-color: #fff
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior: auto
+  }
+
+  .home-root *,
+  .home-root ::after,
+  .home-root ::before {
+    animation-duration: NaNs !important;
+    transition-duration: NaNs !important
+  }
+}
 
 .hero-title .highlight {
   color: var(--color-accent);
-  position: relative;
+  position: relative
 }
 
 .hero-subtitle {
   font-size: 1.2rem;
-  opacity: 0.9;
+  opacity: .9;
   max-width: 600px;
   margin: 0 auto 40px;
-  line-height: 1.8;
+  line-height: 1.8
 }
 
 .hero-actions {
   display: flex;
   gap: 16px;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap
 }
 
 .hero-scroll {
-  position: absolute;
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
@@ -313,16 +383,21 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  font-size: 0.8rem;
-  opacity: 0.7;
+  font-size: .8rem;
+  opacity: .7
 }
 
 .scroll-line {
   width: 1px;
   height: 40px;
-  background: rgba(255,255,255,0.5);
+  background: rgba(255, 255, 255, .5);
   position: relative;
-  overflow: hidden;
+  overflow: hidden
+}
+
+.trust-bar,
+.trust-item {
+  background: var(--color-primary)
 }
 
 .scroll-line::after {
@@ -333,462 +408,442 @@ a {
   width: 100%;
   height: 100%;
   background: #fff;
-  animation: scrollDown 2s ease-in-out infinite;
+  animation: 2s ease-in-out infinite scrollDown
+}
+
+.service-card::after,
+.service-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  transition: var(--transition)
 }
 
 @keyframes scrollDown {
-  0% { top: -100%; }
-  100% { top: 100%; }
+  0% {
+    top: -100%
+  }
+
+  100% {
+    top: 100%
+  }
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(30px)
   }
+
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0)
   }
 }
 
-/* ============================================
-   Trust Bar
-   ============================================ */
 .trust-bar {
-  background: var(--color-primary);
   color: #fff;
-  padding: 40px 0;
+  padding: 40px 0
 }
 
 .trust-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  text-align: center;
+  gap: 32px
 }
 
 .trust-item {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  background: var(--color-primary);
   border-radius: var(--radius-lg);
   padding: 24px;
   border: 2px solid transparent;
-  transition: var(--transition);
+  transition: var(--transition)
+}
+
+.about-quote,
+.faq,
+.gallery,
+.service-card,
+.service-icon,
+.services {
+  background: var(--color-bg-alt)
 }
 
 .trust-number {
-  font-family: var(--font-main);
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 700
 }
 
+.section-tag,
 .trust-label {
-  font-size: 0.9rem;
+  font-size: .9rem
 }
 
-/* ============================================
-   Section Headers
-   ============================================ */
 .section-header {
-  text-align: center;
   max-width: 700px;
-  margin: 0 auto 60px;
+  margin: 0 auto 60px
 }
 
 .section-tag {
   display: inline-block;
   color: var(--color-primary);
   font-weight: 600;
-  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 12px;
+  margin-bottom: 12px
 }
 
 .section-title {
-  font-family: var(--font-main);
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 700;
   color: var(--color-primary);
   margin-bottom: 16px;
-  line-height: 1.2;
+  line-height: 1.2
 }
 
 .section-desc {
   color: var(--color-text-light);
-  font-size: 1.1rem;
-}
-
-/* ============================================
-   Services
-   ============================================ */
-.services {
-  background: var(--color-bg-alt);
+  font-size: 1.1rem
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  gap: 28px
 }
 
 .service-card {
-  background: var(--color-bg-alt);
   border-radius: var(--radius-lg);
   padding: 36px 28px;
-  text-align: center;
   transition: var(--transition);
   border: 1px solid var(--color-border);
   position: relative;
-  overflow: hidden;
+  overflow: hidden
 }
 
 .service-card::before {
-  content: '';
-  position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
   background: linear-gradient(90deg, var(--color-accent), var(--color-gold));
   transform: scaleX(0);
-  transform-origin: left;
-  transition: var(--transition);
+  transform-origin: left
 }
 
 .service-card::after {
-  content: '';
-  position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
   background: linear-gradient(90deg, var(--color-accent), var(--color-primary));
   transform: scaleX(0);
-  transform-origin: left;
-  transition: var(--transition);
+  transform-origin: left
 }
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-lg)
 }
 
-.service-card:hover::before,
-.service-card:hover::after {
-  transform: scaleX(1);
+.service-card:hover::after,
+.service-card:hover::before {
+  transform: scaleX(1)
 }
 
 .service-icon {
   width: 80px;
   height: 80px;
-  margin: 0 auto 20px;
+  margin: 0 auto 10px;
   border-radius: 50%;
-  overflow: hidden;
-  background: var(--color-bg-alt);
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.service-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  justify-content: center
 }
 
 .service-card h3 {
-  font-family: var(--font-main);
   font-size: 1.3rem;
   color: var(--color-text-light);
-  margin-bottom: 12px;
+  margin-bottom: 12px
+}
+
+.about-content p,
+.service-card p {
+  color: var(--color-text-light);
+  margin-bottom: 16px
 }
 
 .service-card p {
-  color: var(--color-text-light);
-  font-size: 0.95rem;
-  margin-bottom: 16px;
+  font-size: .95rem
 }
 
 .service-link {
   color: var(--color-accent);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: .9rem;
   opacity: 0;
   transform: translateY(10px);
-  transition: var(--transition);
+  transition: var(--transition)
 }
 
 .service-card:hover .service-link {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0)
 }
 
-/* ============================================
-   About
-   ============================================ */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: center;
+  align-items: center
 }
 
-.about-content p {
-  color: var(--color-text-light);
-  margin-bottom: 16px;
+.process-step h3,
+.why-card h3 {
+  font-family: var(--font-main);
+  margin-bottom: 10px
 }
 
 .about-quote {
   border-left: 4px solid var(--color-accent);
   padding: 20px 24px;
   margin: 28px 0;
-  background: var(--color-bg-alt);
   border-radius: 0 var(--radius) var(--radius) 0;
   font-style: italic;
   color: var(--color-primary);
-  font-weight: 500;
+  font-weight: 500
+}
+
+.about-image,
+.why-card {
+  border-radius: var(--radius-lg)
+}
+
+.process,
+.process .section-title {
+  color: #fff
 }
 
 .about-image {
-  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-lg)
 }
 
-.about-image img {
+.faq-item,
+.gallery-item {
+  border-radius: var(--radius);
+  overflow: hidden
+}
+
+.about-image img,
+.gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: var(--transition);
+  transition: var(--transition)
 }
 
 .about-image:hover img {
-  transform: scale(1.05);
-}
-
-/* ============================================
-   Gallery
-   ============================================ */
-.gallery {
-  background: var(--color-bg-alt);
+  transform: scale(1.05)
 }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 20px
+}
+
+.faq-item summary,
+.gallery-overlay {
+  display: flex;
+  transition: var(--transition)
+}
+
+.process-steps,
+.why-grid {
+  grid-template-columns: repeat(4, 1fr)
 }
 
 .gallery-item {
   position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
   aspect-ratio: 1;
-  cursor: pointer;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: var(--transition);
+  cursor: pointer
 }
 
 .gallery-item:hover img {
-  transform: scale(1.1);
+  transform: scale(1.1)
 }
 
 .gallery-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);
-  display: flex;
+  background: linear-gradient(to top, rgba(0, 0, 0, .7) 0, transparent 50%);
   align-items: flex-end;
   padding: 20px;
-  opacity: 0;
-  transition: var(--transition);
+  opacity: 0
 }
 
-.gallery-item:hover .gallery-overlay {
-  opacity: 1;
+.gallery-item:hover .gallery-overlay,
+.home-root .gallery-overlay {
+  opacity: 1
 }
 
 .gallery-overlay span {
   color: #fff;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.1rem
 }
 
-/* ============================================
-   Why Us
-   ============================================ */
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
+  gap: 28px
 }
 
 .why-card {
-  text-align: center;
   padding: 36px 24px;
-  border-radius: var(--radius-lg);
   background: var(--color-bg-alt);
   border: 1px solid var(--color-border);
-  transition: var(--transition);
+  transition: var(--transition)
+}
+
+.process,
+.process-step {
+  background: var(--color-primary)
 }
 
 .why-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-md);
-  border-color: var(--color-accent);
+  border-color: var(--color-accent)
+}
+
+.contact-item:hover,
+.faq-item:hover {
+  box-shadow: var(--shadow-sm)
 }
 
 .why-icon {
   font-size: 3rem;
-  margin-bottom: 16px;
+  margin-bottom: 16px
 }
 
 .why-card h3 {
-  font-family: var(--font-main);
   font-size: 1.2rem;
-  color: var(--color-text-light);
-  margin-bottom: 10px;
+  color: var(--color-text-light)
 }
 
+.contact-item span,
 .why-card p {
   color: var(--color-text-light);
-  font-size: 0.95rem;
+  font-size: .95rem
 }
 
-/* ============================================
-   Process
-   ============================================ */
-.process {
-  background: var(--color-primary);
-  color: #fff;
-}
-
-.process .section-title {
-  color: #fff;
+.contact-info>p,
+.contact-item strong,
+.faq-answer,
+.faq-item summary {
+  color: var(--color-text-light)
 }
 
 .process-steps {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 32px;
-  position: relative;
+  position: relative
 }
 
 .process-step {
-  text-align: center;
   position: relative;
-  background: var(--color-primary);
   border-radius: var(--radius-lg);
   padding: 24px;
   border: 2px solid transparent;
-  transition: var(--transition);
+  transition: var(--transition)
+}
+
+.contact-form-wrapper,
+.contact-item,
+.faq-item {
+  background: var(--color-bg-alt)
 }
 
 .step-number {
   font-family: var(--font-main);
   font-size: 3.5rem;
   font-weight: 700;
-  opacity: 0.8;
+  opacity: .8;
   line-height: 1;
-  margin-bottom: 16px;
+  margin-bottom: 16px
 }
 
 .process-step h3 {
-  font-family: var(--font-main);
-  font-size: 1.3rem;
-  margin-bottom: 10px;
+  font-size: 1.3rem
 }
 
 .process-step p {
-  opacity: 0.9;
-  font-size: 0.95rem;
-}
-
-/* ============================================
-   FAQ
-   ============================================ */
-.faq {
-  background: var(--color-bg-alt);
+  opacity: .9;
+  font-size: .95rem
 }
 
 .faq-list {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto
 }
 
 .faq-item {
-  background: var(--color-bg-alt);
-  border-radius: var(--radius);
   margin-bottom: 12px;
   border: 1px solid var(--color-border);
-  overflow: hidden;
-  transition: var(--transition);
-}
-
-.faq-item:hover {
-  box-shadow: var(--shadow-sm);
+  transition: var(--transition)
 }
 
 .faq-item summary {
   padding: 20px 24px;
   cursor: pointer;
   font-weight: 600;
-  color: var(--color-text-light);
   list-style: none;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-  transition: var(--transition);
+  align-items: center
 }
 
 .faq-item summary::-webkit-details-marker {
-  display: none;
+  display: none
 }
 
 .faq-item summary::after {
   content: '+';
   font-size: 1.5rem;
   color: var(--color-accent);
-  transition: var(--transition);
+  transition: var(--transition)
 }
 
 .faq-item[open] summary::after {
-  transform: rotate(45deg);
+  transform: rotate(45deg)
 }
 
 .faq-answer {
-  padding: 0 24px 20px;
-  color: var(--color-text-light);
+  padding: 0 24px 20px
 }
 
-/* ============================================
-   Contact
-   ============================================ */
+.footer-links a:hover,
+.required {
+  color: var(--color-accent)
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: start;
+  align-items: start
 }
 
-.contact-info > p {
-  color: var(--color-text-light);
-  margin-bottom: 32px;
+.contact-icon {
+  width: 50px;
+  font-size: 1.5rem
+}
+
+.contact-info>p {
+  margin-bottom: 32px
 }
 
 .contact-details {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 20px
 }
 
 .contact-item {
@@ -797,41 +852,28 @@ a {
   gap: 16px;
   padding: 16px;
   border-radius: var(--radius);
-  background: var(--color-bg-alt);
-  transition: var(--transition);
+  transition: var(--transition)
 }
 
 .contact-item:hover {
   background: #fff;
-  box-shadow: var(--shadow-sm);
-  transform: translateX(4px);
-}
-
-.contact-icon {
-  font-size: 1.5rem;
+  transform: translateX(4px)
 }
 
 .contact-item strong {
   display: block;
-  color: var(--color-text-light);
-  font-size: 0.9rem;
-}
-
-.contact-item span {
-  color: var(--color-text-light);
-  font-size: 0.95rem;
+  font-size: .9rem
 }
 
 .contact-form-wrapper {
-  background: var(--color-bg-alt);
   border-radius: var(--radius-lg);
   padding: 40px;
   box-shadow: var(--shadow-md);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-border)
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 20px
 }
 
 .form-group label {
@@ -839,11 +881,7 @@ a {
   font-weight: 600;
   margin-bottom: 8px;
   color: var(--color-primary);
-  font-size: 0.95rem;
-}
-
-.required {
-  color: var(--color-accent);
+  font-size: .95rem
 }
 
 .form-group input,
@@ -855,23 +893,20 @@ a {
   font-family: var(--font-body);
   font-size: 1rem;
   transition: var(--transition);
-  background: var(--color-bg-alt);
+  background: var(--color-bg-alt)
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  outline: none;
+  outline: 0;
   border-color: var(--color-accent);
-  background: #fff;
+  background: #fff
 }
 
-/* ============================================
-   Footer
-   ============================================ */
 .footer {
   background: var(--color-primary);
   color: #fff;
-  padding: 60px 0 0;
+  padding: 60px 0 0
 }
 
 .footer-grid {
@@ -879,62 +914,61 @@ a {
   grid-template-columns: 2fr 1fr 1fr;
   gap: 48px;
   padding-bottom: 48px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, .1)
 }
 
 .footer-logo {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 16px
 }
 
 .footer-logo img {
-  height: 40px;
+  height: 40px
 }
 
 .footer-logo span {
   font-family: 'Segoe UI', system-ui, sans-serif;
-  font-style:italic;
+  font-style: italic;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 700
 }
 
 .footer-brand p {
-  opacity: 0.8;
-  font-size: 0.95rem;
-  line-height: 1.7;
+  opacity: .8;
+  font-size: .95rem;
+  line-height: 1.7
 }
 
 .footer h4 {
   font-family: var(--font-main);
   font-size: 1.1rem;
   margin-bottom: 20px;
-  color: #fff;
+  color: #fff
 }
 
 .footer-links ul {
-  list-style: none;
+  list-style: none
 }
 
 .footer-links li {
-  margin-bottom: 10px;
+  margin-bottom: 10px
 }
 
 .footer-links a {
-  opacity: 0.8;
+  opacity: .8;
   transition: var(--transition);
-  font-size: 0.95rem;
+  font-size: .95rem
 }
 
 .footer-links a:hover {
   opacity: 1;
-  color: var(--color-accent);
-  padding-left: 4px;
+  padding-left: 4px
 }
 
 .footer-contact .btn {
-  margin-top: 16px;
+  margin-top: 16px
 }
 
 .footer-bottom {
@@ -942,169 +976,115 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 24px 0;
-  font-size: 0.9rem;
-  opacity: 0.8;
+  font-size: .9rem;
+  opacity: .8;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 12px
 }
 
 .footer-credit {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 8px
 }
 
 .footer-credit img {
   height: 24px;
-  width: auto;
+  width: auto
 }
 
-/* ============================================
-   Responsive
-   ============================================ */
-@media (max-width: 992px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+@media (max-width:992px) {
 
+  .process-steps,
+  .services-grid,
   .why-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr)
   }
 
   .process-steps {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 40px
   }
 
   .about-grid,
   .contact-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 40px
   }
 
   .trust-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 24px
   }
 
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
+
+  .footer-grid,
+  .gallery-grid,
+  .services-grid {
+    grid-template-columns: 1fr
+  }
+
   .section {
-    padding: 60px 0;
-  }
-
-  .nav-toggle {
-    display: flex;
-  }
-
-  .nav-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 280px;
-    height: 100vh;
-    background: #fff;
-    flex-direction: column;
-    padding: 80px 32px 32px;
-    gap: 20px;
-    transition: var(--transition);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .nav-menu.active {
-    right: 0;
-  }
-
-  .nav-link {
-    color: var(--color-text) !important;
-    font-size: 1.1rem;
-  }
-
-  .nav-cta {
-    text-align: center;
-  }
-
-  .nav-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .nav-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .nav-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  .services-grid,
-  .gallery-grid {
-    grid-template-columns: 1fr;
+    padding: 60px 0
   }
 
   .gallery-item {
-    aspect-ratio: 16/10;
+    aspect-ratio: 16/10
   }
 
   .hero-actions {
     flex-direction: column;
-    align-items: center;
+    align-items: center
   }
 
   .hero-actions .btn {
     width: 100%;
-    max-width: 300px;
+    max-width: 300px
   }
 
   .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 32px
   }
 
   .footer-bottom {
     flex-direction: column;
-    text-align: center;
+    text-align: center
   }
 
   .contact-form-wrapper {
-    padding: 24px;
+    padding: 24px
   }
 }
 
-@media (max-width: 480px) {
-  .trust-grid {
-    grid-template-columns: 1fr;
-  }
+@media (max-width:480px) {
 
-  .why-grid,
-  .process-steps {
-    grid-template-columns: 1fr;
+  .process-steps,
+  .trust-grid,
+  .why-grid {
+    grid-template-columns: 1fr
   }
 }
 
-/* Home principal: cabecera opaca, marca legible y movimiento discreto.
-   La referencia casa-alternativa conserva sus estilos originales. */
 .home-root .navbar,
 .home-root .navbar.scrolled {
   background: #fff;
   backdrop-filter: none;
   padding: 16px 0;
   box-shadow: var(--shadow-sm);
-  transition: box-shadow 200ms ease;
+  transition: box-shadow .2s
 }
 
 .home-root .navbar .nav-link {
-  color: var(--color-text);
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
+  align-items: center
 }
 
 .home-root .nav-cta {
-  color: #202044 !important;
+  color: #202044 !important
 }
 
 .home-root .nav-toggle {
@@ -1113,164 +1093,163 @@ a {
   min-width: 44px;
   min-height: 44px;
   align-items: center;
-  justify-content: center;
+  justify-content: center
 }
 
-.home-root .navbar .nav-toggle span {
-  background: var(--color-text);
-}
-
-.home-root .footer-logo img {
+.footer-logo img {
   background: #fff;
   padding: 10px;
   border-radius: 10px;
   height: 64px;
   width: auto;
-  object-fit: contain;
+  object-fit: contain
 }
 
-.home-root .footer :is(a, button):focus-visible {
-  outline-color: #fff;
+.footer :is(a, button):focus-visible {
+  outline-color: #fff
 }
 
 .home-root .faq-item summary:focus-visible {
-  outline-offset: -4px;
+  outline-offset: -4px
 }
 
 .home-root section[id] {
-  scroll-margin-top: 96px;
+  scroll-margin-top: 96px
 }
 
-/* No animar el contenido LCP ni mantener adornos en movimiento perpetuo. */
 .home-root .hero-content {
-  animation: none;
+  animation: none
 }
 
 .home-root .service-link {
   opacity: 1;
   transform: none;
-  color: var(--color-primary);
+  color: var(--color-primary)
 }
 
-.home-root .gallery-overlay {
-  opacity: 1;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .home-root .scroll-line::after {
-    animation: none;
-  }
-}
-
-.home-root :is(.service-card, .why-card, .btn, .nav-cta, .contact-item):hover,
-.home-root :is(.about-image, .gallery-item):hover img {
-  transform: none;
+.home-root :is(.about-image, .gallery-item):hover img,
+.home-root :is(.service-card, .why-card, .btn, .nav-cta, .contact-item):hover {
+  transform: none
 }
 
 .home-root .footer-links a:hover {
-  padding-left: 0;
+  padding-left: 0
 }
 
 .home-root :is(.service-card, .why-card, .gallery-item, .btn, .nav-cta, .contact-item) {
-  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
+  transition: transform 220ms, box-shadow 220ms, background-color 220ms, border-color 220ms
 }
 
-@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
   .home-root :is(.service-card, .why-card, .gallery-item):hover {
     transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-md)
   }
 
   .home-root :is(.btn, .nav-cta, .contact-item):hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px)
   }
 }
 
-/* Clase añadida únicamente al entrar: sin JS/IO el contenido sigue visible. */
 @keyframes reliefHomeEnter {
-  from { opacity: 0.85; translate: 0 12px; }
-  to { opacity: 1; translate: 0 0; }
+  from {
+    opacity: .85;
+    translate: 0 12px
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0
+  }
 }
 
-/* Animación de color para cards y elementos al revelarse */
 @keyframes reliefColorEnter {
   from {
     background-color: var(--color-bg-alt);
-    border-color: var(--color-border);
+    border-color: var(--color-border)
   }
+
   to {
     background-color: #fff;
-    border-color: var(--color-accent);
+    border-color: var(--color-accent)
   }
 }
 
 @keyframes reliefColorEnterDark {
   from {
     background-color: var(--color-primary);
-    border-color: transparent;
+    border-color: transparent
   }
+
   to {
     background-color: var(--color-secondary);
-    border-color: var(--color-accent);
+    border-color: var(--color-accent)
   }
 }
 
 @keyframes reliefTextColorEnter {
-  from { color: var(--color-text-light); }
-  to { color: var(--color-primary); }
+  from {
+    color: var(--color-text-light)
+  }
+
+  to {
+    color: var(--color-primary)
+  }
 }
 
 @keyframes reliefAccentColorEnter {
-  from { color: var(--color-primary); }
-  to { color: var(--color-accent); }
+  from {
+    color: var(--color-primary)
+  }
+
+  to {
+    color: var(--color-accent)
+  }
 }
 
-@media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion:no-preference) {
   .home-root .home-reveal {
-    animation: reliefHomeEnter 520ms cubic-bezier(0.2, 0.65, 0.3, 1);
+    animation: 520ms cubic-bezier(.2, .65, .3, 1) reliefHomeEnter
   }
 
-  .home-root .home-reveal-color {
-    animation: reliefColorEnter 600ms cubic-bezier(0.2, 0.65, 0.3, 1) forwards;
-  }
-
-  .home-root .home-reveal-color.service-card,
-  .home-root .home-reveal-color.why-card,
-  .home-root .home-reveal-color.faq-item,
+  .home-root .home-reveal-color,
+  .home-root .home-reveal-color.contact-form-wrapper,
   .home-root .home-reveal-color.contact-item,
-  .home-root .home-reveal-color.contact-form-wrapper {
-    animation: reliefColorEnter 600ms cubic-bezier(0.2, 0.65, 0.3, 1) forwards;
+  .home-root .home-reveal-color.faq-item,
+  .home-root .home-reveal-color.service-card,
+  .home-root .home-reveal-color.why-card {
+    animation: .6s cubic-bezier(.2, .65, .3, 1) forwards reliefColorEnter
   }
 
   .home-root .home-reveal-color.process-step,
   .home-root .home-reveal-color.trust-item {
-    animation: reliefColorEnterDark 600ms cubic-bezier(0.2, 0.65, 0.3, 1) forwards;
+    animation: .6s cubic-bezier(.2, .65, .3, 1) forwards reliefColorEnterDark
   }
 
   .home-root .home-reveal-color .section-tag,
   .home-root .home-reveal-color .step-number {
-    animation: reliefAccentColorEnter 500ms cubic-bezier(0.2, 0.65, 0.3, 1) forwards;
+    animation: .5s cubic-bezier(.2, .65, .3, 1) forwards reliefAccentColorEnter
   }
 
-  .home-root .home-reveal-color.service-card h3,
-  .home-root .home-reveal-color.why-card h3,
+  .home-root .home-reveal-color.contact-item strong,
   .home-root .home-reveal-color.faq-item summary,
-  .home-root .home-reveal-color.contact-item strong {
-    animation: reliefTextColorEnter 500ms cubic-bezier(0.2, 0.65, 0.3, 1) forwards;
+  .home-root .home-reveal-color.service-card h3,
+  .home-root .home-reveal-color.why-card h3 {
+    animation: .5s cubic-bezier(.2, .65, .3, 1) forwards reliefTextColorEnter
   }
 }
 
 .home-root .home-reveal:focus-within,
 .home-root .home-reveal:target {
-  animation: none;
+  animation: none
 }
 
-@media (max-width: 1100px) {
-  .home-root .nav-toggle {
-    display: flex;
+@media (max-width:1100px) {
+  .nav-toggle {
+    display: flex
   }
 
-  .home-root .nav-menu {
+  .nav-menu {
     position: fixed;
     top: 0;
     right: -100%;
@@ -1285,69 +1264,72 @@ a {
     gap: 8px;
     box-shadow: var(--shadow-lg);
     visibility: hidden;
-    transition: right 240ms ease, visibility 240ms;
+    transition: right 240ms, visibility 240ms
   }
 
-  .home-root .nav-menu.active {
+  .nav-menu.active {
     right: 0;
-    visibility: visible;
+    visibility: visible
   }
 
-  .home-root .nav-cta {
-    text-align: center;
+  .nav-link {
+    color: var(--color-text) !important;
+    font-size: 1.1rem
   }
 
-  .home-root .nav-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+  .nav-cta {
+    text-align: center
   }
 
-  .home-root .nav-toggle.active span:nth-child(2) {
-    opacity: 0;
+  .nav-toggle.active span:first-child {
+    transform: rotate(45deg) translate(5px, 5px)
   }
 
-  .home-root .nav-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .home-root *,
-  .home-root *::before,
-  .home-root *::after {
-    animation: none !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0
   }
 
-  .home-root .home-reveal {
-    translate: none;
-  }
-
-  .home-root .service-card::before,
-  .home-root .service-card::after {
-    transform: none;
+  .nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px)
   }
 }
 
-/* Animaciones */
 .reveal {
-  opacity: 0.15;
+  opacity: .15;
   translate: 0 12px;
-
-  transition:
-    opacity 0.9s ease-out,
-    translate 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity .9s ease-out, translate .9s cubic-bezier(.22, 1, .36, 1)
 }
 
 .reveal.is-visible {
   opacity: 1;
-  translate: 0 0;
+  translate: 0 0
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion:reduce) {
+  .home-root .scroll-line::after {
+    animation: none
+  }
+
+  .home-root *,
+  .home-root ::after,
+  .home-root ::before {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important
+  }
+
+  .home-root .home-reveal {
+    translate: none
+  }
+
+  .home-root .service-card::after,
+  .home-root .service-card::before {
+    transform: none
+  }
+
   .reveal {
     opacity: 1;
     translate: none;
-    transition: none;
+    transition: none
   }
 }
