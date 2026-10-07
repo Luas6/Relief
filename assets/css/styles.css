@@ -79,10 +79,6 @@ a {
   padding: 0 24px
 }
 
-.banner-container {
-  margin-top: 120px
-}
-
 .banner-image {
   border-radius: 5%
 }
@@ -1331,5 +1327,133 @@ a {
     opacity: 1;
     translate: none;
     transition: none
+  }
+}
+
+/* ============================================
+   BREADCRUMBS
+   ============================================ */
+.breadcrumb-nav {
+  padding: 16px 0;
+  background: var(--color-cream);
+  border-bottom: 1px solid var(--color-border);
+  /* Clear fixed navbar (~80-90px height) */
+  margin-top: 120px;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb-nav {
+    padding: 12px 0;
+    /* Mobile navbar may be taller with hamburger */
+    margin-top: 96px;
+  }
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: "/";
+  margin-left: 8px;
+  color: var(--color-border);
+  font-weight: 300;
+}
+
+.breadcrumb a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.breadcrumb li.active {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.breadcrumb li.active span {
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb-nav {
+    padding: 12px 0;
+  }
+  .breadcrumb {
+    font-size: 0.85rem;
+  }
+}
+
+/* ============================================
+   FAQ ACCORDION (home page)
+   ============================================ */
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.25rem;
+  color: var(--color-accent);
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item[open] summary {
+  border-color: var(--color-accent);
+  background: var(--color-cream);
+}
+
+.faq-answer {
+  padding: 16px 20px;
+  color: var(--color-text-light);
+  line-height: 1.7;
+  border: 1px solid var(--color-border);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  background: var(--color-bg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .breadcrumb a,
+  .faq-item summary,
+  .faq-item summary::after {
+    transition: none !important;
   }
 }
