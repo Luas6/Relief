@@ -5,70 +5,104 @@ document.addEventListener('DOMContentLoaded', () => {
   const navMenu = document.getElementById('navMenu');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-
   // =========================
-  // NAVBAR
+  // NAVBAR SCROLL EFFECT
   // =========================
-
   if (navbar) {
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 50);
     });
   }
 
-
   // =========================
-  // MOBILE MENU
+  // MOBILE MENU - Unified for all pages
+  // Supports both: .nav-toggle/#navMenu (home/404) and .navbar-toggler/#navbarNav (interior pages)
   // =========================
 
-  if (navToggle && navMenu) {
+  function setupMobileMenu(toggleBtn, menuEl, isBootstrap = false) {
+    if (!toggleBtn || !menuEl) return;
 
-    navToggle.addEventListener('click', () => {
-      const isOpen = navMenu.classList.toggle('active');
+    const closeMenu = () => {
+      menuEl.classList.remove('active');
+      if (!isBootstrap) {
+        toggleBtn.classList.remove('active');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      } else {
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        // Bootstrap collapse will handle the rest via data-bs-toggle removal
+      }
+    };
 
-      navToggle.classList.toggle('active', isOpen);
-      navToggle.setAttribute('aria-expanded', isOpen);
-    });
+    const openMenu = () => {
+      menuEl.classList.add('active');
+      if (!isBootstrap) {
+        toggleBtn.classList.add('active');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+      } else {
+        toggleBtn.setAttribute('aria-expanded', 'true');
+      }
+    };
 
+    const toggleMenu = () => {
+      const isOpen = menuEl.classList.contains('active');
+      if (isOpen) closeMenu();
+      else openMenu();
+    };
 
-    navMenu.querySelectorAll('a').forEach(link => {
+    toggleBtn.addEventListener('click', toggleMenu);
+
+    // Close on link click
+    menuEl.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', closeMenu);
     });
 
-
+    // Close on Escape
     document.addEventListener('keydown', event => {
-      if (event.key === 'Escape') {
+      if (event.key === 'Escape' && menuEl.classList.contains('active')) {
         closeMenu();
-        navToggle.focus();
+        toggleBtn.focus();
       }
     });
 
-
-    function closeMenu() {
-      navMenu.classList.remove('active');
-      navToggle.classList.remove('active');
-      navToggle.setAttribute('aria-expanded', 'false');
+    // Close on click outside (for custom menu)
+    if (!isBootstrap) {
+      document.addEventListener('click', event => {
+        if (menuEl.classList.contains('active') &&
+            !menuEl.contains(event.target) &&
+            !toggleBtn.contains(event.target)) {
+          closeMenu();
+        }
+      });
     }
   }
 
+  // Custom menu (home/404)
+  setupMobileMenu(navToggle, navMenu, false);
+
+  // Bootstrap navbar menu (interior pages) - detect and initialize
+  const bsToggle = document.querySelector('.navbar-toggler');
+  const bsMenu = document.getElementById('navbarNav');
+  if (bsToggle && bsMenu) {
+    // Remove Bootstrap's data-bs-toggle to prevent conflict; we handle it
+    bsToggle.removeAttribute('data-bs-toggle');
+    bsToggle.removeAttribute('data-bs-target');
+    setupMobileMenu(bsToggle, bsMenu, true);
+  }
 
   // =========================
-  // GALLERY
+  // GALLERY / GLIGHTBOX
   // =========================
-
   if (typeof GLightbox === 'function') {
     GLightbox({
       selector: '.glightbox'
     });
   }
 
-
   // =========================
-  // SCROLL ANIMATIONS
+  // SCROLL ANIMATIONS (IntersectionObserver)
   // =========================
-
   const animatedElements = document.querySelectorAll(
-    '.about-image, .gallery-item, .faq-item, .contact-item, .trust-item'
+    '.about-image, .gallery-item, .faq-item, .contact-item, .trust-item, .service-card, .why-card, .process-step, .bento-item'
   );
 
   if (
@@ -81,17 +115,14 @@ document.addEventListener('DOMContentLoaded', () => {
       element.classList.add('reveal');
     });
 
-
     const observer = new IntersectionObserver(entries => {
 
       entries.forEach(entry => {
 
-        // Empieza la animación cuando ya ha entrado bastante en pantalla
         if (entry.intersectionRatio >= 0.8) {
           entry.target.classList.add('is-visible');
         }
 
-        // Solo reseteamos cuando ha salido completamente
         if (!entry.isIntersecting) {
           entry.target.classList.remove('is-visible');
         }
@@ -107,11 +138,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
   // =========================
-  // SMOOTH SCROLL
+  // SMOOTH SCROLL (respects prefers-reduced-motion)
   // =========================
-
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     anchor.addEventListener('click', event => {
@@ -138,11 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 
-
   // =========================
-  // FAQ
+  // FAQ ACCORDION (single open)
   // =========================
-
   const faqItems = document.querySelectorAll('.faq-item');
 
   faqItems.forEach(item => {
@@ -195,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Clics en CTA "Devis gratuit" (anclas a #contacto)
-  document.querySelectorAll('a[href="#contacto"], a[href$="#contacto"]').forEach(el => {
+  document.querySelectorAll('a[href="#contacto"], a[href$="#contacto"], a[href="/#contacto"]').forEach(el => {
     el.addEventListener('click', () => {
       if (typeof gtag === 'function') {
         gtag('event', 'cta_devis_click', { page_path: window.location.pathname });

@@ -112,7 +112,7 @@ a {
 
 .btn-primary {
   background: var(--color-accent);
-  color: #fff;
+  color: black;
   border-color: var(--color-accent)
 }
 
@@ -292,7 +292,7 @@ a {
 
 .hero-overlay {
   inset: 0;
-  background: linear-gradient(135deg, rgba(26, 26, 46, .85) 0, rgba(22, 33, 62, .75) 50%, rgba(233, 69, 96, .4) 100%)
+  background: linear-gradient(135deg, rgba(26, 26, 46, .85) 0, rgba(22, 33, 62, .75) 50%, rgb(22 60 65 / 40%) 100%);
 }
 
 .hero-content {
@@ -343,11 +343,19 @@ a {
     scroll-behavior: auto
   }
 
-  .home-root *,
-  .home-root ::after,
-  .home-root ::before {
-    animation-duration: NaNs !important;
-    transition-duration: NaNs !important
+  *,
+  ::after,
+  ::before {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .scroll-line::after {
+    animation: none !important;
   }
 }
 
@@ -1299,35 +1307,6 @@ a {
 .reveal.is-visible {
   opacity: 1;
   translate: 0 0
-}
-
-@media (prefers-reduced-motion:reduce) {
-  .home-root .scroll-line::after {
-    animation: none
-  }
-
-  .home-root *,
-  .home-root ::after,
-  .home-root ::before {
-    animation: none !important;
-    transition: none !important;
-    scroll-behavior: auto !important
-  }
-
-  .home-root .home-reveal {
-    translate: none
-  }
-
-  .home-root .service-card::after,
-  .home-root .service-card::before {
-    transform: none
-  }
-
-  .reveal {
-    opacity: 1;
-    translate: none;
-    transition: none
-  }
 }
 
 /* ============================================
