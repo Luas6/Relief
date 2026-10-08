@@ -163,4 +163,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 
+  // =========================
+  // GA4 EVENT TRACKING
+  // =========================
+
+  // Clics en teléfono
+  document.querySelectorAll('a[href^="tel:"]').forEach(el => {
+    el.addEventListener('click', () => {
+      if (typeof gtag === 'function') {
+        gtag('event', 'click_phone', { method: 'tel', page_path: window.location.pathname });
+      }
+    });
+  });
+
+  // Clics en email
+  document.querySelectorAll('a[href^="mailto:"]').forEach(el => {
+    el.addEventListener('click', () => {
+      if (typeof gtag === 'function') {
+        gtag('event', 'click_email', { method: 'mailto', page_path: window.location.pathname });
+      }
+    });
+  });
+
+  // Envío de formulario (FormSubmit)
+  document.querySelectorAll('form[action*="formsubmit"]').forEach(form => {
+    form.addEventListener('submit', () => {
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', { form_location: window.location.pathname });
+      }
+    });
+  });
+
+  // Clics en CTA "Devis gratuit" (anclas a #contacto)
+  document.querySelectorAll('a[href="#contacto"], a[href$="#contacto"]').forEach(el => {
+    el.addEventListener('click', () => {
+      if (typeof gtag === 'function') {
+        gtag('event', 'cta_devis_click', { page_path: window.location.pathname });
+      }
+    });
+  });
+
+  // Profundidad de scroll 90% (una sola vez por página)
+  let maxScrollPct = 0;
+  const scrollHandler = () => {
+    const scrollHeight = document.body.scrollHeight - window.innerHeight;
+    if (scrollHeight <= 0) return;
+    const pct = Math.round((window.scrollY / scrollHeight) * 100);
+    if (pct > maxScrollPct) maxScrollPct = pct;
+    if (maxScrollPct >= 90) {
+      if (typeof gtag === 'function') {
+        gtag('event', 'scroll_depth_90', { page_path: window.location.pathname });
+      }
+      window.removeEventListener('scroll', scrollHandler);
+    }
+  };
+  window.addEventListener('scroll', scrollHandler, { passive: true });
+
 });
