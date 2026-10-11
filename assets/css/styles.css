@@ -597,6 +597,9 @@ a {
 .why-grid {
   grid-template-columns: repeat(4, 1fr)
 }
+.why-us.section {
+  background: var(--color-bg-alt);
+}
 .gallery-item {
   position: relative;
   aspect-ratio: 1;
