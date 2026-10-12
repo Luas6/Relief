@@ -649,8 +649,11 @@ a {
   box-shadow: var(--shadow-sm)
 }
 .why-icon {
-  font-size: 3rem;
-  margin-bottom: 16px
+  display: block;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin: 0 auto 16px
 }
 .why-card h3 {
   font-size: 1.2rem;
