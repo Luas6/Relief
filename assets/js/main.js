@@ -252,6 +252,15 @@ document.addEventListener('DOMContentLoaded', () => {
     window.gtag('js', new Date());
     window.gtag('config', 'G-3VBMWRMRQ4');
   }
+  function loadClarity() {
+    if (window.clarityLoaded) return;
+    window.clarityLoaded = true;
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, 'clarity', 'script', 'ywrd2mri8a');
+  }
   function showCookieBanner() {
     const banner = document.getElementById('cookieBanner');
     if (banner) {
@@ -271,6 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setCookieConsent(true);
     hideCookieBanner();
     loadGA4();
+    loadClarity();
   }
   function handleCookieReject() {
     setCookieConsent(false);
@@ -283,8 +293,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize cookie consent
   const consent = getCookieConsent();
   if (consent === true) {
-    // Already accepted - load GA4 immediately
+    // Already accepted - load analytics immediately
     loadGA4();
+    loadClarity();
   } else if (consent === null) {
     // No consent yet - show banner after short delay
     setTimeout(showCookieBanner, 1000);
