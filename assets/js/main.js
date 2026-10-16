@@ -84,36 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   // =========================
-  // SCROLL ANIMATIONS (IntersectionObserver)
-  // =========================
-  const animatedElements = document.querySelectorAll(
-    '.about-image, .gallery-item, .faq-item, .contact-item, .trust-item, .service-card, .why-card, .process-step, .bento-item'
-  );
-  if (
-    animatedElements.length &&
-    !reducedMotion.matches &&
-    'IntersectionObserver' in window
-  ) {
-    animatedElements.forEach(element => {
-      element.classList.add('reveal');
-    });
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
-          entry.target.classList.add('is-visible');
-        }
-        if (!entry.isIntersecting && entry.intersectionRatio === 0) {
-          entry.target.classList.remove('is-visible');
-        }
-      });
-    }, {
-      threshold: [0, 0.6]
-    });
-    animatedElements.forEach(element => {
-      observer.observe(element);
-    });
-  }
-  // =========================
   // SMOOTH SCROLL (respects prefers-reduced-motion)
   // =========================
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {

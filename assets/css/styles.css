@@ -257,8 +257,7 @@ a {
 }
 .hero-content {
   max-width: 800px;
-  padding: 120px 24px 80px;
-  animation: 1s fadeInUp
+  padding: 120px 24px 80px
 }
 .hero-badge {
   display: inline-block;
@@ -527,7 +526,7 @@ a {
   color: var(--color-accent);
   font-weight: 600;
   font-size: .9rem;
-  opacity: 0;
+  opacity: 1;
   transition: opacity var(--transition-slow)
 }
 .service-card:hover .service-link {
@@ -1157,15 +1156,6 @@ a {
   .nav-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px)
   }
-}
-.reveal {
-  opacity: 0;
-  transition: opacity 1s ease-out;
-  will-change: opacity
-}
-.reveal.is-visible {
-  opacity: 1;
-  transition: opacity 1s ease-out
 }
 /* ============================================
    BREADCRUMBS
