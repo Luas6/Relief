@@ -1,4 +1,5 @@
-.carreleur-pau-page {
+.carreleur-pau-page,
+.carreleur-nay-page {
   --cp-ink: #202044;
   --cp-violet: #404082;
   --cp-violet-deep: #29294f;
@@ -11,9 +12,9 @@
   color: var(--cp-ink);
   overflow-x: clip;
 }
-.carreleur-pau-page * { box-sizing: border-box; }
-.carreleur-pau-page a { text-underline-offset: .22em; }
-.carreleur-pau-page a:focus-visible { outline: 3px solid var(--cp-turquoise); outline-offset: 4px; }
+.carreleur-pau-page *, .carreleur-nay-page * { box-sizing: border-box; }
+.carreleur-pau-page a, .carreleur-nay-page a { text-underline-offset: .22em; }
+.carreleur-pau-page a:focus-visible, .carreleur-nay-page a:focus-visible { outline: 3px solid var(--cp-turquoise); outline-offset: 4px; }
 .cp-scroll-progress { position: fixed; inset: 0 0 auto; z-index: 1000; height: 4px; background: rgba(64,64,130,.1); opacity: 0; pointer-events: none; }
 .cp-scroll-effects .cp-scroll-progress { opacity: 1; }
 .cp-scroll-progress span { display: block; width: 100%; height: 100%; background: linear-gradient(90deg, var(--cp-turquoise), #9ce9e1 48%, var(--cp-violet)); transform: scaleX(0); transform-origin: left center; }
@@ -185,7 +186,8 @@ textarea.cp-field { min-height: 100px; resize: vertical; }
 @keyframes cp-tile-float { 0%,100% { translate: 0 -8px; } 50% { translate: 0 10px; } }
 @keyframes cp-arrive { from { transform: translateY(28px) scale(.985); } to { transform: translateY(0) scale(1); } }
 @media (prefers-reduced-motion: reduce) {
-  .carreleur-pau-page *, .carreleur-pau-page *::before, .carreleur-pau-page *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  .carreleur-pau-page *, .carreleur-pau-page *::before, .carreleur-pau-page *::after,
+  .carreleur-nay-page *, .carreleur-nay-page *::before, .carreleur-nay-page *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
   .cp-scroll-effects .cp-panel.cp-seen:not(.cp-active) .cp-scroll-visual { opacity: 1; transform: none; }
   .cp-scroll-progress { display: none; }
 }
