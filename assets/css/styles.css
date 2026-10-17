@@ -864,7 +864,7 @@ a {
   font-weight: 700
 }
 .footer-brand p {
-  opacity: .8;
+  opacity: 1;
   font-size: .95rem;
   line-height: 1.7
 }
@@ -881,7 +881,7 @@ a {
   margin-bottom: 10px
 }
 .footer-links a {
-  opacity: .8;
+  opacity: 1;
   transition: var(--transition);
   font-size: .95rem
 }
@@ -898,7 +898,7 @@ a {
   align-items: center;
   padding: 24px 0;
   font-size: .9rem;
-  opacity: .8;
+  opacity: 1;
   flex-wrap: wrap;
   gap: 12px
 }
@@ -1373,8 +1373,11 @@ a {
   line-height: 1.5;
 }
 .cookie-text a {
-  color: var(--color-accent);
+  color: var(--color-secondary);
   text-decoration: underline;
+}
+.cookie-text a:hover {
+  color: var(--color-primary);
 }
 .cookie-actions {
   display: flex;
@@ -1416,8 +1419,11 @@ a {
   width: 100%;
 }
 .cookie-link a {
-  color: var(--color-accent);
+  color: var(--color-secondary);
   text-decoration: underline;
+}
+.cookie-link a:hover {
+  color: var(--color-primary);
 }
 @media (max-width: 599px) {
   .cookie-content {
@@ -1439,9 +1445,15 @@ a {
 /* Cookie settings link in footer */
 .cookie-settings-link {
   cursor: pointer;
-  color: var(--color-accent);
+  color: var(--color-secondary);
   text-decoration: underline;
 }
 .cookie-settings-link:hover {
-  color: var(--color-accent-hover);
+  color: var(--color-primary);
+}
+.footer .cookie-settings-link {
+  color: #fff;
+}
+.footer .cookie-settings-link:hover {
+  color: #a5eeee;
 }
